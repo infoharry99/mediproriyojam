@@ -9,11 +9,11 @@
 
 <body>
 
-@include('partials.header')
+  @include('partials.header')
 
-@yield('content')
+  @yield('content')
 
-@include('partials.footer')
+  @include('partials.footer')
 
 </body>
 </html>
