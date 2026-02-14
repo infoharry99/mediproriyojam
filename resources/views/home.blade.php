@@ -4,7 +4,7 @@
 
 @section('content')
 
- <main class="main bg-pink-100">
+ <main class="main">
 
     <!-- Courses Hero Section -->
 <section class="">
@@ -17,90 +17,88 @@
 
 
 <!-- ABOUT SECTION -->
-<section class="py-24">
+<section class="py-24 bg-[#FFF5F6]">
 
-  <div class="max-w-7xl mx-auto px-6">
+  <div class="max-w-7xl mx-auto w-[90%] lg:w-[90%]">
 
-    <div class="grid lg:grid-cols-2 gap-20 items-center">
+    <div class="grid lg:grid-cols-[1fr_auto_1fr] gap-16 items-center">
 
       <!-- LEFT CONTENT -->
       <div>
 
-        <h2 class="text-5xl lg:text-7xl font-semibold font-poppins text-[#313131] mb-8">
+        <h2 class="text-5xl lg:text-6xl font-semibold text-[#313131] mb-6">
           ABOUT US
         </h2>
 
-        <p class="text-black text-xl font-santoshi font-medium mb-10 leading-8 max-w-xl">
-            Medical Prayojanam is one of the best Coaching Institute in Nagpur Exclusively for NEET. It is the only Institute of Central India which is only preparation for Medical Entrance. Here you will get Central India’s Best Faculty Team & see the Magic of Biology, Strength of Chemistry & Power of Physics. It may change your view towards study. Our main moto is to guide the students for Examination of Medical Entrance. Secondary aim is to promote and encourage all the students to fulfil their dream. If you want to become a Doctor then Join Medical Prayojanam.
+        <p class="text-gray-700 text-[20px] mb-4 max-w-xl">
+          Medical Prayojanam is one of the best Coaching Institute in Nagpur Exclusively for NEET. It is the only Institute of Central India which is only preparation for Medical Entrance. Here you will get Central India’s Best Faculty Team & see the Magic of Biology, Strength of Chemistry & Power of Physics. It may change your view towards study. Our main moto is to guide the students for Examination of Medical Entrance. Secondary aim is to promote and encourage all the students to fulfil their dream. If you want to become a Doctor then Join Medical Prayojanam.
         </p>
 
+        <!-- Buttons -->
         <div class="flex gap-5">
-          <button href="#"
-             class="px-6 py-3 border font-poppins border-red-600 hover:text-white text-red-600 font-medium hover:bg-red-600 bg-pink-100 transition">
-            Learn More
-</button>
 
-          <button href="#"
-             class="px-6 py-3 border border-red-600 hover:text-white text-red-600 font-medium hover:bg-red-600 bg-pink-100 transition">
+          <!-- Learn More -->
+          <a href="#"
+             class="px-7 py-3 bg-red-600 text-white font-medium rounded
+                    hover:bg-red-600 hover:scale-105 hover:shadow-xl transition duration-300">
+            Learn More
+          </a>
+
+          <!-- Watch Video -->
+          <a href="#"
+             class="px-7 py-3 border border-red-600 text-red-600 font-medium rounded
+                    flex items-center gap-2
+                    hover:bg-red-600 hover:scale-105 hover:shadow-xl hover:text-white transition duration-300">
+
             Watch Video
-          </button>
+            ▶
+          </a>
+
         </div>
 
       </div>
 
 
-     <!-- RIGHT STATS -->
-<div class="grid grid-cols-2 gap-8">
+      <!-- CENTER LINE -->
+      <div class="hidden lg:block w-px h-[350px] bg-gray-300"></div>
 
-  <div class="group bg-white p-10 rounded-2xl shadow-md text-center 
-              transition duration-300 ease-in-out
-              hover:-translate-y-3 hover:shadow-2xl hover:bg-red-50">
-    <h3 class="text-3xl font-bold text-gray-900 mb-2 
-               transition duration-300 group-hover:text-red-600">
-      1000+
-    </h3>
-    <p class="text-gray-500 transition duration-300 group-hover:text-gray-700">
-      Trusted Tutors
-    </p>
-  </div>
 
-  <div class="group bg-white p-10 rounded-2xl shadow-md text-center 
-              transition duration-300 ease-in-out
-              hover:-translate-y-3 hover:shadow-2xl hover:bg-red-50">
-    <h3 class="text-3xl font-bold text-gray-900 mb-2 
-               transition duration-300 group-hover:text-red-600">
-      250+
-    </h3>
-    <p class="text-gray-500 transition duration-300 group-hover:text-gray-700">
-      Employees
-    </p>
-  </div>
+      <!-- RIGHT STATS -->
+      <div class="grid grid-cols-2 gap-8">
 
-  <div class="group bg-white p-10 rounded-2xl shadow-md text-center 
-              transition duration-300 ease-in-out
-              hover:-translate-y-3 hover:shadow-2xl hover:bg-red-50">
-    <h3 class="text-3xl font-bold text-gray-900 mb-2 
-               transition duration-300 group-hover:text-red-600">
-      100+
-    </h3>
-    <p class="text-gray-500 transition duration-300 group-hover:text-gray-700">
-      Branches
-    </p>
-  </div>
+        <!-- Box 1 -->
+        <div class="bg-[#FAFAFA] p-10  shadow text-center
+                    hover:shadow-2xl transition hover:bg-white scale-105">
 
-  <div class="group bg-white p-10 rounded-2xl shadow-md text-center 
-              transition duration-300 ease-in-out
-              hover:-translate-y-3 hover:shadow-2xl hover:bg-red-50">
-    <h3 class="text-3xl font-bold text-gray-900 mb-2 
-               transition duration-300 group-hover:text-red-600">
-      10+
-    </h3>
-    <p class="text-gray-500 transition duration-300 group-hover:text-gray-700">
-      Awards
-    </p>
-  </div>
+          <h3 class="text-4xl font-semibold mb-2">1000+</h3>
+          <p class="text-gray-500">Satisfied Students</p>
+        </div>
 
-</div>
+        <!-- Box 2 -->
+         <div class="bg-[#FAFAFA] p-10  shadow text-center
+                    hover:shadow-2xl transition hover:bg-white scale-105">
+
+          <h3 class="text-4xl font-semibold mb-2">250+</h3>
+          <p class="text-gray-500">Employees</p>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="bg-[#FAFAFA] p-10  shadow text-center
+                    hover:shadow-2xl transition hover:bg-white scale-105">
+
+          <h3 class="text-4xl font-semibold mb-2">100+</h3>
+          <p class="text-gray-500">Rank Holders</p>
+        </div>
+
+        <!-- Box 4 -->
+         <div class="bg-[#FAFAFA] p-10  shadow text-center
+                    hover:shadow-2xl transition hover:bg-white scale-105">
+
+          <h3 class="text-4xl font-semibold mb-2">10+</h3>
+          <p class="text-gray-500">Years of Excellence</p>
+        </div>
+
+      </div>
 
     </div>
 
@@ -109,61 +107,102 @@
 </section>
 
 
+
 <!-- Featured Courses Section -->
-<section class="py-16">
+<section class="py-20 bg-[#FFF5F6]">
 
-<div class="flex justify-center mb-14">
-    <h2 class="px-6 py-3 font-medium text-lg border border-black rounded-full">Course</h2>
-</div>
+  <!-- Title -->
+  <div class="flex justify-center mb-14">
+    <h2
+      class="px-7 py-2 text-base font-medium border border-gray-900 rounded-full">
+      Course
+    </h2>
+  </div>
 
-  <div class="max-w-7xl mx-auto px-6">
 
-    <!-- Cards Grid -->
-    <div class="grid md:grid-cols-3 gap-8">
+  <div class="max-w-7xl mx-auto w-[90%] lg:w-[90%]">
 
-      <!-- CARD 1 -->
-      <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+    <!-- Cards -->
+    <div class="grid md:grid-cols-3 gap-10">
 
-        <img src="/assets/img/education/course_thumb01.jpg.png" 
-             class="w-full h-66 object-cover" 
-             alt="Course">
 
-        <div class="p-6">
+      <!-- CARD -->
+      <div
+        class="group bg-white p-8 rounded-2xl overflow-hidden shadow-lg
+               hover:shadow-2xl transition duration-300">
 
+        <!-- Image -->
+        <div class="overflow-hidden">
+          <img
+            src="/assets/img/education/course_thumb01.jpg.png"
+            class="w-full h-[220px] object-cover
+                   group-hover:scale-110 transition duration-500"
+            alt="">
+        </div>
+
+        <div class="mt-6">
+
+          <!-- Top -->
           <div class="flex justify-between items-center mb-4">
-            <span class="bg-gray-200 text-sm px-3 py-1 rounded-full">
+
+            <span
+              class="bg-gray-100 text-sm px-4 py-1 rounded-full font-medium">
               NEET
             </span>
 
             <div class="text-right">
-              <span class="line-through text-gray-400 mr-2">$29.00</span>
-              <span class="text-blue-600 font-bold text-lg">$9.00</span>
+              <span class="line-through text-gray-400 mr-2 text-sm">$29.00</span>
+              <span class="text-[#4F46E5] font-bold text-lg">$9.00</span>
             </div>
+
           </div>
 
-          <h3 class="text-lg font-semibold text-gray-800 mb-4">
+
+          <!-- Title -->
+          <h3
+            class="text-lg font-semibold text-gray-800 mb-5 leading-snug">
+
             Foundation course – 11th+12th
           </h3>
 
-          <div class="flex justify-between items-center mb-4">
+
+          <!-- Author -->
+          <div class="flex justify-between items-center mb-5">
+
             <div class="flex items-center gap-2">
-              <img src="/assets/img/education/course_author001.png"
-                   class="w-8 h-8 rounded-full object-cover"
-                   alt="">
+              <img
+                src="/assets/img/education/course_author001.png"
+                class="w-8 h-8 rounded-full object-cover"
+                alt="">
               <span class="text-sm text-gray-600">Mohit Roa</span>
             </div>
 
-            <div class="text-sm text-gray-500">
-              ⭐ (4.8 Reviews)
+            <div class="text-sm text-gray-500 flex items-center gap-1">
+              ⭐ 4.8 <span>(Reviews)</span>
             </div>
+
           </div>
+
 
           <hr class="mb-4">
 
-          <div class="flex justify-between text-sm text-gray-600">
-            <div>📘 05</div>
-            <div>⏱ 11h 20m</div>
-            <div>🎓 22</div>
+
+          <!-- Info -->
+          <div
+            class="flex justify-between text-sm text-gray-600">
+
+            <div class="flex items-center gap-1">
+              📘 <span>05</span>
+            </div>
+
+            <div class="flex items-center gap-1">
+              ⏱ <span>11h 20m</span>
+            </div>
+
+            <div class="flex items-center gap-1">
+              🎓 <span>22</span>
+            </div>
+
           </div>
 
         </div>
@@ -171,48 +210,62 @@
 
 
       <!-- CARD 2 -->
-      <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+      <div
+        class="group bg-white p-8 rounded-2xl overflow-hidden shadow-lg
+               hover:shadow-2xl transition duration-300">
 
-        <img src="/assets/img/education/course_thumb02.jpg.png" 
-             class="w-full h-66 object-cover" 
-             alt="Course">
+        <div class="overflow-hidden">
+          <img
+            src="/assets/img/education/course_thumb02.jpg.png"
+            class="w-full h-[220px] object-cover
+                   group-hover:scale-110 transition duration-500"
+            alt="">
+        </div>
 
-        <div class="p-6">
+        <div class="mt-6">
 
           <div class="flex justify-between items-center mb-4">
-            <span class="bg-gray-200 text-sm px-3 py-1 rounded-full">
+
+            <span
+              class="bg-gray-100 text-sm px-4 py-1 rounded-full font-medium">
               NEET
             </span>
 
             <div>
-              <span class="line-through text-gray-400 mr-2">$20.00</span>
-              <span class="text-blue-600 font-bold text-lg">$10.00</span>
+              <span class="line-through text-gray-400 mr-2 text-sm">$20.00</span>
+              <span class="text-[#4F46E5] font-bold text-lg">$10.00</span>
             </div>
+
           </div>
 
-          <h3 class="text-lg font-semibold text-gray-800 mb-4">
+          <h3 class="text-lg font-semibold text-gray-800 mb-5">
             Countdown course – 12th
           </h3>
 
-          <div class="flex justify-between items-center mb-4">
+          <div class="flex justify-between items-center mb-5">
+
             <div class="flex items-center gap-2">
-              <img src="/assets/img/education/course_author002.png"
-                   class="w-8 h-8 rounded-full object-cover"
-                   alt="">
+              <img
+                src="/assets/img/education/course_author002.png"
+                class="w-8 h-8 rounded-full object-cover"
+                alt="">
               <span class="text-sm text-gray-600">Kriti Mishra</span>
             </div>
 
             <div class="text-sm text-gray-500">
-              ⭐ (4.5 Reviews)
+              ⭐ 4.5 (Reviews)
             </div>
+
           </div>
 
           <hr class="mb-4">
 
           <div class="flex justify-between text-sm text-gray-600">
+
             <div>📘 60</div>
             <div>⏱ 70h 45m</div>
             <div>🎓 202</div>
+
           </div>
 
         </div>
@@ -220,45 +273,60 @@
 
 
       <!-- CARD 3 -->
-      <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+      <div
+        class="group bg-white p-8 rounded-2xl overflow-hidden shadow-lg
+               hover:shadow-2xl transition duration-300">
 
-        <img src="/assets/img/education/course_thumb03.jpg.png" 
-             class="w-full h-66 object-cover" 
-             alt="Course">
+        <div class="overflow-hidden">
+          <img
+            src="/assets/img/education/course_thumb03.jpg.png"
+            class="w-full h-[220px] object-cover
+                   group-hover:scale-110 transition duration-500"
+            alt="">
+        </div>
 
-        <div class="p-6">
+        <div class="mt-6">
 
           <div class="flex justify-between items-center mb-4">
-            <span class="bg-gray-200 text-sm px-3 py-1 rounded-full">
+
+            <span
+              class="bg-gray-100 text-sm px-4 py-1 rounded-full font-medium">
               NEET
             </span>
 
-            <span class="text-blue-600 font-bold text-lg">$20.00</span>
+            <span
+              class="text-[#4F46E5] font-bold text-lg">$20.00</span>
+
           </div>
 
-          <h3 class="text-lg font-semibold text-gray-800 mb-4">
+          <h3 class="text-lg font-semibold text-gray-800 mb-5">
             Target Course – After 12th passed
           </h3>
 
-          <div class="flex justify-between items-center mb-4">
+          <div class="flex justify-between items-center mb-5">
+
             <div class="flex items-center gap-2">
-              <img src="/assets/img/education/course_author003.png"
-                   class="w-8 h-8 rounded-full object-cover"
-                   alt="">
+              <img
+                src="/assets/img/education/course_author003.png"
+                class="w-8 h-8 rounded-full object-cover"
+                alt="">
               <span class="text-sm text-gray-600">Rohit</span>
             </div>
 
             <div class="text-sm text-gray-500">
-              ⭐ (4.8 Reviews)
+              ⭐ 4.8 (Reviews)
             </div>
+
           </div>
 
           <hr class="mb-4">
 
           <div class="flex justify-between text-sm text-gray-600">
+
             <div>📘 08</div>
             <div>⏱ 18h 20m</div>
             <div>🎓 66</div>
+
           </div>
 
         </div>
@@ -266,97 +334,152 @@
 
     </div>
 
+
     <!-- Button -->
-    <div class="flex justify-center mt-7">
-      <button
-         class="inline-block px-7 py-3 border rounded-full border-b-8 border-blue-950 bg-[#5751E1] text-white hover:opacity-90 transition">
-        See All Courses
-      </button>
+    <div class="flex justify-center mt-12">
+
+      <a href="#"
+         class="px-10 py-3 rounded-full
+                bg-[#5751E1] text-white font-medium
+                border-b-4 border-blue-950
+                hover:translate-y-[2px]
+                hover:border-b-2 transition">
+
+        See All Courses →
+
+      </a>
+
     </div>
 
   </div>
-</section>
-
-
-<section class="relative py-24 overflow-hidden">
-
-  <!-- Pink Circle -->
-  <div class="absolute 
-              bottom-0
-              left-1/2 
-              -translate-x-1/2 
-              w-[489px] 
-              h-[489px] 
-              bg-[#FF7E7E] 
-              rounded-full">
-  </div>
-
-  <div class="relative z-10 px-8 text-center">
-
-    <div class="mb-24 flex justify-center">
+<div class="mb-10 mt-10  flex justify-center">
       <h1 class="text-lg py-2 px-4 font-medium border rounded-full border-black shadow-sm">
         Our Top Doctors
       </h1>
     </div>
+</section>
 
-    <!-- Doctor Cards -->
-<div class="grid md:grid-cols-3 gap-12 items-end">
 
-  <!-- CARD -->
-  <div class="group bg-white rounded-2xl overflow-hidden shadow-lg 
-              transition-all duration-500 
-              h-[520px] hover:h-[580px]">
 
-    <img src="/assets/img/education/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall 1.png"
-         class="w-full h-[450px] object-cover"
-         alt="">
+<!-- OUR TOP DOCTORS -->
+<section
+  class="relative py-28 overflow-hidden bg-[#FFEFF0]
+        ">
 
-    <div class="py-4">
-      <h6 class="text-center font-semibold">
-        Ruchita Ghoshpal
-      </h6>
+  <!-- Pink Glow Circle -->
+  <div
+    class="absolute bottom-[-180px] left-1/2 -translate-x-1/2
+           w-[520px] h-[520px]
+           bg-[#FF7E7E]/70 blur-3xl rounded-full">
+  </div>
+
+
+  <div class="relative z-10  text-center  max-w-7xl mx-auto  w-[90%] lg:w-[90%]">
+
+   
+
+
+<div class="grid md:grid-cols-3 gap-14 items-end">
+
+
+ 
+<div class="flex justify-center ">
+
+    <div
+      class="group w-[330px]
+             bg-white rounded-[32px]
+             shadow-2xl overflow-hidden
+             transition-all duration-500 ease-in-out
+             hover:scale-110 hover:-translate-y-6
+             hover:shadow-3xl hover:z-20">
+
+      <img
+        src="/assets/img/education/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall 1.png"
+        class="w-full h-[430px] object-cover
+               transition duration-500 group-hover:scale-105"
+        alt="">
+
+      <div
+        class="py-5 text-center border-t
+               font-bold text-lg">
+
+        Rasika Ghorpade
+
+      </div>
+
     </div>
 
   </div>
 
-  <!-- CARD -->
-  <div class="group bg-white rounded-2xl overflow-hidden shadow-lg 
-              transition-all duration-500 
-              h-[520px] hover:h-[580px]">
+  <!-- MIDDLE CARD (DEFAULT BIG) -->
+  <div class="flex justify-center ">
 
-    <img src="/assets/img/education/697078c6bd0682489206e2ce 1.png"
-         class="w-full h-[450px] object-cover"
-         alt="">
+    <div
+      class="group w-[330px]
+             bg-white rounded-[32px]
+             shadow-2xl overflow-hidden
+             transition-all duration-500 ease-in-out
+             hover:scale-110 hover:-translate-y-6
+             hover:shadow-3xl hover:z-20">
 
-    <div class="py-4">
-      <h6 class="text-center font-semibold">
-        Satysabrata Pal
-      </h6>
+      <img
+        src="/assets/img/education/697078c6bd0682489206e2ce 1.png"
+        class="w-full h-[430px] object-cover
+               transition duration-500 group-hover:scale-105"
+        alt="">
+
+      <div
+        class="py-5 text-center border-t
+               font-bold text-lg">
+
+        Satyabrata Pal
+
+      </div>
+
     </div>
 
   </div>
 
-  <!-- CARD -->
-  <div class="group bg-white rounded-2xl overflow-hidden shadow-lg 
-              transition-all duration-500 
-              h-[520px] hover:h-[580px]">
 
-    <img src="/assets/img/education/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall 1 (1).png"
-         class="w-full h-[450px] object-cover"
-         alt="">
+  
 
-    <div class="py-4">
-      <h6 class="text-center font-semibold">
-        Anaya Mukherjee
-      </h6>
+<div class="flex justify-center ">
+
+    <div
+      class="group w-[330px]
+             bg-white rounded-[32px]
+             shadow-2xl overflow-hidden
+             transition-all duration-500 ease-in-out
+             hover:scale-110 hover:-translate-y-6
+             hover:shadow-3xl hover:z-20">
+
+      <img
+        src="/assets/img/education/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall 1 (1).png"
+        class="w-full h-[430px] object-cover
+               transition duration-500 group-hover:scale-105"
+        alt="">
+
+      <div
+        class="py-5 text-center border-t
+               font-bold text-lg">
+
+        Kresha Kubhalwar
+
+      </div>
+
     </div>
 
   </div>
-
 </div>
 
+
+
+
+
   </div>
+
 </section>
+
 
 
 

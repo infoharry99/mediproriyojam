@@ -1,6 +1,6 @@
-<footer class="bg-[#D62828] text-white h-80 px-7 w-full">
+<footer class="bg-[#D62828] text-white py-12 w-full">
 
-  <div>
+  <div class="w-[90%] lg:w-[90%] max-w-7xl mx-auto">
 
     <div class="grid md:grid-cols-6 ">
 
