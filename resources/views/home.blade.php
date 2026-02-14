@@ -483,7 +483,7 @@
 
 
 
-<section class="z-0 py-20 bg-transparent">
+<section class="z-0 py-20  bg-[#FFF5F6]">
 
   <div class="max-w-6xl mx-auto px-3">
 
@@ -621,12 +621,12 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
 
 </section>
 
-<section class="bg-[#F6EAEA]">
+<section class="bg-[#FFF5F6]">
 
   <div class="max-w-6xl mx-auto px-6 text-center">
 
     <!-- Title -->
-    <h1 class="text-3xl font-medium">
+    <h1 class="text-3xl font-medium  mb-8">
       Our Student Feedback
     </h1>
 
@@ -757,7 +757,7 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
 </section>
 
 
-<section class="py-20">
+<section class="py-20 bg-[#FFF5F6]">
 
 <div class="flex justify-center">
   <h1 class="border rounded-full py-2 px-4 text-lg font-medium border-black">Blog</h1>
@@ -889,76 +889,148 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
 
 </section>
 
-<div class="flex justify-center">
+
+
+<section class="py-20 bg-[#FFF5F6] ">
+<div class="flex justify-center mb-10">
   <h3 class="py-2 px-4 font-medium text-lg border border-black rounded-full">Enquiry form with lead</h3>
 </div>
-
-<section class="py-20">
-
-  <div class="max-w-6xl mx-auto px-6">
+  <div class="max-w-7xl mx-auto w-[90%] lg:w-[90%]">
 
     <div class="grid md:grid-cols-2 gap-10 items-center">
 
       <!-- LEFT: FORM CARD -->
-      <div class="bg-white rounded-2xl h-full shadow-md p-8">
+     <div class="bg-white rounded-2xl h-full shadow-md p-8">
 
-        <h1 class="text-4xl font-bold text-red-600 mb-6">
-          Admission Enquiry Form
-        </h1>
+  <!-- Title -->
+  <h1 class="text-3xl font-bold text-red-600 mb-8">
+    Admission Enquiry Form
+  </h1>
 
-        <form class="space-y-4">
 
-          <!-- Full Name -->
-          <div>
-            <label class="text-sm text-gray-600">Full Name</label>
-            <div class="grid grid-cols-2 gap-3 mt-1">
-              <input type="text" placeholder="First"
-                     class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400">
-              <input type="text" placeholder="Last"
-                     class="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400">
-            </div>
-          </div>
+  <form class="space-y-5">
 
-          <!-- Phone -->
-          <div>
-            <label class="text-sm text-gray-600">Phone no</label>
-            <input type="text" placeholder="Phone number"
-                   class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400">
-          </div>
+    <!-- Full Name -->
+    <div>
+      <label class="block text-sm text-gray-600 mb-1">
+        Full Name
+      </label>
 
-          <!-- Course -->
-          <div>
-            <label class="text-sm text-gray-600">Course name</label>
-            <select class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400">
-              <option>Choose course</option>
-              <option>NEET</option>
-              <option>Medical</option>
-            </select>
-          </div>
+      <div class="grid grid-cols-2 gap-4">
 
-          <!-- City -->
-          <div>
-            <label class="text-sm text-gray-600">City</label>
-            <input type="text"
-                   class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400">
-          </div>
+        <input
+          type="text"
+          placeholder="First"
+          class="w-full border border-gray-300 rounded-md
+                 px-3 py-2.5 text-sm
+                 focus:outline-none focus:ring-2 focus:ring-red-400">
 
-          <!-- Query -->
-          <div>
-            <label class="text-sm text-gray-600">Query</label>
-            <textarea rows="3"
-                      class="w-full mt-1 border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-red-400"></textarea>
-          </div>
-
-          <!-- Submit -->
-          <button type="submit"
-                  class="bg-red-600 text-white px-6 py-2 rounded-md text-sm hover:bg-red-700 transition">
-            Submit
-          </button>
-
-        </form>
+        <input
+          type="text"
+          placeholder="Last"
+          class="w-full border border-gray-300 rounded-md
+                 px-3 py-2.5 text-sm
+                 focus:outline-none focus:ring-2 focus:ring-red-400">
 
       </div>
+    </div>
+
+
+    <!-- Phone -->
+    <div>
+      <label class="block text-sm text-gray-600 mb-1">
+        Phone number
+      </label>
+
+      <input
+        type="text"
+        placeholder="Phone number"
+        class="w-full border border-gray-300 rounded-md
+               px-3 py-2.5 text-sm
+               focus:outline-none focus:ring-2 focus:ring-red-400">
+    </div>
+
+
+    <!-- Course -->
+    <div>
+      <label class="block text-sm text-gray-600 mb-1">
+        Choose course
+      </label>
+
+      <select
+        class="w-full border border-gray-300 rounded-md
+               px-3 py-2.5 text-sm bg-white
+               focus:outline-none focus:ring-2 focus:ring-red-400">
+
+        <option>Choose course</option>
+        <option>NEET</option>
+        <option>Medical</option>
+
+      </select>
+    </div>
+
+
+    <!-- City -->
+    <div>
+      <label class="block text-sm text-gray-600 mb-1">
+        City
+      </label>
+
+      <input
+        type="text"
+        placeholder="City"
+        class="w-full border border-gray-300 rounded-md
+               px-3 py-2.5 text-sm
+               focus:outline-none focus:ring-2 focus:ring-red-400">
+    </div>
+
+
+    <!-- Query -->
+    <div>
+      <label class="block text-sm text-gray-600 mb-1">
+        Query
+      </label>
+
+      <textarea
+        rows="4"
+        placeholder="Query"
+        class="w-full border border-gray-300 rounded-md
+               px-3 py-2.5 text-sm resize-none
+               focus:outline-none focus:ring-2 focus:ring-red-400"></textarea>
+    </div>
+
+
+    <!-- Submit -->
+    <div class="pt-2">
+
+      <button
+        type="submit"
+        class="inline-flex items-center gap-2
+               bg-red-600 text-white
+               px-6 py-2.5 rounded-md text-sm font-medium
+               hover:bg-red-700 transition">
+
+        Submit
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="w-4 h-4"
+             fill="none"
+             viewBox="0 0 24 24"
+             stroke="currentColor">
+          <path stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7" />
+        </svg>
+
+      </button>
+
+    </div>
+
+  </form>
+
+</div>
+
 
 
       <!-- RIGHT: IMAGE -->
@@ -974,7 +1046,7 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
 
 </section>
 
-<section class="py-20">
+<section class="py-20 bg-[#FFF5F6]">
 
 <div class="flex justify-center mb-28">
     <h1 class="px-4 py-2 border font-medium text-lg font-santoshi border-black rounded-full">Download our app</h1>
@@ -983,7 +1055,7 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
   <div class="max-w-7xl mx-auto   px-6 relative">
 
     <!-- Pink Rounded Container -->
-    <div class="bg-[#E8B7B7] rounded-3xl 
+    <div class="bg-[#FFCECE] rounded-3xl 
                 px-12 py-16 h-full
                 relative overflow-visible">
 
@@ -1023,26 +1095,26 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
 
 
     <!-- iPhone Floating Image -->
-    <div class="absolute 
+    <div class=" absolute 
                 right-0 
                 bottom-0
                 md:right-10">
 
       <img src="/assets/img/education/iphoneMask group (3).png"
-           class="h-full object-contain drop-shadow-2xl"
+           class="h-full max-w-7xl mx-auto w-[90%] lg:w-[90%] object-contain drop-shadow-2xl"
            alt="App Preview">
 
     </div>
 
   </div>
-
-</section>
-
-<div class="flex justify-center mb-10">
+<div class="flex justify-center mb-10 mt-20">
   <h4 class="py-2 px-4 font-medium text-lg border rounded-full border-black">Award and achievenment</h4>
 </div>
+</section>
 
-<section class="relative py-16 mb-16 overflow-hidden">
+
+
+<section class="relative py-10 mb-10 overflow-hidden bg-[#FFF5F6]">
 
   <!-- Background Image -->
   <div class="absolute inset-0">
@@ -1054,7 +1126,7 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
   <!-- Dark Overlay -->
   <div class="absolute inset-0"></div>
 
-  <div class="relative max-w-7xl mx-auto px-6">
+  <div class="relative max-w-7xl mx-auto w-[90%] lg:w-[90%]">
 
     <div class="grid grid-cols-2 md:grid-cols-5 gap-10 text-center">
 
