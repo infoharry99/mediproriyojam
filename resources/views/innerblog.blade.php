@@ -286,8 +286,272 @@
 
 </section>
 
+<!-- MATERIAL DESIGN SECTION -->
+<section class="py-20 bg-[#FFF5F6]">
+
+  <div class="max-w-7xl mx-auto w-[90%] lg:w-[90%] text-center">
 
 
+    <!-- Heading -->
+    <h2 class="text-2xl md:text-3xl font-semibold mb-4">
+      Material Design: Finding Balance
+    </h2>
+
+
+    <!-- Description -->
+    <p
+      class="max-w-3xl mx-auto text-gray-600 text-sm leading-relaxed mb-14">
+
+      Google’s Material Design emerged as a comprehensive design system that
+      combined the simplicity of flat design with subtle depth cues, creating
+      a more intuitive user experience while maintaining modern aesthetics.
+
+    </p>
+
+
+    <!-- Cards -->
+    <div class="grid md:grid-cols-3 gap-10 justify-center max-w-2xl mx-auto">
+
+
+      <!-- Card 1 -->
+      <div
+        class="bg-transparent border border-gray-300
+               rounded-xl p-6
+               shadow-sm">
+
+        <h3 class="text-red-500 font-semibold mb-3 text-sm">
+          Physical <br/> Properties
+        </h3>
+
+        <p class="text-gray-600 text-xs leading-relaxed">
+          Surfaces and edges <br/>provide meaningful<br/> interaction cues
+        </p>
+
+      </div>
+
+
+      <!-- Card 2 -->
+      <div
+        class="bg-transparent border border-gray-300
+               rounded-xl p-6
+               shadow-sm">
+
+        <h3 class="text-red-500 font-semibold mb-3 text-sm">
+          Bold<br/> Graphics
+        </h3>
+
+        <p class="text-gray-600 text-xs leading-relaxed">
+          Deliberate color choices<br/> and intentional white<br/> space
+        </p>
+
+      </div>
+
+
+      <!-- Card 3 -->
+      <div
+        class="bg-transparent border border-gray-300
+               rounded-xl p-6
+               shadow-sm">
+
+        <h3 class="text-red-500 font-semibold mb-3 text-sm">
+          Meaningful <br/>Motion
+        </h3>
+
+        <p class="text-gray-600 text-xs leading-relaxed">
+          Animation informs and<br/> reinforces user actions
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- COMMUNITY FEEDBACK -->
+<!-- COMMUNITY FEEDBACK -->
+<section
+  class="py-24
+         bg-[#FFF5F6]
+         overflow-hidden">
+
+  <div class="max-w-7xl mx-auto w-[90%]">
+
+
+    <!-- Heading -->
+    <h2 class="text-xl font-semibold text-center mb-10">
+      Community Feedback
+    </h2>
+
+
+    <!-- Slider Wrapper -->
+    <div class="relative">
+
+
+      <!-- Cards Row -->
+      <div
+        id="feedbackSlider"
+        class="flex gap-6 overflow-x-auto
+               scroll-smooth
+               pb-6 px-2
+               scrollbar-hide">
+
+
+        <!-- CARD 1 -->
+        <div class="min-w-[220px] bg-gradient-to-b from-[#FFD7D7] to-[#FFF5F6]
+                    rounded-xl p-6 shadow">
+
+          <div class="text-4xl font-bold mb-3">“</div>
+
+          <p class="text-xs text-gray-700 leading-relaxed">
+            Working with you guys was an absolute pleasure. Keep up the great work.
+          </p>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+        <div class="min-w-[220px] bg-gradient-to-b from-[#FFD7D7] to-[#FFF5F6]
+                    rounded-xl p-6 shadow">
+
+          <div class="text-4xl font-bold mb-3">“</div>
+
+          <p class="text-xs text-gray-700 leading-relaxed">
+            It was awesome! Just what we needed as a team and startup.
+          </p>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+        <div class="min-w-[220px] bg-gradient-to-b from-[#FFD7D7] to-[#FFF5F6]
+                    rounded-xl p-6 shadow">
+
+          <div class="text-4xl font-bold mb-3">“</div>
+
+          <p class="text-xs text-gray-700 leading-relaxed">
+            Somebody who can move fast along with us and iterate quickly.
+          </p>
+
+        </div>
+
+
+        <!-- CARD 4 -->
+        <div class="min-w-[220px] bg-gradient-to-b from-[#FFD7D7] to-[#FFF5F6]
+                    rounded-xl p-6 shadow">
+
+          <div class="text-4xl font-bold mb-3">“</div>
+
+          <p class="text-xs text-gray-700 leading-relaxed">
+            The utility team is very responsive and creative.
+          </p>
+
+        </div>
+
+
+        <!-- CARD 5 -->
+        <div class="min-w-[220px] bg-gradient-to-b from-[#FFD7D7] to-[#FFF5F6]
+                    rounded-xl p-6 shadow">
+
+          <div class="text-4xl font-bold mb-3">“</div>
+
+          <p class="text-xs text-gray-700 leading-relaxed">
+            Excellent support and timely delivery.
+          </p>
+
+        </div>
+
+
+        <!-- CARD 6 -->
+        <div class="min-w-[220px] bg-gradient-to-b from-[#FFD7D7] to-[#FFF5F6]
+                    rounded-xl p-6 shadow">
+
+          <div class="text-4xl font-bold mb-3">“</div>
+
+          <p class="text-xs text-gray-700 leading-relaxed">
+            Highly recommended for any startup and business.
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <!-- LEFT BUTTON -->
+      <button
+        onclick="slideLeft()"
+        class="absolute -bottom-12 left-[45%]
+               w-10 h-10 rounded-full
+               border border-gray-400
+               flex items-center justify-center
+               bg-white hover:bg-gray-100
+               transition">
+
+        ‹
+
+      </button>
+
+
+      <!-- RIGHT BUTTON -->
+      <button
+        onclick="slideRight()"
+        class="absolute -bottom-12 left-[55%]
+               w-10 h-10 rounded-full
+               border border-gray-400
+               flex items-center justify-center
+               bg-white hover:bg-gray-100
+               transition">
+
+        ›
+
+      </button>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SLIDER SCRIPT -->
+<script>
+  const slider = document.getElementById("feedbackSlider");
+
+  function slideLeft() {
+    slider.scrollBy({
+      left: -280,
+      behavior: "smooth"
+    });
+  }
+
+  function slideRight() {
+    slider.scrollBy({
+      left: 280,
+      behavior: "smooth"
+    });
+  }
+</script>
+
+
+<style>
+  /* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+
+</style>
 
   </main>
 
