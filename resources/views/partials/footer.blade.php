@@ -58,7 +58,7 @@
     <img src="{{ asset('assets/icons/footerFrame 1.png') }}"
          class="w-5 h-5 mt-1"
          alt="Phone">
-    <p>+91 7878XXXXXX</p>
+    <p>+91 8669667300</p>
   </div>
 
   <!-- Email -->
