@@ -43,9 +43,9 @@
                    transition duration-300
                    flex items-center justify-center">
 
-            <span class="text-white text-sm font-semibold tracking-wide">
+            <!-- <span class="text-white text-sm font-semibold tracking-wide">
               View Image
-            </span>
+            </span> -->
 
           </div>
 
