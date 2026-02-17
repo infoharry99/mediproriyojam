@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Tourfy Brandise Register</title>
+<title>Medical Prayojnam Register</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -123,10 +123,10 @@
 
         <!-- LEFT -->
         <div class="col-lg-6 col-md-6 col-12 auth-left d-flex flex-column justify-content-center text-center">
-            <small class="fw-bold">Tourfy Brandise</small>
+            <small class="fw-bold">Medical Prayojnam</small>
             <h1 class="mt-4">CREATE ACCOUNT</h1>
             <p>
-                Join Tourfy Brandise today.  
+                Join Medical Prayojnam today.  
                 Create your account and start managing your experience with us.
             </p>
         </div>

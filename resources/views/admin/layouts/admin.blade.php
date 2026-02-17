@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!-- ✅ BASIC SEO -->
-<title>Tourfy Brandise LLP - Best Marketing and Branding Agency in India</title>
+<title>Medical Prayojnam - Best Marketing and Branding Agency in India</title>
 
-<meta name="title" content="Tourfy Brandise LLP - Best Marketing and Branding Agency in India">
-<meta name="description" content="Tourfy Brandise LLP is a results-driven marketing and branding agency helping businesses grow through strategy, creativity, and performance-focused digital marketing.">
-<meta name="keywords" content="marketing agency india, branding agency delhi, digital marketing company, Tourfy Brandise">
-<meta name="author" content="Tourfy Brandise LLP">
+<meta name="title" content="Medical Prayojnam - Best Marketing and Branding Agency in India">
+<meta name="description" content="Medical Prayojnam is a results-driven marketing and branding agency helping businesses grow through strategy, creativity, and performance-focused digital marketing.">
+<meta name="keywords" content="marketing agency india, branding agency delhi, digital marketing company, Medical Prayojnam">
+<meta name="author" content="Medical Prayojnam">
 
 <!-- ✅ MOBILE -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,14 +17,14 @@
 <!-- ✅ OPEN GRAPH (Facebook / LinkedIn / WhatsApp) -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.tourfybrandise.com/">
-<meta property="og:title" content="Tourfy Brandise LLP - Marketing & Branding Agency">
+<meta property="og:title" content="Medical Prayojnam - Marketing & Branding Agency">
 <meta property="og:description" content="Results-driven marketing and branding agency helping businesses grow.">
 <meta property="og:image" content="https://www.tourfybrandise.com/logo.png">
-<meta property="og:site_name" content="Tourfy Brandise LLP">
+<meta property="og:site_name" content="Medical Prayojnam">
 
 <!-- ✅ TWITTER -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tourfy Brandise LLP">
+<meta name="twitter:title" content="Medical Prayojnam">
 <meta name="twitter:description" content="Marketing and Branding Agency in India">
 <meta name="twitter:image" content="https://www.tourfybrandise.com/logo.png">
 
@@ -40,7 +40,7 @@
 <link rel="apple-touch-icon" href="http://tourfybrandise.infoharry.in/tb.jpeg">
 
 <!-- Open Graph (WhatsApp, Facebook, LinkedIn) -->
-<meta property="og:title" content="Tourfy Brandise LLP">
+<meta property="og:title" content="Medical Prayojnam">
 <meta property="og:description" content="Branding Agency & Digital Solutions">
 <meta property="og:image" content="http://tourfybrandise.infoharry.in/tb.jpeg">
 <meta property="og:image:width" content="1200">
@@ -50,15 +50,15 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Tourfy Brandise LLP">
+<meta name="twitter:title" content="Medical Prayojnam">
 <meta name="twitter:description" content="Travel, Branding & Digital Solutions">
 <meta name="twitter:image" content="http://tourfybrandise.infoharry.in/tb.jpeg">
 
 
-<meta name="description" content="Tourfy Brandise LLP is a marketing and branding company helping businesses grow.">
+<meta name="description" content="Medical Prayojnam is a marketing and branding company helping businesses grow.">
 
-<meta property="og:site_name" content="Tourfy Brandise LLP">
-<meta property="og:title" content="Tourfy Brandise LLP">
+<meta property="og:site_name" content="Medical Prayojnam">
+<meta property="og:title" content="Medical Prayojnam">
 <meta property="og:description" content="Marketing and Branding Services">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -80,7 +80,7 @@
         :root {
             --sidebar-width: 240px;
             --sidebar-collapsed-width: 70px;
-            --primary-color: #3b82f6;
+            --primary-color: #CF242A;
             --primary-hover: #2563eb;
             --bg-dark: #111827;
             --bg-darker: #0d1117;
@@ -957,7 +957,8 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
             </div> --}}
-            <span class="brand-name">Tourfy Brandise</span>
+            {{-- <span class="brand-name">Medical Prayojnam</span> --}}
+            <img src="{{asset('assets/img/education/footerlogo.png')}}" alt="" style="width:100%; height:40px;">
             <button class="collapse-btn" onclick="toggleSidebar()">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
@@ -1042,7 +1043,7 @@
                     <span class="nav-text">Courses</span>
                 </a>
             </div>
-            <div class="nav-item">
+            {{-- <div class="nav-item">
                 <a href="{{ route('admin.top.rankers.index') }}" class="nav-link {{ Request::is('admin/top-rankers*') ? 'active' : '' }}" >
                     <span class="nav-icon">
                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1077,7 +1078,7 @@
                     </span>
                     <span class="nav-text">Feedback Videos</span>
                 </a>
-            </div>
+            </div> --}}
 
             <div class="nav-item">
                 <a href="{{ route('admin.blogs.index') }}" class="nav-link {{ Request::is('admin/blogs*') ? 'active' : '' }}" >
@@ -1090,7 +1091,7 @@
                     <span class="nav-text">Blogs</span>
                 </a>
             </div>
-             <div class="nav-item">
+             {{-- <div class="nav-item">
                 <a href="{{ route('admin.admission.enquiries.index') }}" class="nav-link {{ Request::is('admin/admission-enquiries*') ? 'active' : '' }}" >
                     <span class="nav-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1123,9 +1124,9 @@
                     </span>
                     <span class="nav-text">Achievements</span>
                 </a>
-            </div>
+            </div> --}}
 
-            <div class="nav-item">
+            {{-- <div class="nav-item">
                 <a href="{{ route('admin.course.highlights.index') }}" class="nav-link {{ Request::is('admin/course-highlights*') ? 'active' : '' }}" >
                     <span class="nav-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1135,7 +1136,7 @@
                     </span>
                     <span class="nav-text">Courses Highlights</span>
                 </a>
-            </div>
+            </div> --}}
             <div class="nav-item">
                 <a href="{{ route('admin.course.description.index') }}" class="nav-link {{ Request::is('admin/course-description*') ? 'active' : '' }}" >
                     <span class="nav-icon">
@@ -1147,7 +1148,7 @@
                     <span class="nav-text">Courses Description</span>
                 </a>
             </div>
-            <div class="nav-item">
+            {{-- <div class="nav-item">
                 <a href="{{ route('admin.test.types.index') }}" class="nav-link {{ Request::is('admin/test-types*') ? 'active' : '' }}" >
                     <span class="nav-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1157,7 +1158,7 @@
                     </span>
                     <span class="nav-text">Test Types</span>
                 </a>
-            </div>
+            </div> --}}
             {{-- <div class="nav-item">
                 <a href="{{ route('admin.services.index') }}" class="nav-link {{ Request::is('admin/services*') ? 'active' : '' }}" >
                     <span class="nav-icon">

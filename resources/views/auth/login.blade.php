@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Tourfy Brandise Login</title>
+<title>Login</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -11,7 +11,7 @@
 
 <style>
     body{
-        background:#ef65037c;
+        background:transparent;
         min-height:100vh;
         display:flex;
         align-items:center;
@@ -31,7 +31,7 @@
 
     /* LEFT PANEL */
     .login-left{
-        background:linear-gradient(135deg,#ef6603,#fc8733);
+        background:linear-gradient(135deg,#CF242A,#ab050b);
         color:#fff;
         padding:50px;
         position:relative;
@@ -67,7 +67,7 @@
 
     .login-right h4{
         font-weight:700;
-        color:#ef6603;
+        color:#CF242A;
     }
 
     .form-control{
@@ -79,12 +79,12 @@
 
     .form-control:focus{
         box-shadow:none;
-        border:2px solid #ef6603;
+        border:2px solid #CF242A;
         background:#fff;
     }
 
     .login-btn{
-        background:#ef6603;
+        background:#CF242A;
         border:none;
         padding:14px;
         width:100%;
@@ -124,7 +124,7 @@
 
         <!-- LEFT -->
         <div class="col-lg-6 col-md-6 col-12 login-left d-flex flex-column justify-content-center text-center">
-            <small class="fw-bold">Tourfy Brandise</small>
+            {{-- <small class="fw-bold">Medical Prayojnam</small> --}}
             <h1 class="mt-4">WELCOME BACK</h1>
             <p>Nice to see you again!  
             Enter your credentials to access your account and continue your journey with us.</p>
