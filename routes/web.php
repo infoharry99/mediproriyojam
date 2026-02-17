@@ -31,6 +31,33 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+Route::get('/blog', function () {
+    return view('blog');
+});
+Route::get('/course', function () {
+    return view('course');
+});
+Route::get('/target', function () {
+    return view('target');
+});
+Route::get('/foundation', function () {
+    return view('foundation');
+});
+Route::get('/innerblog', function () {
+    return view('innerblog');
+});
+Route::get('/contact', function () {
+    return view('contact');
+});
+Route::get('/login', function () {
+    return view('login');
+});
+Route::get('/register', function () {
+    return view('register');
+});
+Route::get('/profile', function () {
+    return view('profile');
+});
 
 Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
 Route::post('/register', [AuthController::class, 'register'])->name('register.store');

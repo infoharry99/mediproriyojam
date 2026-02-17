@@ -20,10 +20,9 @@
         class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-700">
 
         <a href="/" class="hover:text-red-500 transition">Home</a>
-        <a href="/about" class="hover:text-red-500 transition">About</a>
-        <a href="/foundationcourse" class="hover:text-red-500 transition">Courses</a>
-        <a href="/instructors" class="hover:text-red-500 transition">Instructors</a>
-        <a href="/pricing" class="hover:text-red-500 transition">Pricing</a>
+        <a href="/foundation" class="hover:text-red-500 transition">About</a>
+        <a href="/target" class="hover:text-red-500 transition">Announcement</a>
+        <a href="/course" class="hover:text-red-500 transition">Courses</a>
         <a href="/blog" class="hover:text-red-500 transition">Blog</a>
         <a href="/contact" class="hover:text-red-500 transition">Contact</a>
 

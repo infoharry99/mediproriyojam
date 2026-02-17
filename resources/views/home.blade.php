@@ -162,7 +162,7 @@
           <h3
             class="text-lg font-semibold text-gray-800 mb-5 leading-snug">
 
-            Foundation course – 11th+12th
+            Foundation course – <br/>11th+12th
           </h3>
 
 
@@ -171,7 +171,7 @@
 
             <div class="flex items-center gap-2">
               <img
-                src="/assets/img/education/course_author001.png"
+                src="/assets/img/education/Rectangle 729 (2).png"
                 class="w-8 h-8 rounded-full object-cover"
                 alt="">
               <span class="text-sm text-gray-600">Mohit Roa</span>
@@ -192,15 +192,15 @@
             class="flex justify-between text-sm text-gray-600">
 
             <div class="flex items-center gap-1">
-              📘 <span>05</span>
+              <img src="/assets/icons/List → Item.png" alt=""> <span>05</span>
             </div>
 
             <div class="flex items-center gap-1">
-              ⏱ <span>11h 20m</span>
+           <img src="/assets/icons/clock.png" alt="">  <span>11h 20m</span>
             </div>
 
             <div class="flex items-center gap-1">
-              🎓 <span>22</span>
+             <img src="/assets/icons/Vector.png" alt=""> <span>22</span>
             </div>
 
           </div>
@@ -239,14 +239,14 @@
           </div>
 
           <h3 class="text-lg font-semibold text-gray-800 mb-5">
-            Countdown course – 12th
+            Countdown course – <br/> 12th
           </h3>
 
           <div class="flex justify-between items-center mb-5">
 
             <div class="flex items-center gap-2">
               <img
-                src="/assets/img/education/course_author002.png"
+                src="/assets/img/education/Rectangle 729 (2).png"
                 class="w-8 h-8 rounded-full object-cover"
                 alt="">
               <span class="text-sm text-gray-600">Kriti Mishra</span>
@@ -260,11 +260,20 @@
 
           <hr class="mb-4">
 
-          <div class="flex justify-between text-sm text-gray-600">
+           <div
+            class="flex justify-between text-sm text-gray-600">
 
-            <div>📘 60</div>
-            <div>⏱ 70h 45m</div>
-            <div>🎓 202</div>
+            <div class="flex items-center gap-1">
+              <img src="/assets/icons/List → Item.png" alt=""> <span>05</span>
+            </div>
+
+            <div class="flex items-center gap-1">
+           <img src="/assets/icons/clock.png" alt="">  <span>11h 20m</span>
+            </div>
+
+            <div class="flex items-center gap-1">
+             <img src="/assets/icons/Vector.png" alt=""> <span>22</span>
+            </div>
 
           </div>
 
@@ -307,7 +316,7 @@
 
             <div class="flex items-center gap-2">
               <img
-                src="/assets/img/education/course_author003.png"
+                src="/assets/img/education/Rectangle 729 (2).png"
                 class="w-8 h-8 rounded-full object-cover"
                 alt="">
               <span class="text-sm text-gray-600">Rohit</span>
@@ -321,11 +330,20 @@
 
           <hr class="mb-4">
 
-          <div class="flex justify-between text-sm text-gray-600">
+           <div
+            class="flex justify-between text-sm text-gray-600">
 
-            <div>📘 08</div>
-            <div>⏱ 18h 20m</div>
-            <div>🎓 66</div>
+            <div class="flex items-center gap-1">
+              <img src="/assets/icons/List → Item.png" alt=""> <span>05</span>
+            </div>
+
+            <div class="flex items-center gap-1">
+           <img src="/assets/icons/clock.png" alt="">  <span>11h 20m</span>
+            </div>
+
+            <div class="flex items-center gap-1">
+             <img src="/assets/icons/Vector.png" alt=""> <span>22</span>
+            </div>
 
           </div>
 
@@ -352,7 +370,7 @@
     </div>
 
   </div>
-<div class="mb-10 mt-10  flex justify-center">
+<div class=" mt-10  flex justify-center">
       <h1 class="text-lg py-2 px-4 font-medium border rounded-full border-black shadow-sm">
         Our Top Doctors
       </h1>
@@ -481,30 +499,52 @@
 </section>
 
 
+<section class="relative py-24 bg-[#FFF5F6] overflow-hidden">
+
+  <!-- Top Pink Curve -->
+  <div
+    class="absolute -top-80 left-1/2 -translate-x-1/2
+           w-[450px] h-[450px]
+           bg-[#FF7E7E] rounded-full">
+  </div>
 
 
-<section class="z-0 py-20  bg-[#FFF5F6]">
+  <div class="relative max-w-7xl mx-auto w-[90%] lg:w-[90%] -mt-10">
 
-  <div class="max-w-6xl mx-auto px-3">
 
-    <!-- Section Title -->
-    <div class="text-center mb-14">
-      <h2 class="text-3xl font-medium">Testimonials</h2>
-      <p class="text-gray-600 mt-2">
-        Don’t take our word for it. Trust our students
-      </p>
+    <!-- Badge -->
+    <div class="flex justify-center mb-6">
+      <span
+        class="px-5 py-1.5 text-sm border border-black text-black rounded-full bg-transparent">
+        Testimonial
+      </span>
     </div>
 
+
+    <!-- Title -->
+    <div class="text-center mb-16 mt-20">
+
+      <h2 class="text-3xl font-semibold mb-2">
+        Testimonial
+      </h2>
+
+      <p class="text-gray-600 text-sm">
+        Don’t take our word for it. Trust our students
+      </p>
+
+    </div>
+
+
     <!-- Cards -->
-    <div class="grid md:grid-cols-3 gap-8">
+   <div class="grid md:grid-cols-3 gap-8">
 
       <!-- Card 1 -->
-      <div class="bg-white p-6 rounded-xl shadow-md">
+      <div class="bg-white p-6  shadow-md">
 
         <div class="flex items-start justify-between mb-4">
           <div class=" gap-3">
             <img src="/assets/img/education/Rectangle 729.png"
-                 class="w-10 h-10 object-cover"
+                 class="w-15 h-15 object-cover"
                  alt="">
             <div>
               <h4 class="font-semibold mt-2">Floyd Miles</h4>
@@ -518,19 +558,19 @@
 
         <p class="text-gray-600 text-sm font-normal leading-relaxed">
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.<br/>
-Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim...
+          Exercitation veniam consequat sunt nostrud amet.
         </p>
 
       </div>
 
 
       <!-- Card 2 -->
-      <div class="bg-white p-6 rounded-xl shadow-md">
+      <div class="bg-white p-6  shadow-md">
 
         <div class="flex items-start justify-between mb-4">
           <div class="gap-3">
             <img src="/assets/img/education/Rectangle 729 (1).png"
-                 class="w-10 h-10 object-cover"
+                 class="w-15 h-15 object-cover"
                  alt="">
             <div>
               <h4 class="font-semibold mt-2">Ronald Richards</h4>
@@ -550,12 +590,12 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
 
 
       <!-- Card 3 -->
-      <div class="bg-white p-6 rounded-xl shadow-md">
+      <div class="bg-white p-6  shadow-md">
 
         <div class="flex items-start justify-between mb-4">
           <div class="gap-3">
             <img src="/assets/img/education/Rectangle 729 (2).png"
-                 class="w-10 h-10 object-cover"
+                 class="w-15 h-15 object-cover"
                  alt="">
             <div>
               <h4 class="font-semibold mt-2">Savannah Nguyen</h4>
@@ -569,7 +609,7 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
 
         <p class="text-gray-600 text-sm leading-relaxed">
           Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.<br/>
-          Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim...
+          Exercitation veniam consequat sunt nostrud amet.
         </p>
         <p></p>
 
@@ -577,11 +617,12 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
 
     </div>
 
-<!-- Pagination -->
+
+   <!-- Pagination -->
 <div class="relative flex justify-center mt-10">
 
   <!-- Gradient Background Strip -->
-  <div class="absolute inset-0  mx-56
+  <div class="absolute inset-0  mx-80
               bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,#CF242A_49.52%,rgba(255,255,255,0)_100%)]
               opacity-60 
               rounded-full">
@@ -591,7 +632,11 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
   <div class="relative flex items-center gap-3 
               px-6 py-2 
               rounded-full">
-
+<button class="w-10 h-10 flex items-center justify-center 
+                  
+                   rounded-sm text-xs">
+      <
+    </button>
     <button class="w-7 h-7 flex items-center justify-center 
                    bg-white 
                    rounded-sm text-xs">
@@ -612,6 +657,11 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
                    bg-white border-2 rounded-sm shadow text-xs">
       4
     </button>
+    <button class="w-10 h-10 flex items-center justify-center 
+                    
+                   rounded-sm text-xs">
+      >
+    </button>
 
   </div>
 
@@ -619,11 +669,17 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
 
   </div>
 
+
+  </div>
+
 </section>
+
+
+
 
 <section class="bg-[#FFF5F6]">
 
-  <div class="max-w-6xl mx-auto px-6 text-center">
+  <div class="max-w-7xl mx-auto w-[90%] lg:w-[90%] text-center">
 
     <!-- Title -->
     <h1 class="text-3xl font-medium  mb-8">
@@ -633,7 +689,7 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
     <!-- Video Cards -->
     <div class="grid md:grid-cols-3 mt-14 gap-8">
 
-<div class="relative rounded-2xl overflow-hidden shadow-lg group">
+<div class="relative rounded-[30px] overflow-hidden shadow-lg group">
 
   <!-- Full Image -->
   <img src="/assets/img/education/image 3youtube.png"
@@ -668,7 +724,7 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
 </div>
 
 
-<div class="relative rounded-2xl overflow-hidden shadow-lg group">
+<div class="relative rounded-[30px] overflow-hidden shadow-lg group">
 
   <!-- Full Image -->
   <img src="/assets/img/education/image 3youtube.png"
@@ -704,7 +760,7 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
 
 
       <!-- Duplicate for 3rd -->
-<div class="relative rounded-2xl overflow-hidden shadow-lg group">
+<div class="relative rounded-[30px] overflow-hidden shadow-lg group">
 
   <!-- Full Image -->
   <img src="/assets/img/education/image 3youtube.png"
@@ -763,11 +819,11 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
   <h1 class="border rounded-full py-2 px-4 text-lg font-medium border-black">Blog</h1>
 </div>
 
-  <div class="max-w-7xl mx-auto px-6">
+  <div class="max-w-7xl mx-auto  w-[90%] lg:w-[90%]">
 
     <!-- Section Title -->
     <div class="mb-12">
-      <h2 class="text-3xl font-bold text-gray-900">
+      <h2 class="text-3xl font-semibold text-gray-900">
         Latest Post
       </h2>
     </div>
@@ -776,17 +832,17 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
     <div class="grid md:grid-cols-3 gap-8">
 
       <!-- Card -->
-      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <div class="bg-white p-5 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
 
         <!-- Image -->
         <img src="/assets/img/education/course_thumb03.jpg.png"
-             class="w-full h-72 object-cover"
+             class="w-full h-72 object-cover rounded-lg"
              alt="Blog">
 
-        <div class="p-6">
+        <div class="mt-6 ">
 
           <!-- Category -->
-          <span class="text-sm bg-blue-100 text-blue-600 px-3 py-1 rounded-md">
+          <span class="text-sm bg-[#F6F8FF] text-blue-600 px-3 py-1 rounded-md">
             Medical
           </span>
 
@@ -802,8 +858,8 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
                  class="w-9 h-9 rounded-full object-cover"
                  alt="Author">
 
-            <div class="text-sm text-gray-600">
-              <span class="font-medium text-gray-800">Tracey Wilson</span>
+            <div class="text-sm text-[#97989F]">
+              <span class="font-medium text-[#97989F]">Tracey Wilson</span>
               <span class="mx-2">•</span>
               August 20, 2022
             </div>
@@ -815,15 +871,15 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
 
 
       <!-- Card 2 -->
-      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <div class="bg-white p-5 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
 
         <img src="/assets/img/education/course_thumb02.jpg.png"
-             class="w-full h-72 object-cover"
+             class="w-full h-72 object-cover rounded-lg"
              alt="Blog">
 
-        <div class="p-6">
+        <div class="mt-6">
 
-          <span class="text-sm bg-blue-100 text-blue-600 px-3 py-1 rounded-md">
+          <span class="text-sm bg-[#F6F8FF] text-blue-600 px-3 py-1 rounded-md">
             Medical
           </span>
 
@@ -837,8 +893,8 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
                  class="w-9 h-9 rounded-full object-cover"
                  alt="Author">
 
-            <div class="text-sm text-gray-600">
-              <span class="font-medium text-gray-800">Jason Francisco</span>
+            <div class="text-sm text-[#97989F]">
+              <span class="font-medium text-[#97989F]">Jason Francisco</span>
               <span class="mx-2">•</span>
               August 20, 2022
             </div>
@@ -850,15 +906,15 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
 
 
       <!-- Card 3 -->
-      <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+      <div class="bg-white p-5 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
 
         <img src="/assets/img/education/Rectangle 38.png"
-             class="w-full h-72 object-cover"
+             class="w-full h-72 object-cover rounded-lg"
              alt="Blog">
 
-        <div class="p-6">
+        <div class="mt-6">
 
-          <span class="text-sm bg-blue-100 text-blue-600 px-3 py-1 rounded-md">
+          <span class="text-sm bg-[#F6F8FF] text-blue-600 px-3 py-1 rounded-md">
             Medical
           </span>
 
@@ -872,8 +928,8 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
                  class="w-9 h-9 rounded-full object-cover"
                  alt="Author">
 
-            <div class="text-sm text-gray-600">
-              <span class="font-medium text-gray-800">Elizabeth Slavin</span>
+            <div class="text-sm text-[#97989F]">
+              <span class="font-medium text-[#97989F]">Elizabeth Slavin</span>
               <span class="mx-2">•</span>
               August 20, 2022
             </div>
@@ -891,7 +947,7 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
 
 
 
-<section class="py-20 bg-[#FFF5F6] ">
+<section class="py-5 bg-[#FFF5F6] ">
 <div class="flex justify-center mb-10">
   <h3 class="py-2 px-4 font-medium text-lg border border-black rounded-full">Enquiry form with lead</h3>
 </div>
@@ -1052,7 +1108,7 @@ Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt 
     <h1 class="px-4 py-2 border font-medium text-lg font-santoshi border-black rounded-full">Download our app</h1>
 </div>
 
-  <div class="max-w-7xl mx-auto   px-6 relative">
+  <div class="max-w-7xl mx-auto w-[90%] lg:w-[90%]   relative">
 
     <!-- Pink Rounded Container -->
     <div class="bg-[#FFCECE] rounded-3xl 
