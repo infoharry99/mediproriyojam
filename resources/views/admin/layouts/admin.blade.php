@@ -1294,7 +1294,7 @@
         <div class="sidebar-footer">
             <div class="user-info">
                 <!-- Logout Form -->
-            <form method="POST" action="{{ route('logout') }}" class="logout-form">
+            <form method="POST" action="{{ route('admin.logout') }}" class="logout-form">
                 @csrf
                 <button type="submit" class=" btn btn-danger">
                     <i class="fa fa-sign-out-alt"></i>
