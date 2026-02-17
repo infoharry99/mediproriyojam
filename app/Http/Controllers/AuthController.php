@@ -32,7 +32,7 @@ class AuthController extends Controller
 
         // Auth::login($user);
 
-        return redirect('/login');
+        return redirect('/admin-login');
     }
 
 
@@ -67,6 +67,6 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/login');
+        return redirect('/admin-login');
     }
 }

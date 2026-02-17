@@ -136,7 +136,7 @@
             <h4>Register Account</h4>
             <p class="text-muted mb-4">Fill the details below to create your account</p>
 
-            <form method="POST" action="{{ route('register.store') }}">
+            <form method="POST" action="{{ route('admin.register.store') }}">
                 @csrf
 
                 <input type="text"
@@ -170,7 +170,7 @@
 
             <p class="text-center mt-4 mb-0">
                 Already have an account?
-                <a href="{{ route('login') }}" class="text-decoration-none fw-semibold " style="color: #ef6603;">
+                <a href="{{ route('admin.login') }}" class="text-decoration-none fw-semibold " style="color: #ef6603;">
                     Login
                 </a>
             </p>

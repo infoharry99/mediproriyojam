@@ -135,7 +135,7 @@
             <h4>Login Account</h4>
             <p class="text-muted mb-4">Enter your email and password to login</p>
 
-            <form method="POST" action="{{ route('login.check') }}">
+            <form method="POST" action="{{ route('admin.login.check') }}">
                 @csrf
                 <input type="email" name="email" class="form-control mb-3" placeholder="Email ID" required>
                 <input type="password" name="password" class="form-control mb-3" placeholder="Password" required>

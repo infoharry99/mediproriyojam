@@ -59,13 +59,13 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::get('/register', [AuthController::class, 'showRegister'])->name('register');
-Route::post('/register', [AuthController::class, 'register'])->name('register.store');
+Route::get('/admin-register', [AuthController::class, 'showRegister'])->name('admin.register');
+Route::post('/admin-register', [AuthController::class, 'register'])->name('admin.register.store');
 
-Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
-Route::post('/login', [AuthController::class, 'login'])->name('login.check');
+Route::get('/admin-login', [AuthController::class, 'showLogin'])->name('admin.login');
+Route::post('/admin-login', [AuthController::class, 'login'])->name('admin.login.check');
 
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::post('/admin-logout', [AuthController::class, 'logout'])->name('admin.logout');
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
 
