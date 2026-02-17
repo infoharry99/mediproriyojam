@@ -8,7 +8,7 @@
       <div class="col-span-2 leading-44">
 
         <img src="{{ asset('assets/img/education/footerlogo.png') }}"
-             class="h-36 w-40"
+             class="h-25 w-auto mb-4"
              alt="Logo">
 
         <p class="text-sm">
