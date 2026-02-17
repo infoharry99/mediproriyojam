@@ -9,10 +9,10 @@
     <div class="flex items-center justify-between h-20">
 
       <!-- Logo -->
-      <a href="/" class="flex items-center mt-8">
+      <a href="/" class="flex items-center">
         <img src="{{ asset('/assets/img/education/footerlogo.png') }}"
              alt="Logo"
-             class="h-32 w-42">
+             class="h-25 w-42">
       </a>
 
       <!-- Desktop Menu -->
