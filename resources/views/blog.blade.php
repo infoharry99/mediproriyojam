@@ -66,7 +66,7 @@
           </div>
 
           <h3 class="text-xl font-semibold leading-snug">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+           Studying Without a Proper Strategy
           </h3>
 
         </div>
@@ -112,7 +112,7 @@
           </div>
 
           <h3 class="text-lg font-semibold leading-snug">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+           Lack of NCERT Focus
           </h3>
 
         </div>
@@ -145,7 +145,7 @@
             </div>
 
             <h4 class="text-sm font-semibold leading-snug">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+             Poor Time Management During Preparation
             </h4>
 
           </div>
@@ -174,7 +174,7 @@
             </div>
 
             <h4 class="text-sm font-semibold leading-snug">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+               Ignoring Mock Tests and Performance Analysis
             </h4>
 
           </div>
@@ -203,7 +203,7 @@
             </div>
 
             <h4 class="text-sm font-semibold leading-snug">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+             Fear, Stress, and Lack of Mental Preparation
             </h4>
 
           </div>
@@ -283,7 +283,7 @@
     <h3
       class="text-lg font-semibold mb-4 leading-snug">
 
-      Dolorum optio tempore voluptas dignissimos
+       Comparing with Others Instead of Self-Improvement
 
     </h3>
 
@@ -359,7 +359,7 @@
     <h3
       class="text-lg font-semibold mb-4 leading-snug">
 
-      Dolorum optio tempore voluptas dignissimos
+      Overconfidence or Late Seriousness
 
     </h3>
 
@@ -435,7 +435,7 @@
     <h3
       class="text-lg font-semibold mb-4 leading-snug">
 
-      Dolorum optio tempore voluptas dignissimos
+      Not Understanding the Level of Competition
 
     </h3>
 
@@ -511,7 +511,7 @@
     <h3
       class="text-lg font-semibold mb-4 leading-snug">
 
-      Dolorum optio tempore voluptas dignissimos
+      Lack of Revision
 
     </h3>
 
@@ -587,7 +587,7 @@
     <h3
       class="text-lg font-semibold mb-4 leading-snug">
 
-      Dolorum optio tempore voluptas dignissimos
+      Wrong Study Environment
 
     </h3>
 
@@ -663,7 +663,7 @@
     <h3
       class="text-lg font-semibold mb-4 leading-snug">
 
-      Dolorum optio tempore voluptas dignissimos
+      How to Avoid Failure in NEET
 
     </h3>
 

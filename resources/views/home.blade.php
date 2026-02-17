@@ -7,13 +7,70 @@
  <main class="main">
 
     <!-- Courses Hero Section -->
-<section class="">
+<!-- <section class="">
   <img 
     src="/assets/img/education/medical 1herotop.png"
     alt="Hero Image"
     class="w-full h-full object-cover"
   />
+</section> -->
+
+<section class="relative">
+
+  <div class="swiper myHeroSlider">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <img src="/assets/icons/banners1.png"
+             class="w-full h-[100vh] " />
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <img src="/assets/icons/banners2.png"
+             class="w-full h-[100vh] " />
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img src="/assets/icons/banners3.png"
+             class="w-full h-[100vh] " />
+      </div>
+
+    </div>
+
+    <!-- Pagination Dots -->
+    <div class="swiper-pagination"></div>
+
+    <!-- Navigation Arrows -->
+    <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+
+  </div>
+
 </section>
+
+<script>
+  var swiper = new Swiper(".myHeroSlider", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    speed: 800,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
 
 
 <!-- ABOUT SECTION -->
