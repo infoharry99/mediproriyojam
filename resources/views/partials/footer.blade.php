@@ -41,7 +41,7 @@
       <div class="mt-8 text-left">
         <h4 class="font-bold text-lg mb-5">Service</h4>
         <ul class="space-y-5 font-normal text-sm">
-          <li>Shopify</li>
+          <!-- <li>Shopify</li> -->
           <li>WordPress</li>
           <li>UI/UX Design</li>
         </ul>
@@ -87,33 +87,61 @@
       <div class="text-left mt-8">
         <h4 class="font-bold text-lg mb-5">Social media</h4>
 
-        <div class="flex gap-4">
+        <!-- <div class="flex gap-4">
 
-          <a href="#">
+          <a href="https://www.facebook.com/MedicalPrayojanam/">
             <img src="{{ asset('/assets/icons/Group 85.svg') }}"
                  class="w-6 h-6 hover:scale-110 transition duration-300"
                  alt="Facebook">
           </a>
 
-          <a href="#">
+          <a href="https://x.com/NeetPrayojanam">
             <img src="{{ asset('/assets/icons/Group 86.svg') }}"
                  class="w-6 h-6 hover:scale-110 transition duration-300"
                  alt="Twitter">
           </a>
 
-          <a href="#">
+          <a href="https://www.youtube.com/@NEET_Prayojanam">
             <img src="{{ asset('/assets/icons/Group 87.svg') }}"
                  class="w-6 h-6 hover:scale-110 transition duration-300"
                  alt="LinkedIn">
           </a>
 
-          <a href="#">
+          <a href="/https://www.instagram.com/medicalprayojanam/">
             <img src="{{ asset('/assets/icons/Group 88.svg') }}"
                  class="w-6 h-6 hover:scale-110 transition duration-300"
                  alt="Instagram">
           </a>
 
-        </div>
+        </div> -->
+        <div class="flex gap-4">
+
+  <a href="https://www.facebook.com/MedicalPrayojanam/" target="_blank" rel="noopener noreferrer">
+    <img src="{{ asset('/assets/icons/Group 85.svg') }}"
+         class="w-6 h-6 hover:scale-110 transition duration-300"
+         alt="Facebook">
+  </a>
+
+  <a href="https://x.com/NeetPrayojanam" target="_blank" rel="noopener noreferrer">
+    <img src="{{ asset('/assets/icons/Group 86.svg') }}"
+         class="w-6 h-6 hover:scale-110 transition duration-300"
+         alt="Twitter">
+  </a>
+
+  <a href="https://www.youtube.com/@NEET_Prayojanam" target="_blank" rel="noopener noreferrer">
+    <img src="{{ asset('/assets/icons/Group 87.svg') }}"
+         class="w-6 h-6 hover:scale-110 transition duration-300"
+         alt="YouTube">
+  </a>
+
+  <a href="https://www.instagram.com/medicalprayojanam/" target="_blank" rel="noopener noreferrer">
+    <img src="{{ asset('/assets/icons/Group 88.svg') }}"
+         class="w-6 h-6 hover:scale-110 transition duration-300"
+         alt="Instagram">
+  </a>
+
+</div>
+
       </div>
 
     </div>

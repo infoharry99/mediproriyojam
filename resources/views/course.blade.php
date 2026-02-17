@@ -600,8 +600,8 @@
       <div class="flex flex-col items-center gap-2">
 
         <img
-          src="/assets/icons/calendar.jpeg"
-          class="w-7 h-7"
+          src="/assets/icons/Layer 2.png"
+          class="w-10 h-10"
           alt="">
 
         <p class="leading-tight">
@@ -615,8 +615,9 @@
       <div class="flex flex-col items-center gap-2">
 
         <img
-          src="/assets/icons/clipboard.jpeg"
-          class="w-7 h-7"
+          src="/assets/icons/Layer 3.png"
+                   class="w-10 h-10"
+
           alt="">
 
         <p>
@@ -629,8 +630,9 @@
       <div class="flex flex-col items-center gap-2">
 
         <img
-          src="/assets/icons/book.jpeg"
-          class="w-7 h-7"
+          src="/assets/icons/Layer 4.png"
+                    class="w-10 h-10"
+
           alt="">
 
         <p>
@@ -643,8 +645,9 @@
       <div class="flex flex-col items-center gap-2">
 
         <img
-          src="/assets/icons/refresh.jpeg"
-          class="w-7 h-7"
+          src="/assets/icons/Layer 5.png"
+                   class="w-10 h-10"
+
           alt="">
 
         <p>
@@ -657,8 +660,9 @@
       <div class="flex flex-col items-center gap-2">
 
         <img
-          src="/assets/icons/list.jpeg"
-          class="w-7 h-7"
+          src="/assets/icons/Layer 6.png"
+                    class="w-10 h-10"
+
           alt="">
 
         <p>
@@ -671,8 +675,9 @@
       <div class="flex flex-col items-center gap-2">
 
         <img
-          src="/assets/icons/trophy.jpeg"
-          class="w-7 h-7"
+          src="/assets/icons/Layer 7.png"
+                    class="w-10 h-10"
+
           alt="">
 
         <p>

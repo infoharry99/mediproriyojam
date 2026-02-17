@@ -43,3 +43,6 @@ Route::get('/register', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+Route::get('/gallery', function () {
+    return view('gallery');
+});

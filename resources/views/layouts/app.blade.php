@@ -29,6 +29,16 @@
   @yield('content')
 
   @include('partials.footer')
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/918669667300"
+   target="_blank"
+   class="fixed bottom-5 right-5 z-50 bg-green-500 p-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300">
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+       alt="WhatsApp"
+       class="w-8 h-8">
+
+</a>
 
 </body>
 </html>
