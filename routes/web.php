@@ -59,6 +59,10 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
+Route::get('/gallery', function () {
+    return view('gallery');
+});
+
 Route::get('/admin-register', [AuthController::class, 'showRegister'])->name('admin.register');
 Route::post('/admin-register', [AuthController::class, 'register'])->name('admin.register.store');
 

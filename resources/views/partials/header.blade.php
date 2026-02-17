@@ -23,6 +23,7 @@
         <a href="/foundation" class="hover:text-red-500 transition">About</a>
         <a href="/target" class="hover:text-red-500 transition">Announcement</a>
         <a href="/course" class="hover:text-red-500 transition">Courses</a>
+        <a href="/gallery" class="hover:text-red-500 transition">Gallery</a>
         <a href="/blog" class="hover:text-red-500 transition">Blog</a>
         <a href="/contact" class="hover:text-red-500 transition">Contact</a>
 
