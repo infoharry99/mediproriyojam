@@ -46,7 +46,8 @@
   </div>
 
 
-  <!-- MOBILE SLIDER -->
+
+
   <div class="swiper myMobileSlider block md:hidden">
     <div class="swiper-wrapper">
 
