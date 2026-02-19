@@ -15,6 +15,8 @@ use App\Http\Controllers\StudentFeedbackVideoController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\TestTypeController;
 use App\Http\Controllers\TopRankerController;
+use App\Http\Controllers\HomeController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,9 +30,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+
+Route::get('/', [HomeController::class, 'index']);
+
+
 Route::get('/blog', function () {
     return view('blog');
 });

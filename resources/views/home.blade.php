@@ -6,52 +6,69 @@
 
  <main class="main">
 
-    <!-- Courses Hero Section -->
-<!-- <section class="">
-  <img 
-    src="/assets/img/education/medical 1herotop.png"
-    alt="Hero Image"
-    class="w-full h-full object-cover"
-  />
-</section> -->
-
-<section class="relative">
+<!-- <section class="pt-20">
 
   <div class="swiper myHeroSlider">
     <div class="swiper-wrapper">
 
-      <!-- Slide 1 -->
+      @foreach($banners as $banner)
+
+        <div class="swiper-slide">
+
+          <img src="{{ asset($banner->image) }}"
+               class="w-full h-[75vh]" />
+
+        </div>
+
+      @endforeach
+
+    </div>
+
+    <div class="swiper-pagination"></div>
+  </div>
+
+</section> -->
+<section class="pt-20">
+
+  <!-- DESKTOP SLIDER -->
+  <div class="swiper myHeroSlider hidden md:block">
+    <div class="swiper-wrapper">
+
+      @foreach($banners as $banner)
+        <div class="swiper-slide">
+          <img src="{{ asset($banner->image) }}"
+               class="w-full h-[75vh] object-cover" />
+        </div>
+      @endforeach
+
+    </div>
+    <div class="swiper-pagination desktop-pagination"></div>
+  </div>
+
+
+  <!-- MOBILE SLIDER -->
+  <div class="swiper myMobileSlider block md:hidden">
+    <div class="swiper-wrapper">
+
       <div class="swiper-slide">
-        <img src="/assets/icons/banners1.png"
+        <img src="{{ asset('assets/icons/mbanner.png') }}"
              class="w-full h-[100vh] " />
       </div>
 
-      <!-- Slide 2 -->
       <div class="swiper-slide">
-        <img src="/assets/icons/banners2.png"
-             class="w-full h-[100vh] " />
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="swiper-slide">
-        <img src="/assets/icons/banners3.png"
+        <img src="{{ asset('assets/icons/mobilebanner.png') }}"
              class="w-full h-[100vh] " />
       </div>
 
     </div>
-
-    <!-- Pagination Dots -->
-    <div class="swiper-pagination"></div>
-
-    <!-- Navigation Arrows -->
-    <!-- <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div> -->
-
+    <div class="swiper-pagination mobile-pagination"></div>
   </div>
 
 </section>
 
-<script>
+
+
+<!-- <script>
   var swiper = new Swiper(".myHeroSlider", {
     loop: true,
     autoplay: {
@@ -70,6 +87,37 @@
       prevEl: ".swiper-button-prev",
     },
   });
+</script> -->
+<script>
+  // Desktop
+  var desktopSwiper = new Swiper(".myHeroSlider", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    speed: 800,
+
+    pagination: {
+      el: ".desktop-pagination",
+      clickable: true,
+    },
+  });
+
+  // Mobile
+  var mobileSwiper = new Swiper(".myMobileSlider", {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    speed: 800,
+
+    pagination: {
+      el: ".mobile-pagination",
+      clickable: true,
+    },
+  });
 </script>
 
 
@@ -84,11 +132,11 @@
       <div>
 
         <h2 class="text-5xl lg:text-6xl font-semibold text-[#313131] mb-6">
-          ABOUT US
+         {{ $about->title ?? 'ABOUT US' }}
         </h2>
 
         <p class="text-gray-700 text-[20px] mb-4 max-w-xl">
-          Medical Prayojanam is one of the best Coaching Institute in Nagpur Exclusively for NEET. It is the only Institute of Central India which is only preparation for Medical Entrance. Here you will get Central India’s Best Faculty Team & see the Magic of Biology, Strength of Chemistry & Power of Physics. It may change your view towards study. Our main moto is to guide the students for Examination of Medical Entrance. Secondary aim is to promote and encourage all the students to fulfil their dream. If you want to become a Doctor then Join Medical Prayojanam.
+          {{ $about->description ?? '' }}
         </p>
 
         <!-- Buttons -->
@@ -121,41 +169,28 @@
 
 
       <!-- RIGHT STATS -->
-      <div class="grid grid-cols-2 gap-8">
+      <!-- RIGHT STATS -->
+<div class="grid grid-cols-2 gap-8">
 
-        <!-- Box 1 -->
-        <div class="bg-[#FAFAFA] p-10  shadow text-center
-                    hover:shadow-2xl transition hover:bg-white scale-105">
+  @foreach($stats as $stat)
 
-          <h3 class="text-4xl font-semibold mb-2">1000+</h3>
-          <p class="text-gray-500">Satisfied Students</p>
-        </div>
+    <div class="bg-[#FAFAFA] p-10 shadow text-center
+                hover:shadow-2xl transition hover:bg-white scale-105">
 
-        <!-- Box 2 -->
-         <div class="bg-[#FAFAFA] p-10  shadow text-center
-                    hover:shadow-2xl transition hover:bg-white scale-105">
+      <h3 class="text-4xl font-semibold mb-2">
+        {{ $stat->number }}
+      </h3>
 
-          <h3 class="text-4xl font-semibold mb-2">250+</h3>
-          <p class="text-gray-500">Employees</p>
-        </div>
+      <p class="text-gray-500">
+        {{ $stat->label }}
+      </p>
 
-        <!-- Box 3 -->
-        <div class="bg-[#FAFAFA] p-10  shadow text-center
-                    hover:shadow-2xl transition hover:bg-white scale-105">
+    </div>
 
-          <h3 class="text-4xl font-semibold mb-2">100+</h3>
-          <p class="text-gray-500">Rank Holders</p>
-        </div>
+  @endforeach
 
-        <!-- Box 4 -->
-         <div class="bg-[#FAFAFA] p-10  shadow text-center
-                    hover:shadow-2xl transition hover:bg-white scale-105">
+</div>
 
-          <h3 class="text-4xl font-semibold mb-2">10+</h3>
-          <p class="text-gray-500">Years of Excellence</p>
-        </div>
-
-      </div>
 
     </div>
 
