@@ -408,7 +408,7 @@
           <div class="text-4xl font-bold mb-3">“</div>
 
           <p class="text-xs text-gray-700 leading-relaxed">
-            Working with you guys was an absolute pleasure. Keep up the great work.
+           I feel I found some parts of me that I had lost. I am very thankful to Medical Prayojanam, that I could crack NEET exam & got admission in TNMC Mumbai. I have learned from Medical Prayojanam will be with me on my 5 year journey of MBBS.
           </p>
 
         </div>
@@ -421,7 +421,7 @@
           <div class="text-4xl font-bold mb-3">“</div>
 
           <p class="text-xs text-gray-700 leading-relaxed">
-            It was awesome! Just what we needed as a team and startup.
+            I never thought learning would be fun till I joined 'Medical Prayojanam'. The novel way of teaching using jingles, making basics clear boost your confidence levels to appear in exams as you understand the topic well. I was immensely benefitted by the Medical Prayojnam. I think it was magic, that I could crack NEET exam and got GMC Nagpur.
           </p>
 
         </div>
@@ -434,7 +434,7 @@
           <div class="text-4xl font-bold mb-3">“</div>
 
           <p class="text-xs text-gray-700 leading-relaxed">
-            Somebody who can move fast along with us and iterate quickly.
+            Medical Prayojanam is the best coaching class. The teaching staff is highly qualifies. The daily test and weekly are held regularly which enhance my knowledge. Here the surrounding atmosphere is very friendly and positive. The teaching way is amazing makes me grasp topics quickly.
           </p>
 
         </div>
@@ -447,7 +447,7 @@
           <div class="text-4xl font-bold mb-3">“</div>
 
           <p class="text-xs text-gray-700 leading-relaxed">
-            The utility team is very responsive and creative.
+           Best coaching in Nagpur for NEET. They provide personal attention to every child and believe that no child is dump every child can crack NEET if workout is there. I am very lucky to be under guidance of super teacher. There are not very large number of students so you can show your existence by performance. I suggest you take admission here.
           </p>
 
         </div>
@@ -460,7 +460,10 @@
           <div class="text-4xl font-bold mb-3">“</div>
 
           <p class="text-xs text-gray-700 leading-relaxed">
-            Excellent support and timely delivery.
+           For thousands of students, NEET is not just a competition exam but a dream of becoming a
+doctor. Every year, many aspirants put in long hours of study, yet only a limited number
+achieve top ranks. The main reason is often not a lack of hard work, but small and repeated
+mistakes during preparation.
           </p>
 
         </div>
@@ -473,7 +476,10 @@
           <div class="text-4xl font-bold mb-3">“</div>
 
           <p class="text-xs text-gray-700 leading-relaxed">
-            Highly recommended for any startup and business.
+            Enrolling in the best NEET coaching in Nagpur significantly enhances a student’s chances
+of success while effectively reducing exam-related stress.
+While many students successfully clear the NEET exam through self-study, joining a premier
+institute provides a distinct competitive edge. Structured guidance.
           </p>
 
         </div>
