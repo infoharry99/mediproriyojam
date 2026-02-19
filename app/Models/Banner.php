@@ -14,6 +14,7 @@ class Banner extends Model
         'image',
         'link',
         'status',
+        'is_mobile'
     ];
 
     protected $casts = [
