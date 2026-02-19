@@ -6,66 +6,64 @@
 
  <main class="main">
 
-<!-- <section class="pt-20">
-
-  <div class="swiper myHeroSlider">
-    <div class="swiper-wrapper">
-
-      @foreach($banners as $banner)
-
-        <div class="swiper-slide">
-
-          <img src="{{ asset($banner->image) }}"
-               class="w-full h-[75vh]" />
-
-        </div>
-
-      @endforeach
-
-    </div>
-
-    <div class="swiper-pagination"></div>
-  </div>
-
-</section> -->
 <section class="pt-20">
 
-  <!-- DESKTOP SLIDER -->
-  <div class="swiper myHeroSlider hidden md:block">
-    <div class="swiper-wrapper">
-
-      @foreach($banners as $banner)
-        <div class="swiper-slide">
-          <img src="{{ asset($banner->image) }}"
-               class="w-full h-[75vh] object-cover" />
+{{-- DESKTOP --}}
+<div id="desktopSlider" style="display:none;">
+    <div class="swiper myHeroSlider">
+        <div class="swiper-wrapper">
+            @foreach($desktopBanners as $banner)
+                @if(!$banner->is_mobile)
+                <div class="swiper-slide">
+                    <img src="{{ asset($banner->image) }}"
+                         class="w-full h-[75vh] object-fill" />
+                </div>
+                @endif
+            @endforeach
         </div>
-      @endforeach
-
+        <div class="swiper-pagination desktop-pagination"></div>
     </div>
-    <div class="swiper-pagination desktop-pagination"></div>
-  </div>
+</div>
 
-
-
-
-  <div class="swiper myMobileSlider block md:hidden">
-    <div class="swiper-wrapper">
-
-      <div class="swiper-slide">
-        <img src="{{ asset('assets/icons/mbanner.png') }}"
-             class="w-full h-[100vh] " />
-      </div>
-
-      <div class="swiper-slide">
-        <img src="{{ asset('assets/icons/mobilebanner.png') }}"
-             class="w-full h-[100vh] " />
-      </div>
-
+{{-- MOBILE --}}
+<div id="mobileSlider" style="display:none;">
+    <div class="swiper myHeroSliderMobile">
+        <div class="swiper-wrapper">
+            @foreach($mobileBanners as $banner)
+                @if($banner->is_mobile)
+                <div class="swiper-slide">
+                    <img src="{{ asset($banner->image) }}"
+                         class="w-full h-[75vh] object-fill" />
+                </div>
+                @endif
+            @endforeach
+        </div>
+        <div class="swiper-pagination mobile-pagination"></div>
     </div>
-    <div class="swiper-pagination mobile-pagination"></div>
-  </div>
+</div>
 
 </section>
+<script>
+function toggleSliders(){
+    const width = window.innerWidth;
+
+    const desktop = document.getElementById("desktopSlider");
+    const mobile = document.getElementById("mobileSlider");
+
+    if(width >= 1024){
+        desktop.style.display = "block";
+        mobile.style.display = "none";
+    }else{
+        desktop.style.display = "none";
+        mobile.style.display = "block";
+    }
+}
+
+toggleSliders();
+window.addEventListener("resize", toggleSliders);
+</script>
+
+
 
 
 
@@ -106,7 +104,7 @@
   });
 
   // Mobile
-  var mobileSwiper = new Swiper(".myMobileSlider", {
+  var mobileSwiper = new Swiper(".myHeroSliderMobile", {
     loop: true,
     autoplay: {
       delay: 3000,

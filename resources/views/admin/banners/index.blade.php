@@ -45,6 +45,22 @@
                        class="form-control"
                        required>
             </div>
+             
+            <input type="hidden" name="is_mobile" value="0">
+
+            <div class="form-check col-md-6">
+                <input type="checkbox"
+                    name="is_mobile"
+                    value="1"
+                    id="is_mobile"
+                    class="form-check-input">
+                <label for="is_mobile" class="form-check-label">
+                    Is Mobile
+                </label>
+            </div>
+
+            
+
         </div>
 
         <button class="btn btn-primary mb-4">
@@ -58,7 +74,7 @@
             <tr>
                 <th>#</th>
                 <th>Preview</th>
-                {{-- <th>Title</th> --}}
+                <th>Mobile</th>
                 <th>Status</th>
                 <th width="300">Actions</th>
             </tr>
@@ -75,6 +91,23 @@
                              class="rounded">
                     @endif
                 </td>
+
+                <td>
+                    <input type="hidden" name="is_mobile" value="0">
+
+                    <div class="form-check mb-1">
+                        <input type="checkbox"
+                            name="is_mobile"
+                            value="1"
+                            class="form-check-input"
+                            {{ $banner->is_mobile ? 'checked' : '' }}>
+                        <label class="form-check-label">Mobile banner</label>
+                    </div>
+                </td>    
+
+                
+                    
+                
 
                 {{-- <td>{{ $banner->title }}</td> --}}
 

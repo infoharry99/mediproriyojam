@@ -51,6 +51,7 @@ class BannerController extends Controller
             'description' => 'nullable|string',
             'link' => 'nullable|url',
             'image' => 'required',
+            'is_mobile'=> 'nullable',
         ]);
 
         $imagePath = null;
@@ -67,6 +68,7 @@ class BannerController extends Controller
             'link' => $request->link,
             'image' => $imagePath,
             'status' => 1,
+            'is_mobile' => $request->is_mobile
         ]);
 
         return back()->with('success', 'Banner added successfully');
