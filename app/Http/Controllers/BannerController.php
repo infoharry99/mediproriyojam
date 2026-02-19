@@ -14,13 +14,43 @@ class BannerController extends Controller
         return view('admin.banners.index', compact('banners'));
     }
 
-    public function store(Request $request)
+    // public function store(Request $request)
+    // {
+    //     $request->validate([
+    //         'title' => 'nullable|string|max:255',
+    //         'description' => 'nullable|string',
+    //         'link' => 'nullable|url',
+    //         'image' => 'required|mimes:jpg,jpeg,png,webp,avif|max:2048',
+    //     ]);
+
+    //     $imagePath = null;
+
+    //     if ($request->hasFile('image')) {
+    //         $name = time().'_'.uniqid().'.'.$request->image->extension();
+    //         $request->image->move(public_path('uploads/banners'), $name);
+    //         $imagePath = 'uploads/banners/'.$name;
+    //     }
+
+    //     Banner::create([
+    //         'title' => $request->title,
+    //         'description' => $request->description,
+    //         'link' => $request->link,
+    //         'image' => $imagePath,
+    //         'status' => 1,
+    //     ]);
+
+    //     return back()->with('success', 'Banner added successfully');
+    // }
+
+   
+
+ public function store(Request $request)
     {
         $request->validate([
             'title' => 'nullable|string|max:255',
             'description' => 'nullable|string',
             'link' => 'nullable|url',
-            'image' => 'required|mimes:jpg,jpeg,png,webp,avif|max:2048',
+            'image' => 'required',
         ]);
 
         $imagePath = null;
