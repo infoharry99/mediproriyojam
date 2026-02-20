@@ -1,146 +1,137 @@
-<footer class="bg-[#D62828] text-white py-12 w-full">
+<!-- FOOTER -->
+<footer class="text-white py-5" style="background:#D62828;">
 
-  <div class="w-[90%] lg:w-[90%] max-w-7xl mx-auto">
+  <div class="container">
 
-    <div class="grid md:grid-cols-6 ">
+    <div class="row gy-4">
 
       <!-- LEFT -->
-      <div class="col-span-2 leading-44">
+      <div class="col-md-4">
 
         <img src="{{ asset('assets/img/education/footerlogo.png') }}"
-             class="h-25 w-auto mb-4"
+             class="mb-3"
+             style="max-height:60px;"
              alt="Logo">
 
-        <p class="text-sm">
+        <p class="small">
           Download the app by clicking the link below :
         </p>
 
-        <div class="flex gap-4 mt-8 ">
+        <div class="d-flex gap-3 mt-4">
+
           <img src="{{ asset('assets/img/education/googleplay.png') }}"
-               class="h-10"
+               height="40"
                alt="Google Play">
 
           <img src="{{ asset('assets/img/education/appstore.png') }}"
-               class="h-10"
+               height="40"
                alt="App Store">
+
         </div>
 
       </div>
 
-<div class="mt-8">
-  <h4 class="font-bold text-xl mb-5">Pages</h4>
-  <ul class="space-y-4 text-md">
-    <li class="hover:underline cursor-pointer">Home it work</li>
-    <li class="hover:underline cursor-pointer">Pricing</li>
-    <li class="hover:underline cursor-pointer">Blog</li>
-    <li class="hover:underline cursor-pointer">Demo</li>
-  </ul>
-</div>
+
+      <!-- Pages -->
+      <div class="col-md-2">
+
+        <h5 class="fw-bold mb-3">Pages</h5>
+
+        <ul class="list-unstyled small">
+
+          <li class="mb-2"><a href="#" class="footer-link">Home it work</a></li>
+          <li class="mb-2"><a href="#" class="footer-link">Pricing</a></li>
+          <li class="mb-2"><a href="#" class="footer-link">Blog</a></li>
+          <li class="mb-2"><a href="#" class="footer-link">Demo</a></li>
+
+        </ul>
+
+      </div>
+
 
       <!-- Service -->
-      <div class="mt-8 text-left">
-        <h4 class="font-bold text-lg mb-5">Service</h4>
-        <ul class="space-y-5 font-normal text-sm">
-          <!-- <li>Shopify</li> -->
-          <li>WordPress</li>
-          <li>UI/UX Design</li>
+      <div class="col-md-2">
+
+        <h5 class="fw-bold mb-3">Service</h5>
+
+        <ul class="list-unstyled small">
+
+          <li class="mb-2">WordPress</li>
+          <li class="mb-2">UI/UX Design</li>
+
         </ul>
+
       </div>
+
 
       <!-- Contact -->
-      <div class="mt-8">
-        <h4 class="font-bold text-lg mb-5">Contact</h4>
+      <div class="col-md-3">
 
-        <div class="space-y-4 text-sm">
+        <h5 class="fw-bold mb-3">Contact</h5>
 
-  <!-- Phone -->
-  <div class="flex items-start w-48 gap-3">
-    <img src="{{ asset('assets/icons/footerFrame 1.png') }}"
-         class="w-5 h-5 mt-1"
-         alt="Phone">
-    <p>+91 8669667300</p>
-  </div>
+        <div class="small">
 
-  <!-- Email -->
-  <div class="flex items-start gap-3">
-    <img src="{{ asset('/assets/icons/footerdashicons_email.png') }}"
-         class="w-5 h-5 mt-1"
-         alt="Email">
-    <p>medicalprayojanam@gmail.com</p>
-  </div>
+          <div class="d-flex gap-2 mb-3">
 
-  <!-- Address -->
-  <div class="flex items-start gap-3">
-    <img src="{{ asset('/assets/icons/footerfa6-solid_location-dot.png') }}"
-         class="w-5 h-5 mt-1"
-         alt="Location">
-    <p>
-     Plot no. 99, Infront Little Angel School, Near NMC Zonal Office, Water Tank, Laxminagar, Nagpur, Maharashtra 440022, 440022
-    </p>
-  </div>
+            <img src="{{ asset('assets/icons/footerFrame 1.png') }}"
+                 width="18">
 
-</div>
+            <span>+91 8669667300</span>
+
+          </div>
+
+
+          <div class="d-flex gap-2 mb-3">
+
+            <img src="{{ asset('/assets/icons/footerdashicons_email.png') }}"
+                 width="18">
+
+            <span>medicalprayojanam@gmail.com</span>
+
+          </div>
+
+
+          <div class="d-flex gap-2">
+
+            <img src="{{ asset('/assets/icons/footerfa6-solid_location-dot.png') }}"
+                 width="18">
+
+            <span>
+              Plot no. 99, Infront Little Angel School, Near NMC Zonal Office,
+              Water Tank, Laxminagar, Nagpur, Maharashtra 440022
+            </span>
+
+          </div>
+
+        </div>
 
       </div>
 
-          <!-- Social -->
-      <div class="text-left mt-8">
-        <h4 class="font-bold text-lg mb-5">Social media</h4>
 
-        <!-- <div class="flex gap-4">
+      <!-- Social -->
+      <div class="col-md-1">
 
-          <a href="https://www.facebook.com/MedicalPrayojanam/">
-            <img src="{{ asset('/assets/icons/Group 85.svg') }}"
-                 class="w-6 h-6 hover:scale-110 transition duration-300"
-                 alt="Facebook">
+        <h5 class="fw-bold mb-3">Social</h5>
+
+        <div class="d-flex gap-3">
+
+          <a href="https://www.facebook.com/MedicalPrayojanam/" target="_blank">
+            <img src="{{ asset('/assets/icons/Group 85.svg') }}" width="22">
           </a>
 
-          <a href="https://x.com/NeetPrayojanam">
-            <img src="{{ asset('/assets/icons/Group 86.svg') }}"
-                 class="w-6 h-6 hover:scale-110 transition duration-300"
-                 alt="Twitter">
+          <a href="https://x.com/NeetPrayojanam" target="_blank">
+            <img src="{{ asset('/assets/icons/Group 86.svg') }}" width="22">
           </a>
 
-          <a href="https://www.youtube.com/@NEET_Prayojanam">
-            <img src="{{ asset('/assets/icons/Group 87.svg') }}"
-                 class="w-6 h-6 hover:scale-110 transition duration-300"
-                 alt="LinkedIn">
+          <a href="https://www.youtube.com/@NEET_Prayojanam" target="_blank">
+            <img src="{{ asset('/assets/icons/Group 87.svg') }}" width="22">
           </a>
 
-          <a href="/https://www.instagram.com/medicalprayojanam/">
-            <img src="{{ asset('/assets/icons/Group 88.svg') }}"
-                 class="w-6 h-6 hover:scale-110 transition duration-300"
-                 alt="Instagram">
+          <a href="https://www.instagram.com/medicalprayojanam/" target="_blank">
+            <img src="{{ asset('/assets/icons/Group 88.svg') }}" width="22">
           </a>
 
-        </div> -->
-        <div class="flex gap-4">
-
-  <a href="https://www.facebook.com/MedicalPrayojanam/" target="_blank" rel="noopener noreferrer">
-    <img src="{{ asset('/assets/icons/Group 85.svg') }}"
-         class="w-6 h-6 hover:scale-110 transition duration-300"
-         alt="Facebook">
-  </a>
-
-  <a href="https://x.com/NeetPrayojanam" target="_blank" rel="noopener noreferrer">
-    <img src="{{ asset('/assets/icons/Group 86.svg') }}"
-         class="w-6 h-6 hover:scale-110 transition duration-300"
-         alt="Twitter">
-  </a>
-
-  <a href="https://www.youtube.com/@NEET_Prayojanam" target="_blank" rel="noopener noreferrer">
-    <img src="{{ asset('/assets/icons/Group 87.svg') }}"
-         class="w-6 h-6 hover:scale-110 transition duration-300"
-         alt="YouTube">
-  </a>
-
-  <a href="https://www.instagram.com/medicalprayojanam/" target="_blank" rel="noopener noreferrer">
-    <img src="{{ asset('/assets/icons/Group 88.svg') }}"
-         class="w-6 h-6 hover:scale-110 transition duration-300"
-         alt="Instagram">
-  </a>
-
-</div>
+        </div>
 
       </div>
 
@@ -149,3 +140,24 @@
   </div>
 
 </footer>
+
+<style>
+  .footer-link{
+  color:#fff;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.footer-link:hover{
+  text-decoration:underline;
+  opacity:.8;
+}
+
+footer img{
+  transition:.3s;
+}
+
+footer img:hover{
+  transform:scale(1.1);
+}
+</style>

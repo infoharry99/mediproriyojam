@@ -4,59 +4,86 @@
 
 @section('content')
 
-<section class="min-h-screen bg-[#FFF5F6] py-16 ">
+<section class="min-vh-100 py-5" style="background:#FFF5F6;">
 
-  <div class="max-w-7xl mx-auto w-[90%] lg:w-[90%] mt-20">
+    <div class="container mt-5 pt-5">
 
-    <!-- Heading -->
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-[#D62828] mb-3">
-        Our Gallery
-      </h2>
+        <!-- Heading -->
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-danger mb-3" style="font-size:2.5rem;">
+                Our Gallery
+            </h2>
 
-      <p class="text-gray-600 max-w-xl mx-auto">
-        Moments, Memories & Milestones
-      </p>
+            <p class="text-muted mx-auto" style="max-width:600px;">
+                Moments, Memories & Milestones
+            </p>
 
-      <div class="w-20 h-1 bg-[#D62828] mx-auto mt-4 rounded"></div>
-    </div>
+            <div class="mx-auto mt-3 rounded"
+                 style="width:80px; height:4px; background:#D62828;">
+            </div>
+        </div>
 
-    <!-- Gallery Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Gallery Grid -->
+        <div class="row g-4">
 
-      @for($i = 1; $i <= 16; $i++)
+            @for($i = 1; $i <= 16; $i++)
 
-        <div
-          class="group relative overflow-hidden rounded-xl bg-white shadow-md hover:shadow-xl transition duration-300">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
 
-          <img
-            src="{{ asset('assets/gallery/gallery'.$i.'.png') }}"
-            alt="Gallery Image {{ $i }}"
-            class="w-full h-56 object-cover
-                   group-hover:scale-110
-                   transition duration-500">
+                <div class="gallery-card position-relative overflow-hidden rounded-4 shadow bg-white">
 
-          <!-- Overlay -->
-          <div
-            class="absolute inset-0 bg-black/40 opacity-0
-                   group-hover:opacity-100
-                   transition duration-300
-                   flex items-center justify-center">
+                    <img src="{{ asset('assets/gallery/gallery'.$i.'.png') }}"
+                         alt="Gallery Image {{ $i }}"
+                         class="img-fluid w-100 gallery-img">
 
-            <!-- <span class="text-white text-sm font-semibold tracking-wide">
-              View Image
-            </span> -->
+                    <!-- Overlay -->
+                    <div class="gallery-overlay d-flex align-items-center justify-content-center">
+                        <!-- Optional text -->
+                        <!-- <span class="text-white fw-semibold small">
+                            View Image
+                        </span> -->
+                    </div>
 
-          </div>
+                </div>
+
+            </div>
+
+            @endfor
 
         </div>
 
-      @endfor
-
     </div>
 
-  </div>
-
 </section>
+
+
+<!-- Custom Hover Effects -->
+<style>
+.gallery-card {
+    height: 230px;
+}
+
+.gallery-card img {
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-card:hover .gallery-overlay {
+    opacity: 1;
+}
+</style>
 
 @endsection

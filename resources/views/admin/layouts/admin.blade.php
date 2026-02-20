@@ -1043,7 +1043,7 @@
                     <span class="nav-text">Courses</span>
                 </a>
             </div>
-            {{-- <div class="nav-item">
+             <div class="nav-item">
                 <a href="{{ route('admin.top.rankers.index') }}" class="nav-link {{ Request::is('admin/top-rankers*') ? 'active' : '' }}" >
                     <span class="nav-icon">
                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1078,7 +1078,7 @@
                     </span>
                     <span class="nav-text">Feedback Videos</span>
                 </a>
-            </div> --}}
+            </div> 
 
             <div class="nav-item">
                 <a href="{{ route('admin.blogs.index') }}" class="nav-link {{ Request::is('admin/blogs*') ? 'active' : '' }}" >

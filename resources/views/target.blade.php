@@ -4,694 +4,257 @@
 
 @section('content')
 
- <main class="main">
+<main>
 
- <section class="py-10  bg-[#FFF5F6]">
+<!-- ================= HERO + FORM SECTION ================= -->
+<section class="py-5" style="background:#FFF5F6;">
+<div class="container mt-5 pt-5">
 
-  <div class="max-w-7xl mx-auto w-[90%] mt-[120px]">
+<div class="row g-5">
 
-    <div class="grid lg:grid-cols-3 gap-10 items-start">
+<!-- LEFT CONTENT -->
+<div class="col-lg-8">
 
+<!-- Video Box -->
+<div class="position-relative rounded-4 overflow-hidden shadow-lg mb-5">
 
-      <!-- LEFT CONTENT -->
-      <div class="col-span-2">
+<img src="/assets/img/blog/Rectangle 4316.png"
+     class="w-100"
+     style="height:400px; object-fit:cover;"
+     alt="Video">
 
+<div class="position-absolute top-50 start-50 translate-middle">
+    <div class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
+         style="width:60px;height:60px; cursor:pointer;">
+        ▶
+    </div>
+</div>
 
-        <!-- Video Box -->
-        <div class="relative rounded-2xl overflow-hidden shadow-lg">
+</div>
 
-          <img
-            src="/assets/img/blog/Rectangle 4316.png"
-            class="w-full h-[400px] object-cover"
-            alt="Video">
+<!-- Course Info -->
+<p class="text-muted fs-5 mb-1">Class 11–12 NEET</p>
 
-          <!-- Play Button -->
-          <div
-            class="absolute inset-0 flex items-center justify-center">
+<h2 class="text-danger fw-bold mb-3">
+    Target course
+</h2>
 
-            <div
-              class="w-14 h-14 bg-white/90 rounded-full
-                     flex items-center justify-center
-                     shadow-lg cursor-pointer
-                     hover:scale-110 transition">
+<p class="text-muted mb-5">
+    Lorem Ipsum Is Simply Dummy Text Of The <br>
+    And Typesetting Industry.
+</p>
 
-              ▶
+<!-- Features -->
+<div class="row g-4 text-start">
 
-            </div>
+@php
+$features = [
+    "LIVE Interactive Class",
+    '"Offline" Like Discipline',
+    "Hard Copy Books delivered to you",
+    "24*7 Live Video Call Doubt Solving"
+];
+@endphp
 
-          </div>
-
+@foreach($features as $feature)
+<div class="col-6 col-md-3">
+    <div class="d-flex flex-column gap-2">
+        <div class="border border-danger rounded d-flex align-items-center justify-content-center"
+             style="width:50px;height:50px;">
         </div>
-
-
-        <!-- Course Info -->
-        <div class="mt-10">
-
-          <p class="text-lg text-gray-600 mb-1">
-            Class 11–12 NEET
-          </p>
-
-          <h2 class="text-3xl font-bold text-red-600 mb-3">
-            Target course
-          </h2>
-
-          <p class="text-gray-600 leading-relaxed mb-8">
-
-            Lorem Ipsum Is Simply Dummy Text Of The  <br/>
-            And Typesetting Industry.
-
-          </p>
-
-
-          <!-- Features -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-
-
-            <!-- Feature -->
-            <div class="flex flex-col items-left gap-2">
-
-              <div
-                class="w-12 h-12 border border-red-400
-                       rounded-lg flex items-center justify-center">
-
-                <img src="/assets/icons/Live Video On.png">
-
-              </div>
-
-              <p class="text-lg text-left ">
-                LIVE  <br/>Interactive Class
-              </p>
-
-            </div>
-
-
-            <div class="flex flex-col items-left gap-2">
-
-              <div
-                class="w-12 h-12 border border-red-400
-                       rounded-lg flex items-center justify-center">
-
-                
-
-              </div>
-
-              <p class="text-lg text-left">
-                "Offline" <br/> Like Discipline
-              </p>
-
-            </div>
-
-
-            <div class="flex flex-col items-left gap-2">
-
-              <div
-                class="w-12 h-12 border border-red-400
-                       rounded-lg flex items-center justify-center">
-
-                
-
-              </div>
-
-              <p class="text-lg text-left">
-                Hard Copy Books <br/>
-                 delivered to you
-              </p>
-
-            </div>
-
-
-            <div class="flex flex-col items-left gap-2">
-
-              <div
-                class="w-12 h-12 border border-red-400
-                       rounded-lg flex items-center justify-center">
-
-                
-
-              </div>
-
-              <p class="text-lg text-left">
-               24*7 Live Video <br/>Call Doubt Solving
-              </p>
-
-            </div>
-
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- RIGHT FORM -->
-      <div>
-
-        <div
-          class="bg-white rounded-2xl shadow-lg p-8 max-w-md ml-auto">
-
-
-          <h3 class="text-xl font-bold text-red-600 mb-6">
-            Admission Enquiry Form
-          </h3>
-
-
-          <form class="space-y-4">
-
-
-            <!-- Name -->
-            <div>
-
-              <label class="text-sm text-gray-600">
-                Full Name
-              </label>
-
-              <div class="grid grid-cols-2 gap-3 mt-1">
-
-                <input
-                  type="text"
-                  placeholder="Mohit"
-                  class="w-full border rounded-md px-3 py-2 text-sm">
-
-                <input
-                  type="text"
-                  placeholder="Rana"
-                  class="w-full border rounded-md px-3 py-2 text-sm">
-
-              </div>
-
-            </div>
-
-
-            <!-- Phone -->
-            <div>
-
-              <label class="text-sm text-gray-600">
-                Phone number
-              </label>
-
-              <input
-                type="text"
-                placeholder="Phone number"
-                class="w-full border rounded-md px-3 py-2 text-sm mt-1">
-
-            </div>
-
-
-            <!-- Course -->
-            <div>
-
-              <label class="text-sm text-gray-600">
-                Choose course
-              </label>
-
-              <select
-                class="w-full border rounded-md px-3 py-2 text-sm mt-1">
-
-                <option>Choose course</option>
-                <option>NEET</option>
-                <option>Medical</option>
-
-              </select>
-
-            </div>
-
-
-            <!-- City -->
-            <div>
-
-              <label class="text-sm text-gray-600">
-                City
-              </label>
-
-              <input
-                type="text"
-                placeholder="City"
-                class="w-full border rounded-md px-3 py-2 text-sm mt-1">
-
-            </div>
-
-
-            <!-- Query -->
-            <div>
-
-              <label class="text-sm text-gray-600">
-                Query
-              </label>
-
-              <textarea
-                rows="3"
-                placeholder="Query"
-                class="w-full border rounded-md px-3 py-2 text-sm mt-1"></textarea>
-
-            </div>
-
-
-            <!-- Submit -->
-            <button
-              type="submit"
-              class="bg-red-600 text-white
-                     px-6 py-2 rounded-md text-sm
-                     hover:bg-red-700 transition
-                     flex items-center gap-2">
-
-              Submit →
-            </button>
-
-
-          </form>
-
-        </div>
-
-      </div>
-
-
+        <p class="mb-0">{{ $feature }}</p>
     </div>
+</div>
+@endforeach
 
-    <!-- SUBJECTS COVERED SECTION -->
-<section class="mt-10 bg-[#FFD1D1]">
+</div>
 
-  <div
-    class=" max-w-6xl mx-auto
-           flex flex-col md:flex-row
-           items-center justify-between
-           gap-4 px-6 py-6
-           rounded-xl">
+</div>
 
-    <!-- Left -->
-    <div class="flex flex-wrap items-center gap-3">
 
-      <span class="font-medium  text-lg text-gray-800">
-        Subjects Covered :
-      </span>
+<!-- RIGHT FORM -->
+<div class="col-lg-4">
 
-      <!-- Pills -->
-      <span
-        class="px-4 py-1 bg-white text-sm
-               rounded-full shadow-sm">
-        Physics
-      </span>
+<div class="bg-white rounded-4 shadow-lg p-4">
 
-      <span
-        class="px-4 py-1 bg-white text-sm
-               rounded-full shadow-sm">
-        Biology
-      </span>
+<h5 class="fw-bold text-danger mb-4">
+    Admission Enquiry Form
+</h5>
 
-      <span
-        class="px-4 py-1 bg-white text-sm
-               rounded-full shadow-sm">
-        Chemistry
-      </span>
+<form>
 
-    </div>
+<div class="mb-3">
+<label class="form-label small text-muted">Full Name</label>
+<div class="row g-2">
+<div class="col-6">
+<input type="text" class="form-control" placeholder="Mohit">
+</div>
+<div class="col-6">
+<input type="text" class="form-control" placeholder="Rana">
+</div>
+</div>
+</div>
 
+<div class="mb-3">
+<label class="form-label small text-muted">Phone number</label>
+<input type="text" class="form-control" placeholder="Phone number">
+</div>
 
-    <!-- Right Button -->
-    <a
-      href="#"
-      class="bg-red-600 text-white
-             px-6 py-2 rounded-md
-             text-sm font-medium
-             hover:bg-red-700 transition">
+<div class="mb-3">
+<label class="form-label small text-muted">Choose course</label>
+<select class="form-select">
+<option>Choose course</option>
+<option>NEET</option>
+<option>Medical</option>
+</select>
+</div>
 
-      Enroll now
+<div class="mb-3">
+<label class="form-label small text-muted">City</label>
+<input type="text" class="form-control" placeholder="City">
+</div>
 
-    </a>
+<div class="mb-3">
+<label class="form-label small text-muted">Query</label>
+<textarea rows="3" class="form-control" placeholder="Query"></textarea>
+</div>
 
-  </div>
+<button class="btn btn-danger w-100">
+Submit →
+</button>
 
-</section>
+</form>
 
-  </div>
+</div>
+</div>
 
-</section>
+</div>
 
-<!-- COURSE DESCRIPTION SECTION -->
-<section class="py-10 bg-[#FFEAEA]">
 
-  <div class="max-w-7xl mx-auto w-[90%] lg:w-[90%] text-center  mb-10">
+<!-- SUBJECTS SECTION -->
+<div class="bg-danger-subtle rounded-4 p-4 mt-5 d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
 
+<div class="d-flex flex-wrap align-items-center gap-3">
+<span class="fw-medium">Subjects Covered :</span>
 
-    <!-- Badge -->
-    <div class="flex justify-center mb-6">
+<span class="badge bg-white text-dark rounded-pill px-3 py-2 shadow-sm">Physics</span>
+<span class="badge bg-white text-dark rounded-pill px-3 py-2 shadow-sm">Biology</span>
+<span class="badge bg-white text-dark rounded-pill px-3 py-2 shadow-sm">Chemistry</span>
+</div>
 
-      <span
-        class="px-5 py-1.5 text-xs font-medium
-               border border-gray-400
-               rounded-full text-gray-700
-               bg-white/40">
+<a href="#" class="btn btn-danger">
+Enroll now
+</a>
 
-        Courses Description
+</div>
 
-      </span>
-
-    </div>
-
-
-    <!-- Title -->
-    <h2
-      class="text-3xl md:text-4xl text-left font-semibold text-gray-900 mb-6">
-
-      Two-Year Integrated Classroom Programme
-
-    </h2>
-
-
-    <!-- Description -->
-    <p
-      class="text-gray-600 leading-relaxed text-sm text-left md:text-base">
-
-      Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry.
-      Lorem Ipsum Has Been The Industry’s Standard Dummy Text Ever Since The 1500s,
-      When An Unknown Printer Took A Galley Of Type And Scrambled It To Make A Type
-      Specimen Book. It Has Survived Not Only Five Centuries, But Also The Leap Into
-      Electronic Typesetting, Remaining Essentially Unchanged. It Was Popularised
-      In The 1960s With The Release Of Letraset Sheets Containing Lorem Ipsum Passages,
-      And More Recently With Desktop Publishing Software Like Aldus PageMaker
-      Including Versions Of Lorem Ipsum.
-
-    </p>
-
-
-  </div>
-
-</section>
-
-<!-- COURSE HIGHLIGHTS SECTION -->
-<section class="py-24 bg-[#FFF5F6]">
-
-  <div class="max-w-7xl mx-auto w-[90%] lg:w-[90%]">
-
-
-    <!-- Heading With Lines -->
-    <div class="flex items-center justify-center gap-6 mb-16">
-
-      <span>
-        <img src="/assets/icons/lineb1.png" alt="">
-
-      </span>
-
-      <h2 class="text-xl font-semibold">
-        Course Highlights
-      </h2>
-
-      <span >
-        <img src="/assets/icons/lineb.png" alt="">
-      </span>
-
-    </div>
-
-
-    <!-- Content -->
-    <div class="grid md:grid-cols-2 gap-10 text-lg">
-
-
-      <!-- LEFT -->
-      <ul class="space-y-5">
-
-        <li class="flex items-start gap-3">
-          <span
-  class="flex items-center justify-center
-         w-5 h-5 rounded-full
-         bg-green-500 text-white
-         text-xs mt-1 ">
-
-  ✓
-
-</span>
-
-          Complete Board + NEET Syllabus Coverage
-        </li>
-
-        <li class="flex items-start gap-3">
-           <span
-  class="flex items-center justify-center
-         w-5 h-5 rounded-full
-         bg-green-500 text-white
-         text-xs mt-1 ">
-
-  ✓
-
-</span>
-          All India Common Analysis For Rank Boosting
-        </li>
-
-        <li class="flex items-start gap-3">
-            <span
-  class="flex items-center justify-center
-         w-5 h-5 rounded-full
-         bg-green-500 text-white
-         text-xs mt-1 ">
-
-  ✓
-
-</span>
-          Doubt Clearing Sessions
-        </li>
-
-        <li class="flex items-start gap-3">
-            <span
-  class="flex items-center justify-center
-         w-5 h-5 rounded-full
-         bg-green-500 text-white
-         text-xs mt-1 ">
-
-  ✓
-
-</span>
-          Regular Updates About Student’s Performance And Attendance
-        </li>
-
-        <li class="flex items-start gap-3">
-           <span
-  class="flex items-center justify-center
-         w-5 h-5 rounded-full
-         bg-green-500 text-white
-         text-xs mt-1 ">
-
-  ✓
-
-</span>
-          Know Your Potential At All India Level Through Narayana All-India Test Series
-        </li>
-
-        <li class="flex items-start gap-3">
-           <span
-  class="flex items-center justify-center
-         w-5 h-5 rounded-full
-         bg-green-500 text-white
-         text-xs mt-1 ">
-
-  ✓
-
-</span>
-          Systematic And Regular Testing Systems
-        </li>
-
-      </ul>
-
-
-      <!-- RIGHT -->
-      <ul class="space-y-5">
-
-        <li class="flex items-start gap-3">
-          <span
-  class="flex items-center justify-center
-         w-5 h-5 rounded-full
-         bg-green-500 text-white
-         text-xs mt-1 ">
-
-  ✓
-
-</span>
-          Well-Defined And Planned Academic Year
-        </li>
-
-        <li class="flex items-start gap-3">
-           <span
-  class="flex items-center justify-center
-         w-5 h-5 rounded-full
-         bg-green-500 text-white
-         text-xs mt-1 ">
-
-  ✓
-
-</span>
-          Up To 90% Scholarship Through NACST
-        </li>
-
-        <li class="flex items-start gap-3">
-           <span
-  class="flex items-center justify-center
-         w-5 h-5 rounded-full
-         bg-green-500 text-white
-         text-xs mt-1 ">
-
-  ✓
-
-</span>
-          Feedback And Micro Level Analysis
-        </li>
-
-        <li class="flex items-start gap-3">
-        <span
-  class="flex items-center justify-center
-         w-5 h-5 rounded-full
-         bg-green-500 text-white
-         text-xs mt-1 ">
-
-  ✓
-
-</span>
-          Review Classes For The Entire Syllabus
-        </li>
-
-        <li class="flex items-start gap-3">
-           <span
-  class="flex items-center justify-center
-         w-5 h-5 rounded-full
-         bg-green-500 text-white
-         text-xs mt-1 ">
-
-  ✓
-
-</span>
-          All India Test Series + Grand Success Package
-        </li>
-
-      </ul>
-
-
-    </div>
-
-  </div>
-
+</div>
 </section>
 
 
-<section class="py-10 bg-[#FFF5F6]">
+<!-- ================= COURSE DESCRIPTION ================= -->
+<section class="py-5" style="background:#FFEAEA;">
+<div class="container">
 
-  <div class="max-w-7xl mx-auto w-[90%] lg:w-[90%] bg-[#CF242A] py-10 text-white rounded-[20px]">
+<div class="text-center mb-4">
+<span class="badge bg-light text-dark border rounded-pill px-4 py-2">
+Courses Description
+</span>
+</div>
 
+<h3 class="fw-semibold mb-4">
+Two-Year Integrated Classroom Programme
+</h3>
 
-    <!-- Heading With Lines -->
-    <div class="flex items-center justify-center gap-6">
+<p class="text-muted">
+Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry...
+</p>
 
-      <span>
-        <img src="/assets/icons/linew1.png" alt="">
-
-      </span>
-
-      <h2 class="text-xl font-semibold">
-        Type of Tests
-      </h2>
-
-      <span >
-        <img src="/assets/icons/linew.png" alt="">
-      </span>
-
-    </div>
-
-     <div class="grid md:grid-cols-3 gap-y-20 gap-x-20 mt-10 text-center text-sm">
-
-
-      <!-- Item -->
-      <div class="flex flex-col items-center gap-2">
-
-        <img
-          src="/assets/icons/Layer 2.png"
-          class="w-10 h-10"
-          alt="">
-
-        <p class="leading-tight">
-          Weekly Test <br>
-          (CPT - Common Practice Test)
-        </p>
-
-      </div>
-
-
-      <div class="flex flex-col items-center gap-2">
-
-        <img
-          src="/assets/icons/Layer 3.png"
-                   class="w-10 h-10"
-
-          alt="">
-
-        <p>
-          Subjective Test
-        </p>
-
-      </div>
-
-
-      <div class="flex flex-col items-center gap-2">
-
-        <img
-          src="/assets/icons/Layer 4.png"
-                    class="w-10 h-10"
-
-          alt="">
-
-        <p>
-          All India Test Series
-        </p>
-
-      </div>
-
-
-      <div class="flex flex-col items-center gap-2">
-
-        <img
-          src="/assets/icons/Layer 5.png"
-                   class="w-10 h-10"
-
-          alt="">
-
-        <p>
-          Fortnightly Test
-        </p>
-
-      </div>
-
-
-      <div class="flex flex-col items-center gap-2">
-
-        <img
-          src="/assets/icons/Layer 6.png"
-                    class="w-10 h-10"
-
-          alt="">
-
-        <p>
-          Term Exams
-        </p>
-
-      </div>
-
-
-      <div class="flex flex-col items-center gap-2">
-
-        <img
-          src="/assets/icons/Layer 7.png"
-                    class="w-10 h-10"
-
-          alt="">
-
-        <p>
-          Grand Test
-        </p>
-
-      </div>
-
-
-    </div>
-    </div>
-
-
+</div>
 </section>
-  </main>
+
+
+<!-- ================= COURSE HIGHLIGHTS ================= -->
+<section class="py-5" style="background:#FFF5F6;">
+<div class="container">
+
+<h5 class="text-center fw-semibold mb-5">
+Course Highlights
+</h5>
+
+<div class="row g-5">
+
+@php
+$highlights = [
+"Complete Board + NEET Syllabus Coverage",
+"All India Common Analysis For Rank Boosting",
+"Doubt Clearing Sessions",
+"Regular Updates About Student’s Performance And Attendance",
+"Systematic And Regular Testing Systems",
+"Well-Defined And Planned Academic Year",
+"Up To 90% Scholarship Through NACST",
+"Feedback And Micro Level Analysis",
+"Review Classes For The Entire Syllabus",
+"All India Test Series + Grand Success Package"
+];
+@endphp
+
+@foreach($highlights as $highlight)
+<div class="col-md-6">
+<div class="d-flex align-items-start gap-3">
+<span class="badge bg-success rounded-circle p-2">✓</span>
+<span>{{ $highlight }}</span>
+</div>
+</div>
+@endforeach
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= TYPE OF TESTS ================= -->
+<section class="py-5" style="background:#FFF5F6;">
+<div class="container">
+
+<div class="bg-danger text-white rounded-4 p-5 text-center">
+
+<h5 class="fw-semibold mb-5">
+Type of Tests
+</h5>
+
+<div class="row g-5">
+
+@php
+$tests = [
+"Weekly Test (CPT - Common Practice Test)",
+"Subjective Test",
+"All India Test Series",
+"Fortnightly Test",
+"Term Exams",
+"Grand Test"
+];
+@endphp
+
+@foreach($tests as $test)
+<div class="col-md-4">
+<div>
+<img src="/assets/icons/Layer 2.png"
+     style="width:40px;height:40px;"
+     class="mb-3">
+<p class="mb-0">{{ $test }}</p>
+</div>
+</div>
+@endforeach
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+</main>
 
 @endsection

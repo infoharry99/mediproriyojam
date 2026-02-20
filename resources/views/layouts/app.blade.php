@@ -4,7 +4,7 @@
 <title>@yield('title')</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<script src="https://cdn.tailwindcss.com"></script>
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
  <script>
     tailwind.config = {
       theme: {
@@ -17,7 +17,23 @@
     }
   </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+  /* WhatsApp Floating Button */
+
+.whatsapp-btn{
+    z-index:9999;
+    transition:all .3s ease;
+}
+
+.whatsapp-btn:hover{
+    transform:scale(1.15);
+}
+</style>
 </head>
 
 <body class="font-pop">
@@ -30,13 +46,14 @@
 
   @include('partials.footer')
 <!-- Floating WhatsApp Button -->
+<!-- Floating WhatsApp Button -->
 <a href="https://wa.me/918669667300"
    target="_blank"
-   class="fixed bottom-5 right-5 z-50 bg-green-500 p-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300">
+   class="position-fixed bottom-0 end-0 m-4 bg-success p-3 rounded-circle shadow whatsapp-btn">
 
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
        alt="WhatsApp"
-       class="w-8 h-8">
+       width="32" height="32">
 
 </a>
 

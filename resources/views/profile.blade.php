@@ -4,83 +4,94 @@
 
 @section('content')
 
-<section class="py-40 bg-[#FFF5F6]">
+<section class="py-5" style="background:#FFF5F6; min-height:100vh;">
 
-  <div class="max-w-4xl mx-auto w-[90%]">
+    <div class="container" style="max-width:900px;">
 
-    <div class="bg-white rounded-2xl shadow-xl p-8">
+        <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5">
 
-      <!-- Profile Header -->
-      <div class="flex items-center gap-6 mb-8">
+            <!-- Profile Header -->
+            <div class="d-flex align-items-center gap-4 mb-4">
 
-        <img src="/assets/img/profile.png"
-             class="w-24 h-24 rounded-full object-cover border"
-             alt="User">
+                <img src="/assets/img/profile.png"
+                     class="rounded-circle border"
+                     style="width:100px; height:100px; object-fit:cover;"
+                     alt="User">
 
-        <div>
-          <h3 class="text-xl font-semibold">
-            Mohit Rana
-          </h3>
-          <p class="text-sm text-gray-500">
-            mohit@gmail.com
-          </p>
+                <div>
+                    <h4 class="fw-semibold mb-1">
+                        Mohit Rana
+                    </h4>
+                    <p class="text-muted small mb-0">
+                        mohit@gmail.com
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Form -->
+            <form>
+
+                <div class="row g-4">
+
+                    <div class="col-md-6">
+                        <label class="form-label text-muted small">
+                            Full Name
+                        </label>
+                        <input type="text"
+                               value="Mohit Rana"
+                               class="form-control rounded-3">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label text-muted small">
+                            Email
+                        </label>
+                        <input type="email"
+                               value="mohit@gmail.com"
+                               class="form-control rounded-3">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label text-muted small">
+                            Phone
+                        </label>
+                        <input type="text"
+                               value="9876543210"
+                               class="form-control rounded-3">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label text-muted small">
+                            City
+                        </label>
+                        <input type="text"
+                               value="Nagpur"
+                               class="form-control rounded-3">
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="mt-4 d-flex gap-3">
+
+                    <button type="submit"
+                            class="btn btn-danger px-4 rounded-3">
+                        Update
+                    </button>
+
+                    <button type="button"
+                            class="btn btn-outline-danger px-4 rounded-3">
+                        Logout
+                    </button>
+
+                </div>
+
+            </form>
+
         </div>
-
-      </div>
-
-
-      <!-- Info -->
-      <div class="grid md:grid-cols-2 gap-6">
-
-        <div>
-          <label class="text-sm text-gray-600">Full Name</label>
-          <input type="text"
-                 value="Mohit Rana"
-                 class="w-full mt-1 border rounded-md px-3 py-2">
-        </div>
-
-        <div>
-          <label class="text-sm text-gray-600">Email</label>
-          <input type="email"
-                 value="mohit@gmail.com"
-                 class="w-full mt-1 border rounded-md px-3 py-2">
-        </div>
-
-        <div>
-          <label class="text-sm text-gray-600">Phone</label>
-          <input type="text"
-                 value="9876543210"
-                 class="w-full mt-1 border rounded-md px-3 py-2">
-        </div>
-
-        <div>
-          <label class="text-sm text-gray-600">City</label>
-          <input type="text"
-                 value="Nagpur"
-                 class="w-full mt-1 border rounded-md px-3 py-2">
-        </div>
-
-      </div>
-
-
-      <!-- Buttons -->
-      <div class="flex gap-4 mt-8">
-
-        <button
-          class="bg-red-600 text-white px-6 py-2 rounded-md hover:bg-red-700">
-          Update
-        </button>
-
-        <button
-          class="border border-red-600 text-red-600 px-6 py-2 rounded-md hover:bg-red-50">
-          Logout
-        </button>
-
-      </div>
 
     </div>
-
-  </div>
 
 </section>
 

@@ -108,6 +108,10 @@
 
                         <input type="text" name="name" value="{{ $testimonial->name }}" class="form-control mb-1">
                         <input type="text" name="designation" value="{{ $testimonial->designation }}" class="form-control mb-1">
+                         <textarea name="message"
+              class="form-control mb-1"
+              rows="2"
+              placeholder="Message">{{ $testimonial->message }}</textarea>
                         <input type="number" name="display_order" value="{{ $testimonial->display_order }}" class="form-control mb-1">
                         <select name="rating" class="form-control mb-1">
                             @for($i=1;$i<=5;$i++)
