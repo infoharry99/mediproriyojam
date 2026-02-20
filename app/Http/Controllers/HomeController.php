@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Banner;
 use App\Models\AboutUs;
 use App\Models\AboutStatistic;
+use App\Models\Testimonial;
 
 class HomeController extends Controller
 {
@@ -16,11 +17,16 @@ class HomeController extends Controller
         $desktopBanners = Banner::where('is_mobile',0)->where('status',1)->get();
         $mobileBanners  = Banner::where('is_mobile',1)->where('status',1)->get();
 
+    $testimonials = Testimonial::where('status','active')
+                        ->orderBy('display_order')
+                        ->paginate(3);   // 6 per page
+
+  
 
         $about = AboutUs::first();
 
         $stats = AboutStatistic::latest()->get();
 
-        return view('home', compact('desktopBanners', 'mobileBanners', 'about', 'stats'));
+        return view('home', compact('desktopBanners', 'mobileBanners', 'about', 'stats', 'testimonials'));
     }
 }

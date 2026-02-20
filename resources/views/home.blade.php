@@ -615,19 +615,12 @@ var mobileSwiper = new Swiper(".myHeroSliderMobile", {
 }
 </style>
 
-<!-- TESTIMONIAL SECTION -->
 <section class="position-relative py-5 overflow-hidden"
          style="background:#FFF5F6; padding-top:6rem; padding-bottom:6rem;">
 
   <!-- Top Pink Circle -->
   <div class="position-absolute start-50 translate-middle-x"
-       style="
-         top:-320px;
-         width:450px;
-         height:450px;
-         background:#FF7E7E;
-         border-radius:50%;
-       ">
+       style="top:-320px;width:450px;height:450px;background:#FF7E7E;border-radius:50%;">
   </div>
 
   <div class="container position-relative">
@@ -650,125 +643,111 @@ var mobileSwiper = new Swiper(".myHeroSliderMobile", {
     <!-- Cards -->
     <div class="row g-4">
 
-      <!-- CARD 1 -->
+      @foreach($testimonials as $testimonial)
       <div class="col-md-4">
         <div class="testimonial-card h-100 p-4 shadow-sm bg-white">
 
           <div class="d-flex justify-content-between mb-3">
 
             <div>
-              <img src="/assets/img/education/Rectangle 729.png"
+              <img src="{{ asset($testimonial->image ?? 'assets/img/profile.png') }}"
                    width="60" height="60"
-                   class="mb-2 object-fit-cover">
+                   class="mb-2 object-fit-cover rounded-circle">
 
-              <h6 class="fw-semibold">Floyd Miles</h6>
+              <h6 class="fw-semibold mb-0">
+                  {{ $testimonial->name }}
+              </h6>
+
+              <small class="text-muted">
+                  {{ $testimonial->designation }}
+              </small>
             </div>
 
+            <!-- Rating -->
             <div class="text-warning fs-5">
-              ★★★★★
+                @for($i=1;$i<=5;$i++)
+                    @if($i <= $testimonial->rating)
+                        ★
+                    @else
+                        ☆
+                    @endif
+                @endfor
             </div>
 
           </div>
 
           <p class="text-muted small">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-            Velit officia consequat duis enim velit mollit.
-            Exercitation veniam consequat sunt nostrud amet.
+            {{ $testimonial->message }}
           </p>
 
         </div>
       </div>
-
-      <!-- CARD 2 -->
-      <div class="col-md-4">
-        <div class="testimonial-card h-100 p-4 shadow-sm bg-white">
-
-          <div class="d-flex justify-content-between mb-3">
-
-            <div>
-              <img src="/assets/img/education/Rectangle 729 (1).png"
-                   width="60" height="60"
-                   class="mb-2">
-
-              <h6 class="fw-semibold">Ronald Richards</h6>
-            </div>
-
-            <div class="text-warning fs-5">
-              ★★★★☆
-            </div>
-
-          </div>
-
-          <p class="text-muted small">
-            Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
-          </p>
-
-        </div>
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="col-md-4">
-        <div class="testimonial-card h-100 p-4 shadow-sm bg-white">
-
-          <div class="d-flex justify-content-between mb-3">
-
-            <div>
-              <img src="/assets/img/education/Rectangle 729 (2).png"
-                   width="60" height="60"
-                   class="mb-2">
-
-              <h6 class="fw-semibold">Savannah Nguyen</h6>
-            </div>
-
-            <div class="text-warning fs-5">
-              ★★★★☆
-            </div>
-
-          </div>
-
-          <p class="text-muted small">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-            Velit officia consequat duis enim velit mollit.
-          </p>
-
-        </div>
-      </div>
+      @endforeach
 
     </div>
 
     <!-- Pagination -->
-    <div class="position-relative text-center mt-5">
+   <div class="position-relative text-center mt-5">
 
-      <!-- Gradient Strip -->
-      <div class="position-absolute start-50 translate-middle-x"
-           style="
-             width:60%;
-             height:45px;
-             background:linear-gradient(90deg,rgba(255,255,255,0) 0%,#CF242A 50%,rgba(255,255,255,0) 100%);
-             opacity:.6;
-             border-radius:50px;
-           ">
-      </div>
+    <!-- Gradient Strip -->
+    <div class="position-absolute start-50 translate-middle-x"
+         style="width:60%;
+                height:45px;
+                background:linear-gradient(90deg,rgba(255,255,255,0) 0%,#CF242A 50%,rgba(255,255,255,0) 100%);
+                opacity:.6;
+                border-radius:50px;">
+    </div>
 
-      <div class="position-relative d-inline-flex align-items-center gap-2">
+    <div class="position-relative d-inline-flex align-items-center gap-2">
 
-        <button class="btn btn-sm">‹</button>
+        {{-- Previous Button --}}
+        @if ($testimonials->onFirstPage())
+            <button class="btn btn-sm disabled">‹</button>
+        @else
+            <a href="{{ $testimonials->previousPageUrl() }}"
+               class="btn btn-sm">‹</a>
+        @endif
 
-        <button class="btn btn-sm btn-light">1</button>
-        <button class="btn btn-sm btn-light">2</button>
-        <button class="btn btn-sm btn-light">3</button>
-        <button class="btn btn-sm btn-light border">4</button>
 
-        <button class="btn btn-sm">›</button>
+        {{-- Page Numbers --}}
+        @foreach ($testimonials->getUrlRange(1, $testimonials->lastPage()) as $page => $url)
 
-      </div>
+            @if ($page == $testimonials->currentPage())
+                <span class="btn btn-sm btn-light border fw-bold">
+                    {{ $page }}
+                </span>
+            @else
+                <a href="{{ $url }}"
+                   class="btn btn-sm btn-light">
+                    {{ $page }}
+                </a>
+            @endif
+
+        @endforeach
+
+
+        {{-- Next Button --}}
+        @if ($testimonials->hasMorePages())
+            <a href="{{ $testimonials->nextPageUrl() }}"
+               class="btn btn-sm">›</a>
+        @else
+            <button class="btn btn-sm disabled">›</button>
+        @endif
 
     </div>
+
+</div>
 
   </div>
 </section>
 
 <style>
+ 
+.btn-light.border {
+    border: 2px solid #CF242A !important;
+    color: #CF242A;
+}
+
   .testimonial-card{
   border-radius:10px;
   transition:all .3s ease;

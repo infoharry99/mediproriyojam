@@ -98,7 +98,31 @@
     </div>
 </section>
 
+<style>
+.blog-content h3 {
+    margin-top: 30px;
+    font-weight: 700;
+}
 
+.blog-content h4 {
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+.blog-content ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-content li {
+    margin-bottom: 8px;
+}
+
+.blog-content p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+</style>
 <!-- VENN DIAGRAM SECTION -->
 <section class="py-5" style="background:#FFF5F6;">
     <div class="container text-center position-relative" style="height:420px; max-width:800px;">
