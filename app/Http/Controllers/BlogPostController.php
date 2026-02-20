@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\BlogPost;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use App\Models\Testimonial;
 
 class BlogPostController extends Controller
 {
@@ -135,4 +136,39 @@ class BlogPostController extends Controller
 
         return back()->with('success', 'Blog deleted successfully');
     }
+    // FRONT BLOG LISTING
+public function publicIndex()
+{
+    $featuredPost = BlogPost::where('status', 'published')
+        ->where('is_featured', 1)
+        ->latest()
+        ->first();
+
+    $posts = BlogPost::where('status', 'published')
+        ->latest()
+        ->paginate(9);
+
+    return view('blog', compact('posts', 'featuredPost'));
+}
+
+
+// BLOG DETAILS PAGE
+public function show($slug)
+{
+    $post = BlogPost::where('slug', $slug)
+        ->where('status', 'published')
+        ->firstOrFail();
+
+    $relatedPosts = BlogPost::where('status', 'published')
+        ->where('id', '!=', $post->id)
+        ->latest()
+        ->take(3)
+        ->get();
+
+         $testimonials = Testimonial::where('status', 'active')
+            ->orderBy('display_order')
+            ->get();
+
+    return view('innerblog', compact('post', 'relatedPosts','testimonials'));
+}
 }

@@ -4,561 +4,285 @@
 
 @section('content')
 
- <main class="main">
+<main class="main">
 
+<!-- HERO SECTION -->
+<section class="py-5" style="background:#FFF5F6;">
+    <div class="container mt-5 pt-5">
 
-
-
-
-<section class="py-5 bg-[#FFF5F6] ">
-<div class="flex justify-center mb-10 mt-[120px]">
-  <h3 class="py-2 px-4 font-medium text-[30px] ">Best NEET & Medical Coaching Classes in Nagpur | Medical Prayojanam</h3>
-</div>
-  <div class="max-w-7xl mx-auto w-[90%] lg:w-[90%]">
-
-  
-
-
-    <div
-      class="relative rounded-2xl overflow-hidden
-             shadow-xl h-[480px] md:h-[420px]">
-
-
-      <!-- Background Image -->
-      <img
-        src="/assets/img/bg/innerblog.png"
-        class="absolute inset-0 w-full h-full object-cover"
-        alt="Banner">
-
-
-      <!-- Blue Overlay -->
-      <div
-        class="absolute inset-0
-               bg-gradient-to-r
-               from-[#0A2A5A]/95 via-[#0A2A5A]/70 to-transparent">
-      </div>
-
-
-      <!-- Content -->
-      <div
-  class="absolute bottom-5 left-0 right-6
-         z-10
-         px-3 md:px-12">
-
-
-        <div class="max-w-xl text-white">
-
-
-          <!-- Badge -->
-          <span
-            class="inline-block mb-3
-                   px-3 py-1 text-xs
-                   bg-blue-500/90
-                   rounded-full">
-
-            NEET
-
-          </span>
-
-
-          <!-- Title -->
-          <h1
-            class="text-xl md:text-3xl font-bold leading-snug mb-4">
-
-            Best NEET & Medical Coaching Classes in Nagpur |
-            Medical Prayojanam
-
-          </h1>
-
-
-          <!-- Meta -->
-          <div class="flex items-center gap-3 text-xs opacity-90">
-
-            <span class="flex items-center gap-1">
-              👤 Karan Singh
-            </span>
-
-            <span>•</span>
-
-            <span>August 20, 2023</span>
-
-          </div>
-
-
+        <div class="text-center mb-4">
+            <h3 class="fw-medium" style="font-size:30px;">
+    {{ $post->title }}
+</h3>
         </div>
 
-      </div>
+        <div class="position-relative rounded-4 overflow-hidden shadow-lg" style="height:480px;">
 
+            <!-- Background -->
+           <img src="{{ asset($post->featured_image ?? 'assets/img/bg/innerblog.png') }}"
+     class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+     alt="{{ $post->title }}">
 
+            <!-- Overlay -->
+            <div class="position-absolute top-0 start-0 w-100 h-100"
+                 style="background:linear-gradient(to right, rgba(10,42,90,0.95), rgba(10,42,90,0.7), transparent);">
+            </div>
+
+            <!-- Content -->
+            <div class="position-absolute bottom-0 start-0 p-4 p-md-5 text-white" style="max-width:600px;">
+
+                <span class="badge bg-primary mb-3">NEET</span>
+
+                <h1 class="fw-bold mb-3">
+                   {{ $post->title }}
+                </h1>
+
+              <small class="opacity-75">
+    👤 {{ $post->author_name }} •
+    {{ \Carbon\Carbon::parse($post->publish_date)->format('F d, Y') }}
+</small>
+
+            </div>
+
+        </div>
     </div>
-
- 
-
-
-  </div>
-
 </section>
 
 
 <!-- CONTENT SECTION -->
-<section class="py-10 bg-[#FFF5F6]">
+<section class="py-5" style="background:#FFF5F6;">
+    <div class="container">
 
-  <div class="max-w-7xl mx-auto w-[90%]">
+        <div class="row mb-5">
 
+            <!-- Table of Contents -->
+            <div class="col-lg-4 mb-4">
+                <div class="bg-white rounded-4 shadow-sm p-4">
+                    <h5 class="fw-semibold mb-3">Table of Contents</h5>
+                    <ul class="list-unstyled fs-5">
+                        <li class="text-danger fw-medium">Introduction</li>
+                        <li class="text-muted">The Skeuomorphic Era</li>
+                        <li class="text-muted">Flat Design Revolution</li>
+                        <li class="text-muted">Material Design</li>
+                        <li class="text-muted">Rise of Neumorphism</li>
+                        <li class="text-muted">Future Trends</li>
+                    </ul>
+                </div>
+            </div>
 
-    <!-- Top Row -->
-    <div class="grid lg:grid-cols-3 gap-10 items-start mb-20">
+            <!-- Text -->
+            <div class="col-lg-8 fs-5 text-muted">
+    {!! $post->short_description !!}
+    {!! $post->content !!}
+</div>
 
-
-      <!-- Table of Contents -->
-      <div
-        class="bg-white rounded-xl shadow-md p-6">
-
-        <h3 class="font-semibold mb-4 text-lg">
-          Table of Contents
-        </h3>
-
-        <ul class="space-y-2 text-lg">
-
-          <li class="text-red-500 font-medium">
-            Introduction
-          </li>
-
-          <li class="text-gray-700">
-            The Skeuomorphic Era
-          </li>
-
-          <li class="text-gray-700">
-            Flat Design Revolution
-          </li>
-
-          <li class="text-gray-700">
-            Material Design
-          </li>
-
-          <li class="text-gray-700">
-            Rise of Neumorphism
-          </li>
-
-          <li class="text-gray-700">
-            Future Trends
-          </li>
-
-        </ul>
-
-      </div>
+        </div>
 
 
-      <!-- Text Content -->
-      <div class="lg:col-span-2 text-gray-700 text-lg leading-relaxed space-y-4">
+        <!-- Skeuomorphic -->
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4">
+                <h2 class="text-danger fw-semibold mb-3">
+                    The Skeuomorphic Era
+                </h2>
+                <p class="fs-5 text-muted">
+                    Skeuomorphic design dominated the early years...
+                </p>
+            </div>
 
-        <p>
-          The journey of user interface design has been marked by significant
-          shifts in aesthetic approaches, each era bringing its own unique
-          perspective on how digital interfaces should look and feel.
-        </p>
-
-        <p>
-          From the early days of graphical user interfaces to today’s
-          sophisticated design systems, the evolution of UI design reflects
-          not just technological advancement, but also changing user
-          expectations and cultural shifts in how we interact with digital
-          products.
-        </p>
-
-      </div>
-
+            <div class="col-lg-6">
+                <div class="bg-secondary rounded-4" style="height:220px;"></div>
+            </div>
+        </div>
 
     </div>
-
-
-    <!-- Bottom Row -->
-    <div class="grid lg:grid-cols-2 gap-14 items-start">
-
-
-      <!-- Left Text -->
-      <div>
-
-        <h2
-          class="text-3xl font-semibold text-red-500 mb-4">
-
-          The Skeuomorphic Era
-
-        </h2>
-
-        <p
-          class="text-gray-700 text-lg leading-relaxed">
-
-          Skeuomorphic design dominated the early years of digital interfaces,
-          attempting to mirror real-world objects in digital form. This
-          approach helped users transition from physical to digital
-          interactions through familiar visual metaphors.
-
-        </p>
-
-      </div>
-
-
-      <!-- Right Image Placeholder -->
-      <div
-        class="w-full h-[220px]
-               bg-gray-300
-               rounded-xl">
-
-      </div>
-
-
-    </div>
-
-
-  </div>
-
 </section>
 
 
 <!-- VENN DIAGRAM SECTION -->
-<section class="py-20 bg-[#FFF5F6]">
+<section class="py-5" style="background:#FFF5F6;">
+    <div class="container text-center position-relative" style="height:420px; max-width:800px;">
 
-  <div class="max-w-5xl mx-auto w-[90%]">
-
-    <div class="relative flex justify-center items-center h-[420px]">
-
-
-      <!-- LEFT CIRCLE -->
-      <div
-        class="absolute left-1/2 -translate-x-[90%]
-               w-[400px] h-[400px]
-               rounded-full
-               bg-[#FF9A9A]
-               flex items-center
-               text-white">
-
-        <div class="pl-14 pr-10">
-
-          <h3 class="font-semibold mb-4 text-lg">
-            Advantages
-          </h3>
-
-          <ul class="space-y-2 text-sm list-disc list-inside">
-
-            <li>Reduced visual cues</li>
-            <li>Potential usability issues</li>
-            <li>Limited depth perception</li>
-
-          </ul>
-
+        <!-- Left Circle -->
+        <div class="position-absolute top-50 start-50 translate-middle"
+             style="transform:translate(-120%, -50%);
+                    width:350px;height:350px;
+                    background:#FF9A9A;border-radius:50%;
+                    color:white; padding:60px; text-align:left;">
+            <h6 class="fw-semibold mb-3">Advantages</h6>
+            <ul>
+                <li>Reduced visual cues</li>
+                <li>Potential usability issues</li>
+                <li>Limited depth perception</li>
+            </ul>
         </div>
 
-      </div>
-
-
-      <!-- RIGHT CIRCLE -->
-      <div
-        class="absolute left-1/2 translate-x-[-10%]
-               w-[400px] h-[400px]
-               rounded-full
-               bg-[#E53939]
-               flex items-center
-               text-white">
-
-        <div class="pl-14 pr-10">
-
-          <h3 class="font-semibold mb-4 text-lg">
-            Challenges
-          </h3>
-
-          <ul class="space-y-2 text-sm list-disc list-inside">
-
-            <li>Reduced visual cues</li>
-            <li>Potential usability issues</li>
-            <li>Limited depth perception</li>
-
-          </ul>
-
+        <!-- Right Circle -->
+        <div class="position-absolute top-50 start-50 translate-middle"
+             style="transform:translate(20%, -50%);
+                    width:350px;height:350px;
+                    background:#E53939;border-radius:50%;
+                    color:white; padding:60px; text-align:left;">
+            <h6 class="fw-semibold mb-3">Challenges</h6>
+            <ul>
+                <li>Reduced visual cues</li>
+                <li>Potential usability issues</li>
+                <li>Limited depth perception</li>
+            </ul>
         </div>
-
-      </div>
-
 
     </div>
-
-  </div>
-
 </section>
 
-<!-- MATERIAL DESIGN SECTION -->
-<section class="py-20 bg-[#FFF5F6]">
 
-  <div class="max-w-7xl mx-auto w-[90%] lg:w-[90%] text-center">
+<!-- MATERIAL DESIGN -->
+<section class="py-5 text-center" style="background:#FFF5F6;">
+    <div class="container">
 
+        <h2 class="fw-semibold mb-3">Material Design: Finding Balance</h2>
 
-    <!-- Heading -->
-    <h2 class="text-2xl md:text-3xl font-semibold mb-4">
-      Material Design: Finding Balance
-    </h2>
-
-
-    <!-- Description -->
-    <p
-      class="max-w-3xl mx-auto text-gray-600 text-sm leading-relaxed mb-14">
-
-      Google’s Material Design emerged as a comprehensive design system that
-      combined the simplicity of flat design with subtle depth cues, creating
-      a more intuitive user experience while maintaining modern aesthetics.
-
-    </p>
-
-
-    <!-- Cards -->
-    <div class="grid md:grid-cols-3 gap-10 justify-center max-w-2xl mx-auto">
-
-
-      <!-- Card 1 -->
-      <div
-        class="bg-transparent border border-gray-300
-               rounded-xl p-6
-               shadow-sm">
-
-        <h3 class="text-red-500 font-semibold mb-3 text-sm">
-          Physical <br/> Properties
-        </h3>
-
-        <p class="text-gray-600 text-xs leading-relaxed">
-          Surfaces and edges <br/>provide meaningful<br/> interaction cues
+        <p class="text-muted mx-auto mb-5" style="max-width:700px;">
+            Google’s Material Design emerged as a comprehensive design system...
         </p>
 
-      </div>
+        <div class="row justify-content-center g-4">
 
+            <div class="col-md-3">
+                <div class="border rounded-4 p-4 shadow-sm">
+                    <h6 class="text-danger fw-semibold">Physical Properties</h6>
+                    <p class="small text-muted">Surfaces and edges provide meaningful interaction cues</p>
+                </div>
+            </div>
 
-      <!-- Card 2 -->
-      <div
-        class="bg-transparent border border-gray-300
-               rounded-xl p-6
-               shadow-sm">
+            <div class="col-md-3">
+                <div class="border rounded-4 p-4 shadow-sm">
+                    <h6 class="text-danger fw-semibold">Bold Graphics</h6>
+                    <p class="small text-muted">Deliberate color choices and white space</p>
+                </div>
+            </div>
 
-        <h3 class="text-red-500 font-semibold mb-3 text-sm">
-          Bold<br/> Graphics
-        </h3>
+            <div class="col-md-3">
+                <div class="border rounded-4 p-4 shadow-sm">
+                    <h6 class="text-danger fw-semibold">Meaningful Motion</h6>
+                    <p class="small text-muted">Animation reinforces user actions</p>
+                </div>
+            </div>
 
-        <p class="text-gray-600 text-xs leading-relaxed">
-          Deliberate color choices<br/> and intentional white<br/> space
-        </p>
-
-      </div>
-
-
-      <!-- Card 3 -->
-      <div
-        class="bg-transparent border border-gray-300
-               rounded-xl p-6
-               shadow-sm">
-
-        <h3 class="text-red-500 font-semibold mb-3 text-sm">
-          Meaningful <br/>Motion
-        </h3>
-
-        <p class="text-gray-600 text-xs leading-relaxed">
-          Animation informs and<br/> reinforces user actions
-        </p>
-
-      </div>
-
+        </div>
 
     </div>
-
-
-  </div>
-
 </section>
 
 
 <!-- COMMUNITY FEEDBACK -->
-<!-- COMMUNITY FEEDBACK -->
-<section
-  class="py-24
-         bg-[#FFF5F6]
-         overflow-hidden">
+<section class="py-5" style="background:#FFF5F6;">
+    <div class="container text-center">
 
-  <div class="max-w-7xl mx-auto w-[90%]">
+        <h4 class="mb-4">Community Feedback</h4>
 
+        <div class="position-relative">
 
-    <!-- Heading -->
-    <h2 class="text-xl font-semibold text-center mb-10">
-      Community Feedback
-    </h2>
+            <!-- Slider -->
+            <div id="feedbackSlider"
+                 class="d-flex gap-4 overflow-auto pb-4"
+                 style="scroll-behavior:smooth;">
 
+                @foreach($testimonials as $testimonial)
+                <div class="p-4 rounded-4 shadow position-relative testimonial-card"
+                     style="min-width:280px;
+                            background:linear-gradient(to bottom,#FFD7D7,#FFF5F6);">
 
-    <!-- Slider Wrapper -->
-    <div class="relative">
+                    <!-- Quote -->
+                    <!-- <div class="display-6 mb-2">“</div> -->
 
+                    <!-- Message -->
+                  <p class="small text-muted testimonial-message">
+    {{ $testimonial->message }}
+</p>
 
-      <!-- Cards Row -->
-      <div
-        id="feedbackSlider"
-        class="flex gap-6 overflow-x-auto
-               scroll-smooth
-               pb-6 px-2
-               scrollbar-hide">
+                    <!-- Rating -->
+                    <div class="mb-3 text-warning">
+                        @for($i=1;$i<=5;$i++)
+                            @if($i <= $testimonial->rating)
+                                <i class="bi bi-star-fill"></i>
+                            @else
+                                <i class="bi bi-star"></i>
+                            @endif
+                        @endfor
+                    </div>
 
+                    <!-- Bottom Profile Section -->
+                    <div class="d-flex align-items-center gap-2 position-absolute"
+                         style="bottom:15px; left:15px; ">
 
-        <!-- CARD 1 -->
-        <div class="min-w-[220px] bg-gradient-to-b from-[#FFD7D7] to-[#FFF5F6]
-                    rounded-xl p-6 shadow">
+                        <img src="{{ asset($testimonial->image ?? 'assets/img/profile.png') }}"
+                             style="width:50px;height:50px;object-fit:cover;"
+                             class="rounded-circle border"
+                             alt="{{ $testimonial->name }}">
 
-          <div class="text-4xl font-bold mb-3">“</div>
+                        <div class="text-start">
+                            <h6 class="mb-0 small fw-semibold">
+                                {{ $testimonial->name }}
+                            </h6>
+                            <small class="text-muted">
+                                {{ $testimonial->designation }}
+                            </small>
+                        </div>
 
-          <p class="text-xs text-gray-700 leading-relaxed">
-           I feel I found some parts of me that I had lost. I am very thankful to Medical Prayojanam, that I could crack NEET exam & got admission in TNMC Mumbai. I have learned from Medical Prayojanam will be with me on my 5 year journey of MBBS.
-          </p>
+                    </div>
 
-        </div>
+                </div>
+                @endforeach
 
+            </div>
 
-        <!-- CARD 2 -->
-        <div class="min-w-[220px] bg-gradient-to-b from-[#FFD7D7] to-[#FFF5F6]
-                    rounded-xl p-6 shadow">
-
-          <div class="text-4xl font-bold mb-3">“</div>
-
-          <p class="text-xs text-gray-700 leading-relaxed">
-            I never thought learning would be fun till I joined 'Medical Prayojanam'. The novel way of teaching using jingles, making basics clear boost your confidence levels to appear in exams as you understand the topic well. I was immensely benefitted by the Medical Prayojnam. I think it was magic, that I could crack NEET exam and got GMC Nagpur.
-          </p>
-
-        </div>
-
-
-        <!-- CARD 3 -->
-        <div class="min-w-[220px] bg-gradient-to-b from-[#FFD7D7] to-[#FFF5F6]
-                    rounded-xl p-6 shadow">
-
-          <div class="text-4xl font-bold mb-3">“</div>
-
-          <p class="text-xs text-gray-700 leading-relaxed">
-            Medical Prayojanam is the best coaching class. The teaching staff is highly qualifies. The daily test and weekly are held regularly which enhance my knowledge. Here the surrounding atmosphere is very friendly and positive. The teaching way is amazing makes me grasp topics quickly.
-          </p>
-
-        </div>
-
-
-        <!-- CARD 4 -->
-        <div class="min-w-[220px] bg-gradient-to-b from-[#FFD7D7] to-[#FFF5F6]
-                    rounded-xl p-6 shadow">
-
-          <div class="text-4xl font-bold mb-3">“</div>
-
-          <p class="text-xs text-gray-700 leading-relaxed">
-           Best coaching in Nagpur for NEET. They provide personal attention to every child and believe that no child is dump every child can crack NEET if workout is there. I am very lucky to be under guidance of super teacher. There are not very large number of students so you can show your existence by performance. I suggest you take admission here.
-          </p>
+            <!-- Buttons -->
+            <div class="mt-3">
+                <button onclick="slideLeft()" class="btn btn-outline-secondary rounded-circle me-2">‹</button>
+                <button onclick="slideRight()" class="btn btn-outline-secondary rounded-circle">›</button>
+            </div>
 
         </div>
-
-
-        <!-- CARD 5 -->
-        <div class="min-w-[220px] bg-gradient-to-b from-[#FFD7D7] to-[#FFF5F6]
-                    rounded-xl p-6 shadow">
-
-          <div class="text-4xl font-bold mb-3">“</div>
-
-          <p class="text-xs text-gray-700 leading-relaxed">
-           For thousands of students, NEET is not just a competition exam but a dream of becoming a
-doctor. Every year, many aspirants put in long hours of study, yet only a limited number
-achieve top ranks. The main reason is often not a lack of hard work, but small and repeated
-mistakes during preparation.
-          </p>
-
-        </div>
-
-
-        <!-- CARD 6 -->
-        <div class="min-w-[220px] bg-gradient-to-b from-[#FFD7D7] to-[#FFF5F6]
-                    rounded-xl p-6 shadow">
-
-          <div class="text-4xl font-bold mb-3">“</div>
-
-          <p class="text-xs text-gray-700 leading-relaxed">
-            Enrolling in the best NEET coaching in Nagpur significantly enhances a student’s chances
-of success while effectively reducing exam-related stress.
-While many students successfully clear the NEET exam through self-study, joining a premier
-institute provides a distinct competitive edge. Structured guidance.
-          </p>
-
-        </div>
-
-
-      </div>
-
-
-      <!-- LEFT BUTTON -->
-      <button
-        onclick="slideLeft()"
-        class="absolute -bottom-12 left-[45%]
-               w-10 h-10 rounded-full
-               border border-gray-400
-               flex items-center justify-center
-               bg-white hover:bg-gray-100
-               transition">
-
-        ‹
-
-      </button>
-
-
-      <!-- RIGHT BUTTON -->
-      <button
-        onclick="slideRight()"
-        class="absolute -bottom-12 left-[55%]
-               w-10 h-10 rounded-full
-               border border-gray-400
-               flex items-center justify-center
-               bg-white hover:bg-gray-100
-               transition">
-
-        ›
-
-      </button>
-
 
     </div>
-
-  </div>
-
 </section>
-
-
-<!-- SLIDER SCRIPT -->
-<script>
-  const slider = document.getElementById("feedbackSlider");
-
-  function slideLeft() {
-    slider.scrollBy({
-      left: -280,
-      behavior: "smooth"
-    });
-  }
-
-  function slideRight() {
-    slider.scrollBy({
-      left: 280,
-      behavior: "smooth"
-    });
-  }
-</script>
-
 
 <style>
-  /* Hide scrollbar */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.testimonial-card {
+    min-width: 280px;
+    min-height: 250px;
+    background: linear-gradient(to bottom,#FFD7D7,#FFF5F6);
+    padding-bottom: 90px; /* space for bottom profile */
 }
 
+.testimonial-message {
+    margin-bottom: 20px;
+}
+</style>
+<script>
+const slider = document.getElementById("feedbackSlider");
 
+function slideLeft(){
+    slider.scrollBy({left:-280,behavior:'smooth'});
+}
+function slideRight(){
+    slider.scrollBy({left:280,behavior:'smooth'});
+}
+</script>
 
+<style>
+.object-fit-cover{
+    object-fit:cover;
+}
+#feedbackSlider::-webkit-scrollbar{
+    display:none;
+}
+#feedbackSlider{
+    -ms-overflow-style:none;
+    scrollbar-width:none;
+}
 </style>
 
-  </main>
+</main>
 
 @endsection

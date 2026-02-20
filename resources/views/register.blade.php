@@ -4,66 +4,80 @@
 
 @section('content')
 
-<section class="min-h-screen py-40 bg-[#FFF5F6] flex items-center justify-center">
+<section class="min-vh-100 d-flex align-items-center justify-content-center"
+         style="background:#FFF5F6; padding-top:120px; padding-bottom:120px;">
 
-  <div class="bg-white w-full max-w-md p-8 rounded-2xl shadow-xl">
+    <div class="card border-0 shadow-lg rounded-4 p-4 p-md-5"
+         style="max-width:450px; width:100%;">
 
-    <h2 class="text-2xl font-bold text-center text-red-600 mb-6">
-      Register
-    </h2>
+        <h2 class="text-center text-danger fw-bold mb-4">
+            Register
+        </h2>
 
-    <form  action="#" class="space-y-4">
+        <form action="#">
 
+            <!-- Full Name -->
+            <div class="mb-3">
+                <label class="form-label text-muted small">
+                    Full Name
+                </label>
+                <input type="text"
+                       class="form-control rounded-3">
+            </div>
 
-      <!-- Name -->
-      <div>
-        <label class="text-sm text-gray-600">Full Name</label>
-        <input type="text"
-               class="w-full mt-1 border rounded-md px-3 py-2">
-      </div>
+            <!-- Email -->
+            <div class="mb-3">
+                <label class="form-label text-muted small">
+                    Email
+                </label>
+                <input type="email"
+                       class="form-control rounded-3">
+            </div>
 
-      <!-- Email -->
-      <div>
-        <label class="text-sm text-gray-600">Email</label>
-        <input type="email"
-               class="w-full mt-1 border rounded-md px-3 py-2">
-      </div>
+            <!-- Phone -->
+            <div class="mb-3">
+                <label class="form-label text-muted small">
+                    Phone
+                </label>
+                <input type="text"
+                       class="form-control rounded-3">
+            </div>
 
-      <!-- Phone -->
-      <div>
-        <label class="text-sm text-gray-600">Phone</label>
-        <input type="text"
-               class="w-full mt-1 border rounded-md px-3 py-2">
-      </div>
+            <!-- Password -->
+            <div class="mb-3">
+                <label class="form-label text-muted small">
+                    Password
+                </label>
+                <input type="password"
+                       class="form-control rounded-3">
+            </div>
 
-      <!-- Password -->
-      <div>
-        <label class="text-sm text-gray-600">Password</label>
-        <input type="password"
-               class="w-full mt-1 border rounded-md px-3 py-2">
-      </div>
+            <!-- Confirm Password -->
+            <div class="mb-4">
+                <label class="form-label text-muted small">
+                    Confirm Password
+                </label>
+                <input type="password"
+                       class="form-control rounded-3">
+            </div>
 
-      <!-- Confirm -->
-      <div>
-        <label class="text-sm text-gray-600">Confirm Password</label>
-        <input type="password"
-               class="w-full mt-1 border rounded-md px-3 py-2">
-      </div>
+            <!-- Button -->
+            <button type="submit"
+                    class="btn btn-danger w-100 rounded-3 py-2">
+                Register
+            </button>
 
-      <!-- Button -->
-      <button
-        class="w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700">
-        Register
-      </button>
+        </form>
 
-    </form>
+        <p class="text-center small mt-4 mb-0">
+            Already have an account?
+            <a href="/login"
+               class="text-danger fw-semibold text-decoration-none">
+                Login
+            </a>
+        </p>
 
-    <p class="text-sm text-center mt-4">
-      Already have account?
-      <a href="/login" class="text-red-600 font-medium">Login</a>
-    </p>
-
-  </div>
+    </div>
 
 </section>
 

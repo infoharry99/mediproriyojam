@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\File;
 
 class TestimonialController extends Controller
 {
+
     public function index()
     {
         $testimonials = Testimonial::orderBy('display_order')->get();

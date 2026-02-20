@@ -4,45 +4,52 @@
 
 @section('content')
 
-<section class="min-h-screen bg-[#FFF5F6] flex items-center justify-center">
+<section class="min-vh-100 d-flex align-items-center justify-content-center"
+         style="background:#FFF5F6;">
 
-  <div class="bg-white w-full max-w-md p-8 rounded-2xl shadow-xl">
+    <div class="card shadow-lg border-0 rounded-4 p-4 p-md-5"
+         style="max-width:450px; width:100%;">
 
-    <h2 class="text-2xl font-bold text-center text-red-600 mb-6">
-      Login
-    </h2>
+        <h2 class="text-center text-danger fw-bold mb-4">
+            Login
+        </h2>
 
-    <form  action="#" class="space-y-4">
+        <form action="#">
 
+            <!-- Email -->
+            <div class="mb-3">
+                <label class="form-label text-muted small">
+                    Email
+                </label>
+                <input type="email"
+                       class="form-control rounded-3">
+            </div>
 
-      <!-- Email -->
-      <div>
-        <label class="text-sm text-gray-600">Email</label>
-        <input type="email"
-               class="w-full mt-1 border rounded-md px-3 py-2 focus:ring-2 focus:ring-red-400">
-      </div>
+            <!-- Password -->
+            <div class="mb-3">
+                <label class="form-label text-muted small">
+                    Password
+                </label>
+                <input type="password"
+                       class="form-control rounded-3">
+            </div>
 
-      <!-- Password -->
-      <div>
-        <label class="text-sm text-gray-600">Password</label>
-        <input type="password"
-               class="w-full mt-1 border rounded-md px-3 py-2 focus:ring-2 focus:ring-red-400">
-      </div>
+            <!-- Button -->
+            <button type="submit"
+                    class="btn btn-danger w-100 rounded-3 py-2">
+                Login
+            </button>
 
-      <!-- Button -->
-      <button
-        class="w-full bg-red-600 text-white py-2 rounded-md hover:bg-red-700 transition">
-        Login
-      </button>
+        </form>
 
-    </form>
+        <p class="text-center small mt-4 mb-0">
+            Don’t have an account?
+            <a href="/register" class="text-danger fw-semibold text-decoration-none">
+                Register
+            </a>
+        </p>
 
-    <p class="text-sm text-center mt-4">
-      Don’t have an account?
-      <a href="/register" class="text-red-600 font-medium">Register</a>
-    </p>
-
-  </div>
+    </div>
 
 </section>
 

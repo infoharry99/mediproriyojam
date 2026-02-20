@@ -34,9 +34,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 
 
-Route::get('/blog', function () {
-    return view('blog');
-});
+
 Route::get('/course', function () {
     return view('course');
 });
@@ -46,9 +44,7 @@ Route::get('/target', function () {
 Route::get('/foundation', function () {
     return view('foundation');
 });
-Route::get('/innerblog', function () {
-    return view('innerblog');
-});
+
 Route::get('/contact', function () {
     return view('contact');
 });
@@ -66,6 +62,12 @@ Route::get('/gallery', function () {
     return view('gallery');
 });
 
+
+// Blog Listing
+Route::get('/blog', [BlogPostController::class, 'publicIndex'])->name('blog.index');
+
+// Blog Details
+Route::get('/blog/{slug}', [BlogPostController::class, 'show'])->name('blog.show');
 Route::get('/admin-register', [AuthController::class, 'showRegister'])->name('admin.register');
 Route::post('/admin-register', [AuthController::class, 'register'])->name('admin.register.store');
 
