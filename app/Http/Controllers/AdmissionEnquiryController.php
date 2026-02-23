@@ -13,6 +13,33 @@ class AdmissionEnquiryController extends Controller
         return view('admin.admission-enquiries.index', compact('enquiries'));
     }
 
+   public function store(Request $request)
+{
+    $data = $request->validate([
+        'first_name'   => 'required|string|max:100',
+        'last_name'    => 'nullable|string|max:100',
+        'phone_number' => 'required|string|max:20',
+        'course'       => 'nullable',
+        'city'         => 'nullable|string|max:150',
+        'query'        => 'nullable',
+    ]);
+
+    // Convert array → string (safety fix)
+    if (is_array($data['course'] ?? null)) {
+        $data['course'] = implode(',', $data['course']);
+    }
+
+    if (is_array($data['query'] ?? null)) {
+        $data['query'] = implode(',', $data['query']);
+    }
+
+    $data['status'] = 'new';
+
+    AdmissionEnquiry::create($data);
+
+    return back()->with('success', 'Enquiry submitted successfully');
+}
+
     public function updateStatus(Request $request, $id)
     {
         $request->validate([

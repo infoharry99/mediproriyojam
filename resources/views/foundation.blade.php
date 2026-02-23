@@ -81,29 +81,41 @@ And Typesetting Industry.
 <div class="bg-white shadow rounded-4 p-4">
 
 <h4 class="fw-bold mb-4" style="color:#CF242A;">
+     @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
 Admission Enquiry Form
 </h4>
 
-<form class="row g-3">
+
+       <form class="row g-3" action="{{ route('admission.enquiry.store') }}" method="POST">
+                    @csrf
 
 <div class="col-6">
 <label class="form-label small">First Name</label>
-<input type="text" class="form-control" placeholder="Mohit">
+<input type="text" name="first_name" placeholder="First" class="form-control">
+
 </div>
 
 <div class="col-6">
 <label class="form-label small">Last Name</label>
-<input type="text" class="form-control" placeholder="Rana">
+<input type="text" name="last_name" placeholder="Last" class="form-control">
+
 </div>
 
 <div class="col-12">
 <label class="form-label small">Phone Number</label>
-<input type="text" class="form-control" placeholder="Phone number">
+<input type="text" name="phone_number" placeholder="Phone number" class="form-control">
+
 </div>
 
 <div class="col-12">
-<label class="form-label small">Choose Course</label>
-<select class="form-select">
+ <label class="form-label text-muted small">
+                                School
+                            </label>
+                            <select class="form-select" name="course">
 <option>Choose course</option>
 <option>NEET</option>
 <option>Medical</option>
@@ -112,16 +124,18 @@ Admission Enquiry Form
 
 <div class="col-12">
 <label class="form-label small">City</label>
-<input type="text" class="form-control" placeholder="City">
+<input type="text" name="city" placeholder="City" class="form-control">
+
 </div>
 
 <div class="col-12">
 <label class="form-label small">Query</label>
-<textarea rows="3" class="form-control" placeholder="Query"></textarea>
+<textarea rows="4" name="query" placeholder="Query" class="form-control"></textarea>
+
 </div>
 
 <div class="col-12">
-<button type="submit" class="btn text-white px-4"
+<button  type="submit" class="btn text-white px-4"
         style="background:#CF242A;">
 Submit →
 </button>

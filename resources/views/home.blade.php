@@ -935,11 +935,18 @@ var mobileSwiper = new Swiper(".myHeroSliderMobile", {
         <div class="bg-white rounded-4 shadow p-4 p-lg-5 h-100">
 
           <h2 class="fw-bold text-danger mb-4">
+            @if(session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
             Admission Enquiry Form
           </h2>
 
 
-          <form>
+          
+          <form action="{{ route('admission.enquiry.store') }}" method="POST">
+          @csrf
 
             <!-- Full Name -->
             <div class="mb-4">
@@ -949,19 +956,12 @@ var mobileSwiper = new Swiper(".myHeroSliderMobile", {
               </label>
 
               <div class="row g-3">
-
                 <div class="col-6">
-                  <input type="text"
-                         class="form-control"
-                         placeholder="First">
+                  <input type="text" name="first_name" placeholder="First" class="form-control">
                 </div>
-
                 <div class="col-6">
-                  <input type="text"
-                         class="form-control"
-                         placeholder="Last">
+                  <input type="text" name="last_name" placeholder="Last" class="form-control">
                 </div>
-
               </div>
 
             </div>
@@ -969,62 +969,43 @@ var mobileSwiper = new Swiper(".myHeroSliderMobile", {
 
             <!-- Phone -->
             <div class="mb-4">
-
-              <label class="form-label text-muted small">
-                Phone number
-              </label>
-
-              <input type="text"
-                     class="form-control"
-                     placeholder="Phone number">
-
-            </div>
+                            <label class="form-label text-muted small">
+                                Phone number
+                            </label>
+                            <input type="text" name="phone_number" placeholder="Phone number" class="form-control">
+                        </div>
 
 
             <!-- Course -->
             <div class="mb-4">
-
-              <label class="form-label text-muted small">
-                Choose course
-              </label>
-
-              <select class="form-select">
-
-                <option selected>Choose course</option>
-                <option>NEET</option>
-                <option>Medical</option>
-
-              </select>
-
-            </div>
+                            <label class="form-label text-muted small">
+                                School
+                            </label>
+                            <select class="form-select" name="course">
+                                <option selected>Choose course</option>
+                                <option>NEET</option>
+                                <option>Medical</option>
+                            </select>
+                        </div>
 
 
             <!-- City -->
-            <div class="mb-4">
+            
+                        <!-- City -->
+                        <div class="mb-4">
+                            <label class="form-label text-muted small">
+                                City
+                            </label>
+                            <input type="text" name="city" placeholder="City" class="form-control">
+                        </div>
 
-              <label class="form-label text-muted small">
-                City
-              </label>
-
-              <input type="text"
-                     class="form-control"
-                     placeholder="City">
-
-            </div>
-
-
-            <!-- Query -->
-            <div class="mb-4">
-
-              <label class="form-label text-muted small">
-                Query
-              </label>
-
-              <textarea rows="4"
-                        class="form-control resize-none"
-                        placeholder="Query"></textarea>
-
-            </div>
+                        <!-- Query -->
+                        <div class="mb-4">
+                            <label class="form-label text-muted small">
+                                Query
+                            </label>
+                            <textarea rows="4" name="query" placeholder="Query" class="form-control"></textarea>
+                        </div>
 
 
             <!-- Submit -->

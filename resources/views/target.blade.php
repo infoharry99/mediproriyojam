@@ -78,31 +78,40 @@ $features = [
 <div class="bg-white rounded-4 shadow-lg p-4">
 
 <h5 class="fw-bold text-danger mb-4">
+    @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
     Admission Enquiry Form
 </h5>
 
-<form>
+  <form action="{{ route('admission.enquiry.store') }}" method="POST">
+                    @csrf
 
 <div class="mb-3">
 <label class="form-label small text-muted">Full Name</label>
 <div class="row g-2">
 <div class="col-6">
-<input type="text" class="form-control" placeholder="Mohit">
+<input type="text" name="first_name" placeholder="First" class="form-control">
+
 </div>
 <div class="col-6">
-<input type="text" class="form-control" placeholder="Rana">
+<input type="text" name="last_name" placeholder="Last" class="form-control">
+
 </div>
 </div>
 </div>
 
 <div class="mb-3">
 <label class="form-label small text-muted">Phone number</label>
-<input type="text" class="form-control" placeholder="Phone number">
+<input type="text" name="phone_number" placeholder="Phone number" class="form-control">
+
 </div>
 
 <div class="mb-3">
-<label class="form-label small text-muted">Choose course</label>
-<select class="form-select">
+<label class="form-label small text-muted">School</label>
+<select class="form-select" name="course">
 <option>Choose course</option>
 <option>NEET</option>
 <option>Medical</option>
@@ -111,15 +120,16 @@ $features = [
 
 <div class="mb-3">
 <label class="form-label small text-muted">City</label>
-<input type="text" class="form-control" placeholder="City">
+<input type="text" name="city" placeholder="City" class="form-control">
 </div>
 
 <div class="mb-3">
 <label class="form-label small text-muted">Query</label>
-<textarea rows="3" class="form-control" placeholder="Query"></textarea>
+<textarea rows="4" name="query" placeholder="Query" class="form-control"></textarea>
+
 </div>
 
-<button class="btn btn-danger w-100">
+<button type="submit" class="btn btn-danger w-100">
 Submit →
 </button>
 

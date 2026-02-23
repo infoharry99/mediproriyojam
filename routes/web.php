@@ -82,6 +82,10 @@ Route::get('/about-us', function () {
     return view('aboutus', compact('about_intro', 'about_founder', 'stats', 'galleries', 'features'));
 });
 
+
+Route::post('/admission-enquiry', [AdmissionEnquiryController::class, 'store'])
+    ->name('admission.enquiry.store');
+
 // Blog Listing
 Route::get('/blog', [BlogPostController::class, 'publicIndex'])->name('blog.index');
 

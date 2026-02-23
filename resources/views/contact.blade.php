@@ -17,6 +17,12 @@
 
     <div class="container">
 
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
         <div class="row align-items-center g-5">
 
             <!-- LEFT FORM CARD -->
@@ -28,7 +34,8 @@
                         Admission Enquiry Form
                     </h1>
 
-                    <form>
+                    <form action="{{ route('admission.enquiry.store') }}" method="POST">
+                    @csrf
 
                         <!-- Full Name -->
                         <div class="mb-4">
@@ -38,14 +45,10 @@
 
                             <div class="row g-3">
                                 <div class="col-6">
-                                    <input type="text"
-                                           placeholder="First"
-                                           class="form-control">
+                                    <input type="text" name="first_name" placeholder="First" class="form-control">
                                 </div>
                                 <div class="col-6">
-                                    <input type="text"
-                                           placeholder="Last"
-                                           class="form-control">
+                                   <input type="text" name="last_name" placeholder="Last" class="form-control">
                                 </div>
                             </div>
                         </div>
@@ -55,17 +58,15 @@
                             <label class="form-label text-muted small">
                                 Phone number
                             </label>
-                            <input type="text"
-                                   placeholder="Phone number"
-                                   class="form-control">
+                            <input type="text" name="phone_number" placeholder="Phone number" class="form-control">
                         </div>
 
                         <!-- Course -->
                         <div class="mb-4">
                             <label class="form-label text-muted small">
-                                Choose course
+                                School
                             </label>
-                            <select class="form-select">
+                            <select class="form-select" name="course">
                                 <option selected>Choose course</option>
                                 <option>NEET</option>
                                 <option>Medical</option>
@@ -77,9 +78,7 @@
                             <label class="form-label text-muted small">
                                 City
                             </label>
-                            <input type="text"
-                                   placeholder="City"
-                                   class="form-control">
+                            <input type="text" name="city" placeholder="City" class="form-control">
                         </div>
 
                         <!-- Query -->
@@ -87,9 +86,7 @@
                             <label class="form-label text-muted small">
                                 Query
                             </label>
-                            <textarea rows="4"
-                                      placeholder="Query"
-                                      class="form-control"></textarea>
+                            <textarea rows="4" name="query" placeholder="Query" class="form-control"></textarea>
                         </div>
 
                         <!-- Submit -->
