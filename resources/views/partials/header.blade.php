@@ -107,7 +107,7 @@
 
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('foundation') ? 'active' : '' }}"
-                           href="/foundation">
+                           href="/about-us">
                             About
                         </a>
                     </li>

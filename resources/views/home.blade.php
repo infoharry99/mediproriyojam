@@ -578,41 +578,41 @@ var mobileSwiper = new Swiper(".myHeroSliderMobile", {
 <style>
   /* Doctor Cards */
 
-.doctor-card{
-    width:330px;
-    background:#fff;
-    border-radius:32px;
-    overflow:hidden;
-    box-shadow:0 15px 35px rgba(0,0,0,0.2);
-    transition:all .5s ease;
-    position:relative;
-    z-index:1;
-}
+  .doctor-card{
+      width:330px;
+      background:#fff;
+      border-radius:32px;
+      overflow:hidden;
+      box-shadow:0 15px 35px rgba(0,0,0,0.2);
+      transition:all .5s ease;
+      position:relative;
+      z-index:1;
+  }
 
-.doctor-card:hover{
-    transform:scale(1.1) translateY(-25px);
-    box-shadow:0 30px 60px rgba(0,0,0,0.35);
-    z-index:10;
-}
+  .doctor-card:hover{
+      transform:scale(1.1) translateY(-25px);
+      box-shadow:0 30px 60px rgba(0,0,0,0.35);
+      z-index:10;
+  }
 
-.doctor-img{
-    width:100%;
-    height:430px;
-    object-fit:cover;
-    transition:transform .5s ease;
-}
+  .doctor-img{
+      width:100%;
+      height:430px;
+      object-fit:cover;
+      transition:transform .5s ease;
+  }
 
-.doctor-card:hover .doctor-img{
-    transform:scale(1.05);
-}
+  .doctor-card:hover .doctor-img{
+      transform:scale(1.05);
+  }
 
-.doctor-name{
-    padding:18px;
-    text-align:center;
-    border-top:1px solid #eee;
-    font-weight:600;
-    font-size:18px;
-}
+  .doctor-name{
+      padding:18px;
+      text-align:center;
+      border-top:1px solid #eee;
+      font-weight:600;
+      font-size:18px;
+  }
 </style>
 
 <section class="position-relative py-5 overflow-hidden"

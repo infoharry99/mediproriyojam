@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\AboutpageFeatureController;
+use App\Http\Controllers\AboutpageFounderController;
+use App\Http\Controllers\AboutpageGalleryController;
+use App\Http\Controllers\AboutpageIntroController;
+use App\Http\Controllers\AboutpageStatController;
 use App\Http\Controllers\AboutStatisticController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AchievementController;
@@ -16,7 +21,11 @@ use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\TestTypeController;
 use App\Http\Controllers\TopRankerController;
 use App\Http\Controllers\HomeController;
-
+use App\Models\AboutpageFeature;
+use App\Models\AboutpageFounder;
+use App\Models\AboutpageGallery;
+use App\Models\AboutpageIntro;
+use App\Models\AboutpageStat;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -62,6 +71,16 @@ Route::get('/gallery', function () {
     return view('gallery');
 });
 
+//About Us
+
+Route::get('/about-us', function () {
+    $about_intro = AboutpageIntro::latest()->get();
+    $about_founder = AboutpageFounder::latest()->get();
+    $stats =AboutpageStat::latest()->get();
+    $galleries = AboutpageGallery::latest()->get();
+    $features = AboutpageFeature::latest()->get();
+    return view('aboutus', compact('about_intro', 'about_founder', 'stats', 'galleries', 'features'));
+});
 
 // Blog Listing
 Route::get('/blog', [BlogPostController::class, 'publicIndex'])->name('blog.index');
@@ -78,7 +97,7 @@ Route::post('/admin-logout', [AuthController::class, 'logout'])->name('admin.log
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
 
-       Route::get('/banners', [BannerController::class, 'index'])
+    Route::get('/banners', [BannerController::class, 'index'])
         ->name('banners.index');
 
     Route::post('/banners', [BannerController::class, 'store'])
@@ -226,6 +245,54 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
         ->name('test.types.update');
 
     Route::delete('/test-types/{id}', [TestTypeController::class, 'destroy'])
-        ->name('test.types.destroy');    
+        ->name('test.types.destroy'); 
+        
+    Route::get('/about-intro', [AboutpageIntroController::class, 'index'])
+        ->name('about.intro.index');
+
+    Route::post('/about-intro', [AboutpageIntroController::class, 'save'])
+        ->name('about.intro.save');  
+    
+    Route::get('/about-founder', [AboutpageFounderController::class, 'index'])
+        ->name('about.founder.index');
+
+    Route::post('/about-founder', [AboutpageFounderController::class, 'save'])
+        ->name('about.founder.save');    
+
+       Route::get('/about-stats', [AboutpageStatController::class, 'index'])
+        ->name('about.stats.index');
+
+    Route::post('/about-stats', [AboutpageStatController::class, 'store'])
+        ->name('about.stats.store');
+
+    Route::put('/about-stats/{id}', [AboutpageStatController::class, 'update'])
+        ->name('about.stats.update');
+
+    Route::delete('/about-stats/{id}', [AboutpageStatController::class, 'destroy'])
+        ->name('about.stats.destroy'); 
+     
+    Route::get('/about-gallery', [AboutpageGalleryController::class, 'index'])
+        ->name('about.gallery.index');
+
+    Route::post('/about-gallery', [AboutpageGalleryController::class, 'store'])
+        ->name('about.gallery.store');
+
+    Route::put('/about-gallery/{id}', [AboutpageGalleryController::class, 'update'])
+        ->name('about.gallery.update');
+
+    Route::delete('/about-gallery/{id}', [AboutpageGalleryController::class, 'destroy'])
+        ->name('about.gallery.destroy');   
+        
+     Route::get('/about-features', [AboutpageFeatureController::class, 'index'])
+        ->name('about.features.index');
+
+    Route::post('/about-features', [AboutpageFeatureController::class, 'store'])
+        ->name('about.features.store');
+
+    Route::put('/about-features/{id}', [AboutpageFeatureController::class, 'update'])
+        ->name('about.features.update');
+
+    Route::delete('/about-features/{id}', [AboutpageFeatureController::class, 'destroy'])
+        ->name('about.features.destroy');    
 
 });
