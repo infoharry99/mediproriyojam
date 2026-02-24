@@ -52,48 +52,46 @@
 </section>
 
 <style>
-.herosection{
-  margin-top: 70px;
-}
+  .herosection{
+    margin-top: 70px;
+  }
 
-.hero-desktop-img {
-    width: 100%;
-    height: 75vh;
-}
+  .hero-desktop-img {
+      width: 100%;
+      height: 75vh;
+  }
 
-.hero-mobile-img {
-    width: 100%;
-    height: 100%;
-}
+  .hero-mobile-img {
+      width: 100%;
+      height: 100%;
+  }
 </style>
+
 <script>
-var desktopSwiper = new Swiper(".myHeroSlider", {
-    loop:true,
-    autoplay:{
-        delay:3000,
-        disableOnInteraction:false,
-    },
-    pagination:{
-        el:".desktop-pagination",
-        clickable:true,
-    }
-});
+  var desktopSwiper = new Swiper(".myHeroSlider", {
+      loop:true,
+      autoplay:{
+          delay:3000,
+          disableOnInteraction:false,
+      },
+      pagination:{
+          el:".desktop-pagination",
+          clickable:true,
+      }
+  });
 
-var mobileSwiper = new Swiper(".myHeroSliderMobile", {
-    loop:true,
-    autoplay:{
-        delay:3000,
-        disableOnInteraction:false,
-    },
-    pagination:{
-        el:".mobile-pagination",
-        clickable:true,
-    }
-});
+  var mobileSwiper = new Swiper(".myHeroSliderMobile", {
+      loop:true,
+      autoplay:{
+          delay:3000,
+          disableOnInteraction:false,
+      },
+      pagination:{
+          el:".mobile-pagination",
+          clickable:true,
+      }
+  });
 </script>
-
-
-
 
 <!-- ABOUT SECTION -->
 <section class="py-5" style="background:#FFF5F6;">
@@ -193,23 +191,23 @@ var mobileSwiper = new Swiper(".myHeroSliderMobile", {
 </section>
 
 <style>
-  .stat-box{
-    transition:all .3s ease;
-}
+    .stat-box{
+        transition:all .3s ease;
+    }
 
-.stat-box:hover{
-    transform:scale(1.05);
-    background:#fff !important;
-    box-shadow:0 15px 30px rgba(0,0,0,0.12);
-}
+    .stat-box:hover{
+        transform:scale(1.05);
+        background:#fff !important;
+        box-shadow:0 15px 30px rgba(0,0,0,0.12);
+    }
 
-.btn{
-    transition:all .3s ease;
-}
+    .btn{
+        transition:all .3s ease;
+    }
 
-.btn:hover{
-    transform:scale(1.05);
-}
+    .btn:hover{
+        transform:scale(1.05);
+  }
 </style>
 
 
@@ -225,15 +223,11 @@ var mobileSwiper = new Swiper(".myHeroSliderMobile", {
 
 
   <div class="container">
-
     <!-- Cards -->
     <div class="row g-4">
-
       <!-- CARD 1 -->
       <div class="col-md-4">
-
         <div class="card course-card h-100 border-0 shadow-sm">
-
           <!-- Image -->
           <div class="overflow-hidden">
             <img src="/assets/img/education/course_thumb01.jpg.png"
@@ -242,60 +236,26 @@ var mobileSwiper = new Swiper(".myHeroSliderMobile", {
           </div>
 
           <div class="card-body p-4">
-
-            <!-- Top -->
             <div class="d-flex justify-content-between align-items-center mb-3">
-
               <span class="badge bg-light text-dark px-3 py-2 rounded-pill">
                 NEET
               </span>
-
-              <div>
-                <small class="text-muted text-decoration-line-through me-2">$29.00</small>
-                <span class="fw-bold text-primary">$9.00</span>
-              </div>
-
             </div>
 
-
-            <!-- Title -->
             <h5 class="fw-semibold mb-4">
-              Foundation course – <br>11th+12th
+              Magic Bullet batch<br> (11th + 12th + NEET)
             </h5>
-
-
-            <!-- Author -->
-            <div class="d-flex justify-content-between align-items-center mb-4">
-
-              <div class="d-flex align-items-center gap-2">
-                <img src="/assets/img/education/Rectangle 729 (2).png"
-                     width="32" height="32"
-                     class="rounded-circle object-fit-cover">
-
-                <small class="text-muted">Mohit Roa</small>
-              </div>
-
-              <small class="text-muted">⭐ 4.8 (Reviews)</small>
-
-            </div>
-
 
             <hr>
 
-
-            <!-- Info -->
             <div class="d-flex justify-content-between text-muted small mt-3">
 
               <div class="d-flex align-items-center gap-1">
-                <img src="/assets/icons/List → Item.png" width="16"> <span>05</span>
+                <img src="/assets/icons/clock.png" width="16"> <span>2 year</span>
               </div>
 
               <div class="d-flex align-items-center gap-1">
-                <img src="/assets/icons/clock.png" width="16"> <span>11h 20m</span>
-              </div>
-
-              <div class="d-flex align-items-center gap-1">
-                <img src="/assets/icons/Vector.png" width="16"> <span>22</span>
+                <img src="/assets/icons/Vector.png" width="16"> <span>202</span>
               </div>
 
             </div>
@@ -317,51 +277,26 @@ var mobileSwiper = new Swiper(".myHeroSliderMobile", {
           </div>
 
           <div class="card-body p-4">
-
             <div class="d-flex justify-content-between align-items-center mb-3">
-
               <span class="badge bg-light text-dark px-3 py-2 rounded-pill">
                 NEET
               </span>
-
-              <div>
-                <small class="text-muted text-decoration-line-through me-2">$20.00</small>
-                <span class="fw-bold text-primary">$10.00</span>
-              </div>
-
             </div>
 
             <h5 class="fw-semibold mb-4">
-              Countdown course – <br>12th
+              Platinum Batch (12th + NEET)
             </h5>
-
-            <div class="d-flex justify-content-between align-items-center mb-4">
-
-              <div class="d-flex align-items-center gap-2">
-                <img src="/assets/img/education/Rectangle 729 (2).png"
-                     width="32" height="32"
-                     class="rounded-circle">
-                <small class="text-muted">Kriti Mishra</small>
-              </div>
-
-              <small class="text-muted">⭐ 4.5 (Reviews)</small>
-
-            </div>
 
             <hr>
 
             <div class="d-flex justify-content-between text-muted small mt-3">
 
               <div class="d-flex align-items-center gap-1">
-                <img src="/assets/icons/List → Item.png" width="16"> <span>05</span>
+                <img src="/assets/icons/clock.png" width="16"> <span>1 year</span>
               </div>
 
               <div class="d-flex align-items-center gap-1">
-                <img src="/assets/icons/clock.png" width="16"> <span>11h 20m</span>
-              </div>
-
-              <div class="d-flex align-items-center gap-1">
-                <img src="/assets/icons/Vector.png" width="16"> <span>22</span>
+                <img src="/assets/icons/Vector.png" width="16"> <span>202</span>
               </div>
 
             </div>
@@ -385,46 +320,25 @@ var mobileSwiper = new Swiper(".myHeroSliderMobile", {
           <div class="card-body p-4">
 
             <div class="d-flex justify-content-between align-items-center mb-3">
-
               <span class="badge bg-light text-dark px-3 py-2 rounded-pill">
                 NEET
               </span>
-
-              <span class="fw-bold text-primary">$20.00</span>
-
             </div>
 
             <h5 class="fw-semibold mb-4">
-              Target Course – After 12th passed
+              Eklavya Batch (After 12th)
             </h5>
-
-            <div class="d-flex justify-content-between align-items-center mb-4">
-
-              <div class="d-flex align-items-center gap-2">
-                <img src="/assets/img/education/Rectangle 729 (2).png"
-                     width="32" height="32"
-                     class="rounded-circle">
-                <small class="text-muted">Rohit</small>
-              </div>
-
-              <small class="text-muted">⭐ 4.8 (Reviews)</small>
-
-            </div>
 
             <hr>
 
             <div class="d-flex justify-content-between text-muted small mt-3">
 
               <div class="d-flex align-items-center gap-1">
-                <img src="/assets/icons/List → Item.png" width="16"> <span>05</span>
+                <img src="/assets/icons/clock.png" width="16"> <span>1 year</span>
               </div>
 
               <div class="d-flex align-items-center gap-1">
-                <img src="/assets/icons/clock.png" width="16"> <span>11h 20m</span>
-              </div>
-
-              <div class="d-flex align-items-center gap-1">
-                <img src="/assets/icons/Vector.png" width="16"> <span>22</span>
+                <img src="/assets/icons/Vector.png" width="16"> <span>202</span>
               </div>
 
             </div>
@@ -464,33 +378,33 @@ var mobileSwiper = new Swiper(".myHeroSliderMobile", {
 </section>
 <style>
   .course-card{
-    border-radius:16px;
-    transition:all .3s ease;
-}
+      border-radius:16px;
+      transition:all .3s ease;
+  }
 
-.course-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 20px 40px rgba(0,0,0,0.15);
-}
+  .course-card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 20px 40px rgba(0,0,0,0.15);
+  }
 
-.course-img{
-    height:220px;
-    object-fit:cover;
-    transition:transform .5s ease;
-}
+  .course-img{
+      height:220px;
+      object-fit:cover;
+      transition:transform .5s ease;
+  }
 
-.course-card:hover .course-img{
-    transform:scale(1.1);
-}
+  .course-card:hover .course-img{
+      transform:scale(1.1);
+  }
 
-.course-btn{
-    background:#5751E1;
-    border:none;
-}
+  .course-btn{
+      background:#5751E1;
+      border:none;
+  }
 
-.course-btn:hover{
-    background:#4a45c9;
-}
+  .course-btn:hover{
+      background:#4a45c9;
+  }
 </style>
 
 <!-- OUR TOP DOCTORS -->
@@ -999,12 +913,12 @@ var mobileSwiper = new Swiper(".myHeroSliderMobile", {
                             <input type="text" name="city" placeholder="City" class="form-control">
                         </div>
 
-                        <!-- Query -->
+                        <!-- Current studying -->
                         <div class="mb-4">
                             <label class="form-label text-muted small">
-                                Query
+                                Current studying
                             </label>
-                            <textarea rows="4" name="query" placeholder="Query" class="form-control"></textarea>
+                            <textarea rows="4" name="query" placeholder="Current studying" class="form-control"></textarea>
                         </div>
 
 

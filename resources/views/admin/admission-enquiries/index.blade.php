@@ -17,7 +17,7 @@
                 <th>Phone</th>
                 <th>Course</th>
                 <th>City</th>
-                <th>Query</th>
+                <th>Current studying</th>
                 <th>Status</th>
                 <th width="180">Actions</th>
             </tr>

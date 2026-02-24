@@ -81,12 +81,12 @@
                             <input type="text" name="city" placeholder="City" class="form-control">
                         </div>
 
-                        <!-- Query -->
+                        <!-- Current studying -->
                         <div class="mb-4">
                             <label class="form-label text-muted small">
-                                Query
+                                Current studying
                             </label>
-                            <textarea rows="4" name="query" placeholder="Query" class="form-control"></textarea>
+                            <textarea rows="4" name="query" placeholder="Current studying" class="form-control"></textarea>
                         </div>
 
                         <!-- Submit -->

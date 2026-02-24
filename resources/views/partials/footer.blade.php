@@ -1,11 +1,7 @@
 <!-- FOOTER -->
 <footer class="text-white py-5" style="background:#D62828;">
-
   <div class="container">
-
     <div class="row gy-4">
-
-      <!-- LEFT -->
       <div class="col-md-4">
 
         <img src="{{ asset('assets/img/education/footerlogo.png') }}"
@@ -94,7 +90,7 @@
           <div class="d-flex gap-2">
 
             <img src="{{ asset('/assets/icons/footerfa6-solid_location-dot.png') }}"
-                 width="18">
+                 width="18" height="20">
 
             <span>
               Plot no. 99, Infront Little Angel School, Near NMC Zonal Office,

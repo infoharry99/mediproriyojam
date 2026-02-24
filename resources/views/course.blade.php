@@ -124,8 +124,8 @@ Admission Enquiry Form
 </div>
 
 <div class="col-12">
-<label class="form-label small">Query</label>
-<textarea rows="4" name="query" placeholder="Query" class="form-control"></textarea>
+<label class="form-label small">Current studying</label>
+<textarea rows="4" name="query" placeholder="Current studying" class="form-control"></textarea>
 
 </div>
 

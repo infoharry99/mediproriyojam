@@ -124,8 +124,8 @@ $features = [
 </div>
 
 <div class="mb-3">
-<label class="form-label small text-muted">Query</label>
-<textarea rows="4" name="query" placeholder="Query" class="form-control"></textarea>
+<label class="form-label small text-muted">Current studying</label>
+<textarea rows="4" name="query" placeholder="Current studying" class="form-control"></textarea>
 
 </div>
 
