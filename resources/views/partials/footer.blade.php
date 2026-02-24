@@ -48,7 +48,7 @@
       <!-- Service -->
       <div class="col-md-2">
 
-        <h5 class="fw-bold mb-3">Courese</h5>
+        <h5 class="fw-bold mb-3">Courses</h5>
 
         <ul class="list-unstyled small">
 
