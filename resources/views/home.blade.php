@@ -475,118 +475,88 @@
     <section class="position-relative py-5 overflow-hidden"
          style="background:#FFF5F6; padding-top:6rem; padding-bottom:6rem;">
 
-      <!-- Top Pink Circle -->
-      <div class="position-absolute start-50 translate-middle-x"
-          style="top:-320px;width:450px;height:450px;background:#FF7E7E;border-radius:50%;">
-      </div>
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
 
-      <div class="container position-relative">
+              <div class="carousel-inner text-center">
 
-        <!-- Badge -->
-        <div class="text-center mb-3">
-          <span class="px-4 py-1 border border-dark rounded-pill small">
-            Testimonial
-          </span>
-        </div>
+                  @foreach($testimonials as $key => $testimonial)
+                  <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
 
-        <!-- Title -->
-        <div class="text-center mb-5">
-          <h2 class="fw-semibold mb-2">Testimonial</h2>
-          <p class="text-muted small">
-            Don’t take our word for it. Trust our students
-          </p>
-        </div>
+                      <div class="d-flex justify-content-center">
 
-        <!-- SLIDER -->
-        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="false">
+                          <div class="testimonial-card p-4 shadow-sm bg-white">
 
-          <div class="carousel-inner">
+                              <div class="d-flex justify-content-between mb-3">
 
-            @foreach($testimonials->chunk(3) as $key => $chunk)
-            <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
-              <div class="row g-4">
+                                  <div class="text-start">
+                                      <img src="{{ asset($testimonial->image ?? 'assets/img/profile.png') }}"
+                                          width="60" height="60"
+                                          class="mb-2 rounded-circle object-fit-cover">
 
-                @foreach($chunk as $testimonial)
-                <div class="col-12 col-md-4">
-                  <div class="testimonial-card h-100 p-4 shadow-sm bg-white">
+                                      <h6 class="fw-semibold mb-0">
+                                          {{ $testimonial->name }}
+                                      </h6>
 
-                    <div class="d-flex justify-content-between mb-3">
+                                      <small class="text-muted">
+                                          {{ $testimonial->designation }}
+                                      </small>
+                                  </div>
 
-                      <div>
-                        <img src="{{ asset($testimonial->image ?? 'assets/img/profile.png') }}"
-                            width="60" height="60"
-                            class="mb-2 rounded-circle object-fit-cover">
+                                  <div class="text-warning fs-5">
+                                      @for($i=1;$i<=5;$i++)
+                                          {!! $i <= $testimonial->rating ? '★' : '☆' !!}
+                                      @endfor
+                                  </div>
 
-                        <h6 class="fw-semibold mb-0">
-                          {{ $testimonial->name }}
-                        </h6>
+                              </div>
 
-                        <small class="text-muted">
-                          {{ $testimonial->designation }}
-                        </small>
+                              <p class="text-muted">
+                                  {{ $testimonial->message }}
+                              </p>
+
+                          </div>
+
                       </div>
-
-                      <!-- Rating -->
-                      <div class="text-warning fs-5">
-                        @for($i=1;$i<=5;$i++)
-                          {!! $i <= $testimonial->rating ? '★' : '☆' !!}
-                        @endfor
-                      </div>
-
-                    </div>
-
-                    <p class="text-muted small">
-                      {{ $testimonial->message }}
-                    </p>
 
                   </div>
-                </div>
-                @endforeach
+                  @endforeach
 
               </div>
-            </div>
-            @endforeach
+
+              <!-- Left -->
+              <button class="carousel-control-prev" type="button"
+                      data-bs-target="#testimonialCarousel"
+                      data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon bg-danger rounded-circle p-3"></span>
+              </button>
+
+              <!-- Right -->
+              <button class="carousel-control-next" type="button"
+                      data-bs-target="#testimonialCarousel"
+                      data-bs-slide="next">
+                  <span class="carousel-control-next-icon bg-danger rounded-circle p-3"></span>
+              </button>
 
           </div>
-
-          <!-- Controls -->
-          <div class="text-center mt-5">
-            <button class="btn btn-danger rounded-circle me-2"
-                    data-bs-target="#testimonialCarousel"
-                    data-bs-slide="prev">
-              ‹
-            </button>
-
-            <button class="btn btn-danger rounded-circle"
-                    data-bs-target="#testimonialCarousel"
-                    data-bs-slide="next">
-              ›
-            </button>
-          </div>
-
-        </div>
-
-      </div>
-  </section>
+    </section>
 
 <style>
   .testimonial-card{
-    border-radius:14px;
-    transition:all .3s ease;
+      max-width:600px;
+      width:100%;
+      border-radius:16px;
+      transition:all .3s ease;
   }
 
   .testimonial-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+      transform:translateY(-8px);
+      box-shadow:0 20px 40px rgba(0,0,0,0.15);
   }
 
-  /* Mobile glow fix */
-  @media (max-width: 768px){
-    .position-absolute[style*="top:-320px"]{
-      width:300px !important;
-      height:300px !important;
-      top:-200px !important;
-    }
+  /* Fix arrow positioning */
+  .carousel-control-prev,
+  .carousel-control-next{
+      width:5%;
   }
 </style>
 
