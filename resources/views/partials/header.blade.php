@@ -113,8 +113,8 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('target') ? 'active' : '' }}"
-                           href="/target">
+                        <a class="nav-link {{ request()->is('announcements') ? 'active' : '' }}"
+                           href="/announcements">
                             Announcement
                         </a>
                     </li>
@@ -165,6 +165,7 @@
                     </a>
 
                 </div>
+                
 
             </div>
 

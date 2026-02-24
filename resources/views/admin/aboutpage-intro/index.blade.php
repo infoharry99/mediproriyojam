@@ -26,7 +26,9 @@
 
         <div class="mb-3">
             <label>Content</label>
-            <textarea name="content"
+            <textarea
+            id="content"
+             name="content"
                       class="form-control"
                       rows="6">{{ $intro->content ?? '' }}</textarea>
         </div>
@@ -51,4 +53,9 @@
     </form>
 
 </div>
+<script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+
+<script>
+    CKEDITOR.replace('content');
+</script>
 @endsection

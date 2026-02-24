@@ -44,13 +44,7 @@
       <!-- Text -->
       <div class="col-lg-9">
         <div class="aboutus-content-text">
-          <p>
-            The journey of user interface design has been marked by significant shifts in aesthetic approaches, each era bringing its own unique perspective on how digital interfaces should look and feel.
-          </p>
-
-          <p>
-            From the early days of graphical user interfaces to today's sophisticated design systems, the evolution of UI design reflects not just technological advancement, but also changing user expectations and cultural shifts in how we interact with digital products.
-          </p>
+          {!! $intro->content !!}
         </div>
       </div>
 
@@ -77,42 +71,42 @@
     overflow:hidden;
     }
 
-    /* TOC */
-.aboutus-toc-card{
-  background:#fff;          /* softer grey */
-  border-radius:24px; 
-  max-width:320px;         /* bigger radius */
-  padding:32px 28px;           /* more spacing */
-}
+        /* TOC */
+    .aboutus-toc-card{
+      background:#fff;          /* softer grey */
+      border-radius:24px; 
+      max-width:320px;         /* bigger radius */
+      padding:32px 28px;           /* more spacing */
+    }
 
-/* Title */
-.aboutus-toc-title{
-  font-weight:600;
-  font-size:22px;              /* bigger like screenshot */
-  margin-bottom:18px;
-  color:#222;
-}
+    /* Title */
+    .aboutus-toc-title{
+      font-weight:600;
+      font-size:22px;              /* bigger like screenshot */
+      margin-bottom:18px;
+      color:#222;
+    }
 
-/* List */
-.aboutus-toc-list{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
+    /* List */
+    .aboutus-toc-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
 
-.aboutus-toc-list li{
-  padding:8px 0;               /* more spacing */
-  color:#333;
-  cursor:pointer;
-  font-size:17px;              /* bigger text */
-  line-height:1.4;
-}
+    .aboutus-toc-list li{
+      padding:8px 0;               /* more spacing */
+      color:#333;
+      cursor:pointer;
+      font-size:17px;              /* bigger text */
+      line-height:1.4;
+    }
 
-/* Active */
-.aboutus-toc-list li.active{
-  color:#ff3b30;
-  font-weight:600;
-}
+    /* Active */
+    .aboutus-toc-list li.active{
+      color:#ff3b30;
+      font-weight:600;
+    }
 
     /* Content */
     .aboutus-content-text{

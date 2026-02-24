@@ -1149,20 +1149,20 @@ var mobileSwiper = new Swiper(".myHeroSliderMobile", {
 <style>
   /* Phone Image */
 
-.phone-img{
-  max-width:320px;
-  filter:drop-shadow(0 20px 30px rgba(0,0,0,.3));
-}
-
-/* Responsive Fix */
-
-@media(max-width:768px){
   .phone-img{
-    position:static;
-    max-width:220px;
-    margin-top:20px;
+    max-width:320px;
+    filter:drop-shadow(0 20px 30px rgba(0,0,0,.3));
   }
-}
+
+  /* Responsive Fix */
+
+  @media(max-width:768px){
+    .phone-img{
+      position:static;
+      max-width:220px;
+      margin-top:20px;
+    }
+  }
 </style>
 
 <!-- BADGE / ACHIEVEMENT SECTION -->

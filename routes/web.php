@@ -9,6 +9,8 @@ use App\Http\Controllers\AboutStatisticController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AchievementController;
 use App\Http\Controllers\AdmissionEnquiryController;
+use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\AnnouncementPosterController;
 use App\Http\Controllers\AppDownloadController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BannerController;
@@ -26,6 +28,8 @@ use App\Models\AboutpageFounder;
 use App\Models\AboutpageGallery;
 use App\Models\AboutpageIntro;
 use App\Models\AboutpageStat;
+use App\Models\Announcement;
+use App\Models\AnnouncementPoster;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -80,6 +84,12 @@ Route::get('/about-us', function () {
     $galleries = AboutpageGallery::latest()->get();
     $features = AboutpageFeature::latest()->get();
     return view('aboutus', compact('about_intro', 'about_founder', 'stats', 'galleries', 'features'));
+});
+
+Route::get('/announcements', function () {
+    $announcements = Announcement::latest()->get();
+    $announcement_poster = AnnouncementPoster::latest()->first();
+    return view('announcement', compact('announcements', 'announcement_poster'));
 });
 
 
@@ -297,6 +307,24 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
         ->name('about.features.update');
 
     Route::delete('/about-features/{id}', [AboutpageFeatureController::class, 'destroy'])
-        ->name('about.features.destroy');    
+        ->name('about.features.destroy');
+     
+    Route::get('/announcements', [AnnouncementController::class, 'index'])
+        ->name('announcements.index');
+
+    Route::post('/announcements', [AnnouncementController::class, 'store'])
+        ->name('announcements.store');
+
+    Route::put('/announcements/{id}', [AnnouncementController::class, 'update'])
+        ->name('announcements.update');
+
+    Route::delete('/announcements/{id}', [AnnouncementController::class, 'destroy'])
+        ->name('announcements.destroy'); 
+    
+     Route::get('/announcement-poster', [AnnouncementPosterController::class, 'index'])
+        ->name('announcement.poster.index');
+
+    Route::post('/announcement-poster', [AnnouncementPosterController::class, 'save'])
+        ->name('announcement.poster.save');    
 
 });
