@@ -3,6 +3,8 @@
 @section('title','Home')
 
 @section('content')
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 
 <main>
 
@@ -26,17 +28,17 @@
 <div class="position-absolute top-50 start-50 translate-middle">
     <div class="bg-white rounded-circle d-flex align-items-center justify-content-center shadow"
          style="width:60px;height:60px; cursor:pointer;">
-        ▶
+        
     </div>
 </div>
 
 </div>
 
 <!-- Course Info -->
-<p class="text-muted fs-5 mb-1">Class 11–12 NEET</p>
+<p class="text-muted fs-5 mb-1"> Class 11 - 12 NEET</p>
 
 <h2 class="text-danger fw-bold mb-3">
-    Target course
+   Eklavya Batch (After 12th)
 </h2>
 
 <p class="text-muted mb-5">
@@ -167,7 +169,7 @@ Enroll now
 <div class="container">
 
 <div class="text-center mb-4">
-<span class="badge bg-light text-dark border rounded-pill px-4 py-2">
+<span class="badge bg-transparent text-dark border rounded-pill px-4 py-2">
 Courses Description
 </span>
 </div>
@@ -177,7 +179,8 @@ Two-Year Integrated Classroom Programme
 </h3>
 
 <p class="text-muted">
-Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry...
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
 </p>
 
 </div>

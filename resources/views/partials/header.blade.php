@@ -60,22 +60,78 @@
 
 <!-- HEADER -->
 <style>
+/* Smooth nav links */
 .navbar .nav-link {
     transition: 0.3s ease;
+    padding: 10px 14px;
 }
 
-.navbar .nav-link.active {
-    color: #dc3545 !important; /* Red */
+/* Active + Hover */
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+    color: #dc3545 !important;
     font-weight: 600;
 }
 
-.navbar .nav-link:hover {
-    color: #dc3545;
+/* Fix body spacing for fixed header */
+/* Dropdown UI */
+.dropdown-menu {
+    border-radius: 10px;
+    padding: 8px 0;
+}
+
+.dropdown-item {
+    padding: 8px 18px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+/* Hover Effect */
+.dropdown-item:hover {
+    background: #dc3545;
+    color: #fff;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+
+    .navbar-nav {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .navbar-collapse {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .header-buttons a {
+        width: 100%;
+    }
+}
+.navbar {
+    z-index: 1050;
+}
+
+.dropdown-menu {
+    z-index: 2000;
 }
 </style>
 
 <header class="fixed-top bg-white shadow-sm">
-    <nav class="navbar navbar-expand-md navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
 
             <!-- Logo -->
@@ -86,7 +142,8 @@
             </a>
 
             <!-- Mobile Toggle -->
-            <button class="navbar-toggler" type="button"
+            <button class="navbar-toggler border-0" 
+                    type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#mainNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -96,68 +153,84 @@
             <div class="collapse navbar-collapse" id="mainNavbar">
 
                 <!-- Links -->
-                <ul class="navbar-nav mx-auto mb-2 mb-md-0 fw-medium">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
 
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('/') ? 'active' : '' }}"
-                           href="/">
-                            Home
-                        </a>
+                           href="/">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('foundation') ? 'active' : '' }}"
-                           href="/about-us">
-                            About
-                        </a>
+                        <a class="nav-link {{ request()->is('about-us') ? 'active' : '' }}"
+                           href="/about-us">About</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('announcements') ? 'active' : '' }}"
-                           href="/announcements">
-                            Announcement
-                        </a>
+                           href="/announcements">Announcement</a>
                     </li>
+<li class="nav-item dropdown">
 
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->is('course') ? 'active' : '' }}"
-                           href="/course">
-                            Courses
-                        </a>
-                    </li>
+   <a class="nav-link dropdown-toggle {{ request()->is('course*') ? 'active' : '' }}"
+   href="javascript:void(0)"
+   id="courseDropdown"
+   role="button"
+   data-bs-toggle="dropdown"
+   aria-expanded="false">
+    Courses
+</a>
+
+    <ul class="dropdown-menu shadow-sm border-0"
+        aria-labelledby="courseDropdown">
+
+        <li>
+            <a class="dropdown-item" href="/course">
+                Magic Bullet batch (11th + 12th + NEET)
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item" href="/foundation">
+              Platinum Batch (12th + NEET)
+            </a>
+        </li>
+
+        <li>
+            <a class="dropdown-item" href="/target">
+                Eklavya Batch (After 12th)
+            </a>
+        </li>
+
+    </ul>
+
+</li>
 
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('gallery') ? 'active' : '' }}"
-                           href="/gallery">
-                            Gallery
-                        </a>
+                           href="/gallery">Gallery</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('blog*') ? 'active' : '' }}"
-                           href="/blog">
-                            Blog
-                        </a>
+                           href="/blog">Blog</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}"
-                           href="/contact">
-                            Contact
-                        </a>
+                           href="/contact">Contact</a>
                     </li>
 
                 </ul>
 
                 <!-- Right Buttons -->
-                <div class="d-flex align-items-center gap-2">
+                <div class="d-flex align-items-center header-buttons">
 
-                    <a href="/login"
+                    <a href="/contact"
                        class="btn btn-dark rounded-pill px-4">
-                        Login
+                        Contact US
                     </a>
 
-                    <a href="/enroll"
+                    <a href="/contact"
                        class="btn btn-dark rounded-circle d-flex align-items-center justify-content-center"
                        style="width:40px;height:40px;">
                         <img src="{{ asset('/assets/icons/headerarrow.png') }}"
@@ -165,10 +238,8 @@
                     </a>
 
                 </div>
-                
 
             </div>
-
         </div>
     </nav>
 </header>

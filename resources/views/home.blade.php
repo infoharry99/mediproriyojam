@@ -114,19 +114,19 @@
         <!-- Buttons -->
         <div class="d-flex gap-3 flex-wrap justify-content-center justify-content-lg-start">
 
-          <!-- Learn More -->
-          <a href="#"
-             class="btn btn-danger px-4 py-2 rounded-pill">
-            Learn More
-          </a>
+  <!-- Learn More -->
+  <a href="#"
+     class="btn btn-danger px-4 py-2 square-btn">
+    Learn More
+  </a>
 
-          <!-- Watch Video -->
-          <a href="#"
-             class="btn btn-outline-danger px-4 py-2 rounded-pill d-flex align-items-center gap-2">
-            Watch Video <span>▶</span>
-          </a>
+  <!-- Watch Video -->
+  <a href="#"
+     class="btn btn-outline-danger px-4 py-2 d-flex align-items-center gap-2 square-btn">
+    Watch Video <span class="play-icon"></span>
+  </a>
 
-        </div>
+</div>
       </div>
 
       <!-- CENTER LINE (Desktop Only) -->
@@ -138,18 +138,21 @@
       <div class="col-lg-6">
         <div class="row g-4">
 
-          @foreach($stats as $stat)
-          <div class="col-6 col-md-6">
-            <div class="stat-box bg-white p-4 p-lg-5 text-center shadow-sm rounded-3 h-100">
-              <h3 class="fw-bold mb-2 fs-2 text-danger">
-                {{ $stat->number }}
-              </h3>
-              <p class="text-muted mb-0">
-                {{ $stat->label }}
-              </p>
-            </div>
-          </div>
-          @endforeach
+         @foreach($stats as $stat)
+<div class="col-6 col-md-6">
+  <div class="stat-card  p-4 p-lg-5 text-center shadow-sm h-100">
+    
+    <h3 class="fw-bold mb-2 fs-2 text-danger">
+      {{ $stat->number }}
+    </h3>
+    
+    <p class="text-muted mb-0">
+      {{ $stat->label }}
+    </p>
+
+  </div>
+</div>
+@endforeach
 
         </div>
       </div>
@@ -159,6 +162,7 @@
 </section>
 
 <style>
+  
   .divider-line{
       width:1px;
       height:300px;
@@ -173,6 +177,37 @@
       transform:translateY(-8px);
       box-shadow:0 20px 40px rgba(0,0,0,0.12);
   }
+  .stat-card {
+    border-radius: 0; /* Square box */
+    transition: all 0.3s ease;
+    background: #FAFAFA;
+    cursor: pointer;
+}
+
+.square-btn{
+    border-radius: 0 !important;   /* Pure square */
+    min-width: 160px;              /* Same width */
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+/* Icon always red */
+.square-btn .play-icon{
+    color: red !important;
+    font-weight: bold;
+}
+
+/* Hover Effect (Optional Premium Feel) */
+.square-btn:hover{
+    transform: translateY(-3px) scale(1.03);
+}
+/* Hover Effect */
+.stat-card:hover {
+    background:white;              /* White */
+    transform: translateY(-8px) scale(1.05); /* Up + Zoom */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    z-index: 5;
+}
 
   .btn{
       transition:all .3s ease;
@@ -201,9 +236,10 @@
 
       <!-- CARD -->
       <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card course-card h-100 border-0 shadow-sm">
+         <a href="/course" class="text-decoration-none text-dark">
+        <div class="card course-card  border-0 shadow-sm">
 
-          <div class="overflow-hidden rounded-top">
+          <div class="overflow-hidden rounded-top p-4">
             <img src="/assets/img/education/course_thumb01.jpg.png"
                  class="card-img-top course-img"
                  alt="">
@@ -218,85 +254,134 @@
             <h5 class="fw-semibold mb-3">
               Magic Bullet batch (11th + 12th + NEET)
             </h5>
-
-            <hr>
-
             <div class="d-flex justify-content-between text-muted small mt-3">
 
               <div class="d-flex align-items-center gap-1">
-                <img src="/assets/icons/clock.png" width="16">
-                <span>2 year</span>
+                <img src="/assets/img/education/c1.png" width="30">
+                <span>Mohit Rao</span>
               </div>
 
               <div class="d-flex align-items-center gap-1">
-                <img src="/assets/icons/Vector.png" width="16">
-                <span>202</span>
+                <!-- <img src="/assets/icons/Vector.png" width="16"> -->
+                <span>⭐(4.5 Reviews)</span>
               </div>
 
             </div>
 
-          </div>
-        </div>
-      </div>
-
-
-      <!-- Duplicate same structure for other cards -->
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card course-card h-100 border-0 shadow-sm">
-          <div class="overflow-hidden rounded-top">
-            <img src="/assets/img/education/course_thumb02.jpg.png"
-                 class="card-img-top course-img">
-          </div>
-          <div class="card-body p-4">
-            <span class="badge bg-light text-dark px-3 py-2 rounded-pill mb-3">
-              NEET
-            </span>
-            <h5 class="fw-semibold mb-3">
-              Platinum Batch (12th + NEET)
-            </h5>
             <hr>
-            <div class="d-flex justify-content-between text-muted small mt-3">
-              <div class="d-flex align-items-center gap-1">
-                <img src="/assets/icons/clock.png" width="16">
-                <span>1 year</span>
-              </div>
-              <div class="d-flex align-items-center gap-1">
-                <img src="/assets/icons/Vector.png" width="16">
-                <span>202</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+          <div class="d-flex gap-4 text-muted small mt-3">
 
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card course-card h-100 border-0 shadow-sm">
-          <div class="overflow-hidden rounded-top">
-            <img src="/assets/img/education/course_thumb03.jpg.png"
-                 class="card-img-top course-img">
-          </div>
-          <div class="card-body p-4">
-            <span class="badge bg-light text-dark px-3 py-2 rounded-pill mb-3">
-              NEET
-            </span>
-            <h5 class="fw-semibold mb-3">
-              Eklavya Batch (After 12th)
-            </h5>
-            <hr>
-            <div class="d-flex justify-content-between text-muted small mt-3">
-              <div class="d-flex align-items-center gap-1">
-                <img src="/assets/icons/clock.png" width="16">
-                <span>1 year</span>
-              </div>
-              <div class="d-flex align-items-center gap-1">
-                <img src="/assets/icons/Vector.png" width="16">
-                <span>202</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                        <div class="d-flex align-items-center gap-1">
+                          <img src="/assets/icons/clock.png" width="16">
+                          <span>2 year</span>
+                        </div>
 
+                        <div class="d-flex align-items-center gap-1">
+                          . <img src="/assets/icons/Vector.png" width="16">
+                          <span>202</span>
+                        </div>
+
+                      </div>
+                    
+
+                    </div>
+                  </div>
+                  </a>
+                </div>
+
+
+                <!-- Duplicate same structure for other cards -->
+                <div class="col-12 col-sm-6 col-lg-4">
+                   <a href="/foundation" class="text-decoration-none text-dark">
+                  <div class="card course-card1 h-100 border-0 ">
+                    <div class="overflow-hidden rounded-top p-4">
+                      <img src="/assets/img/education/course_thumb02.jpg.png"
+                          class="card-img-top course-img ">
+                    </div>
+                    <div class="card-body p-4">
+                      <span class="badge bg-light text-dark px-3 py-2 rounded-pill mb-3">
+                        NEET
+                      </span>
+                      <h5 class="fw-semibold mb-3">
+                        Platinum Batch (12th + NEET)
+                      </h5>
+                      <div class="d-flex justify-content-between text-muted small mt-3">
+
+                        <div class="d-flex align-items-center gap-1">
+                          <img src="/assets/img/education/c2.png" width="30">
+                          <span>Kriti Mishra</span>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-1">
+                          <!-- <img src="/assets/icons/Vector.png" width="16"> -->
+                          <span>⭐(4.5 Reviews)</span>
+                        </div>
+
+                      </div>
+                      <hr>
+                      <div class="d-flex gap-4 text-muted small mt-3">
+                        <div class="d-flex align-items-center gap-1">
+                          <img src="/assets/icons/clock.png" width="16">
+                          <span>1 year</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-1">
+                        . <img src="/assets/icons/Vector.png" width="16">
+                          <span>202</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                   <a href="/target" class="text-decoration-none text-dark">
+                  <div class="card course-card h-100 border-0 shadow-sm">
+                    <div class="overflow-hidden rounded-top p-4">
+                      <img src="/assets/img/education/course_thumb03.jpg.png"
+                          class="card-img-top course-img">
+                    </div>
+                    <div class="card-body p-4">
+                      <span class="badge bg-light text-dark px-3 py-2 rounded-pill mb-3">
+                        NEET
+                      </span>
+                      <h5 class="fw-semibold mb-3">
+                        Eklavya Batch (After 12th)
+                      </h5>
+                      <div class="d-flex justify-content-between text-muted small mt-3">
+
+                        <div class="d-flex align-items-center gap-1">
+                          <img src="/assets/img/education/c3.png" width="30">
+                          <span>Rohit</span>
+                        </div>
+
+                        <div class="d-flex align-items-center gap-1">
+                          <!-- <img src="/assets/icons/Vector.png" width="16"> -->
+                          <span>⭐(4.8 Reviews)</span>
+                        </div>
+
+                      </div>
+                      <hr>
+                      <div class="d-flex gap-4  text-muted small mt-3">
+                        <div class="d-flex align-items-center gap-1">
+                          <img src="/assets/icons/clock.png" width="16">
+                          <span>1 year</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-1">
+                        . <img src="/assets/icons/Vector.png" width="16">
+                          <span>202</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                   </a>
+                </div>
+
+                <div class="text-center my-4">
+              <a href="#" class="see-all-btn">
+                  See All Courses <span>→</span>
+              </a>
+          </div>
     </div>
 
    
@@ -312,11 +397,49 @@
 
 </section>
   <style>
+    .see-all-btn{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    background: linear-gradient(135deg, #6a5cff, #7b6cff);
+    color: #fff;
+
+    padding: 10px 22px;
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+
+    box-shadow: 0 4px 12px rgba(106,92,255,0.3);
+    transition: all 0.25s ease;
+}
+
+/* Arrow style */
+.see-all-btn span{
+    font-size: 16px;
+    transition: transform 0.25s ease;
+}
+
+/* Hover Effect */
+.see-all-btn:hover{
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(106,92,255,0.4);
+}
+
+/* Arrow move on hover */
+.see-all-btn:hover span{
+    transform: translateX(4px);
+}
       .course-card{
         border-radius:16px;
         transition:all .3s ease;
       }
-
+ .course-card1{
+  background:transparent;
+ }
       .course-card:hover{
           transform:translateY(-8px);
           box-shadow:0 20px 40px rgba(0,0,0,0.15);
@@ -329,9 +452,18 @@
       }
 
       .course-card:hover .course-img{
-          transform:scale(1.1);
+          transform:scale(1);
       }
+/* Move card body content slightly up */
+.course-card .card-body {
+    padding-top: 15px !important;   /* upar ka padding kam */
+    margin-top: -10px;              /* content ko upar uthao */
+}
 
+/* Optional: adjust heading spacing */
+.course-card h5 {
+    margin-top: 5px;
+}
       /* Smaller image on mobile */
       @media (max-width: 576px) {
           .course-img{
@@ -472,92 +604,158 @@
     }
   </style>
     
-    <section class="position-relative py-5 overflow-hidden"
-         style="background:#FFF5F6; padding-top:6rem; padding-bottom:6rem;">
+    <section class="position-relative overflow-hidden"
+         style="background:#FFF5F6; ">
+         <div class="testimonial-header position-relative text-center">
+
+    <!-- Top Circle Background -->
+    <div class="top-circle"></div>
+
+    <div class="container position-relative">
+        <h2 class="fw-semibold">Testimonial</h2>
+        <p class="text-muted mb-0">
+            Don’t take our word for it. Trust our students
+        </p>
+    </div>
+
+</div>
 
           <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
 
-              <div class="carousel-inner text-center">
+             <div class="carousel-inner">
 
-                  @foreach($testimonials as $key => $testimonial)
-                  <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+    @foreach($testimonials->chunk(3) as $chunkIndex => $testimonialChunk)
+        <div class="carousel-item {{ $chunkIndex == 0 ? 'active' : '' }}">
+            <div class="row justify-content-center">
 
-                      <div class="d-flex justify-content-center">
+                @foreach($testimonialChunk as $testimonial)
+                    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                        <div class="testimonial-card p-4 shadow-sm bg-white">
 
-                          <div class="testimonial-card p-4 shadow-sm bg-white">
+                            <div class="d-flex justify-content-between mb-3">
+                                <div class="text-start">
+                                    <img src="{{ asset($testimonial->image ?? 'assets/img/profile.png') }}"
+                                         width="60" height="60"
+                                         class="mb-2 rounded-circle object-fit-cover">
 
-                              <div class="d-flex justify-content-between mb-3">
+                                    <h6 class="fw-semibold mb-0">
+                                        {{ $testimonial->name }}
+                                    </h6>
 
-                                  <div class="text-start">
-                                      <img src="{{ asset($testimonial->image ?? 'assets/img/profile.png') }}"
-                                          width="60" height="60"
-                                          class="mb-2 rounded-circle object-fit-cover">
+                                    <small class="text-muted">
+                                        {{ $testimonial->designation }}
+                                    </small>
+                                </div>
 
-                                      <h6 class="fw-semibold mb-0">
-                                          {{ $testimonial->name }}
-                                      </h6>
+                                <div class="text-warning fs-5">
+                                    @for($i=1;$i<=5;$i++)
+                                        {!! $i <= $testimonial->rating ? '★' : '☆' !!}
+                                    @endfor
+                                </div>
+                            </div>
 
-                                      <small class="text-muted">
-                                          {{ $testimonial->designation }}
-                                      </small>
-                                  </div>
+                            <p class="text-muted">
+                                {{ $testimonial->message }}
+                            </p>
 
-                                  <div class="text-warning fs-5">
-                                      @for($i=1;$i<=5;$i++)
-                                          {!! $i <= $testimonial->rating ? '★' : '☆' !!}
-                                      @endfor
-                                  </div>
+                        </div>
+                    </div>
+                @endforeach
 
-                              </div>
+            </div>
+        </div>
+    @endforeach
 
-                              <p class="text-muted">
-                                  {{ $testimonial->message }}
-                              </p>
+</div>
 
-                          </div>
-
-                      </div>
-
-                  </div>
-                  @endforeach
-
-              </div>
-
-              <!-- Left -->
-              <button class="carousel-control-prev" type="button"
-                      data-bs-target="#testimonialCarousel"
-                      data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon bg-danger rounded-circle p-3"></span>
-              </button>
-
-              <!-- Right -->
-              <button class="carousel-control-next" type="button"
-                      data-bs-target="#testimonialCarousel"
-                      data-bs-slide="next">
-                  <span class="carousel-control-next-icon bg-danger rounded-circle p-3"></span>
-              </button>
+             
 
           </div>
+           <div class="d-flex justify-content-center gap-4 mt-4">
+
+    <button class="carousel-control-prev position-static"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev">
+       <span class="carousel-control-prev-icon custom-arrow"></span>
+    </button>
+
+    <button class="carousel-control-next position-static"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next">
+         <span class="carousel-control-next-icon custom-arrow"></span>
+    </button>
+
+</div>
     </section>
 
 <style>
   .testimonial-card{
-      max-width:600px;
-      width:100%;
-      border-radius:16px;
-      transition:all .3s ease;
-  }
+    max-width:100%;
+    width:100%;
+    border-radius:16px;
+    transition:all .3s ease;
+}
 
-  .testimonial-card:hover{
-      transform:translateY(-8px);
-      box-shadow:0 20px 40px rgba(0,0,0,0.15);
-  }
+.testimonial-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+.testimonial-header{
+    padding-top:120px;
+    padding-bottom:60px;
+    overflow:hidden;
+}
 
-  /* Fix arrow positioning */
-  .carousel-control-prev,
-  .carousel-control-next{
-      width:5%;
-  }
+.top-circle{
+    position:absolute;
+    top:-300px;
+    left:50%;
+    transform:translateX(-50%);
+    width:400px;
+    height:400px;
+    background:#f36c6c;   /* Coral color */
+    border-radius:50%;
+    z-index:0;
+}
+
+.testimonial-header h2{
+    font-size:38px;
+    position:relative;
+    z-index:2;
+}
+
+.testimonial-header p{
+    font-size:16px;
+    position:relative;
+    z-index:2;
+}
+
+/* Custom Center Arrows */
+/* .custom-arrow{
+    background:#ff4d6d;
+    color:#fff;
+    width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    font-size:18px;
+} */
+.custom-arrow{
+    background-color:#ff4d6d;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background-size:60% 60%;
+}
+
+.carousel-control-prev,
+.carousel-control-next{
+    width:auto;
+}
 </style>
 
 

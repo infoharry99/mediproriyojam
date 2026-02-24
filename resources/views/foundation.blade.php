@@ -3,6 +3,7 @@
 @section('title','Home')
 
 @section('content')
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <main>
 
@@ -23,7 +24,7 @@
 <div class="position-absolute top-50 start-50 translate-middle">
 <div class="bg-white rounded-circle shadow d-flex align-items-center justify-content-center"
      style="width:60px;height:60px;cursor:pointer;">
-▶
+
 </div>
 </div>
 </div>
@@ -31,10 +32,10 @@
 <!-- Course Info -->
 <div class="mt-5">
 
-<p class="text-muted fs-5 mb-1">Class 11–12 NEET</p>
+<p class="text-muted fs-5 mb-1"> Class 11 - 12 NEET</p>
 
 <h2 class="fw-bold mb-3" style="color:#CF242A;">
-Foundation course
+Platinum Batch (12th + NEET)
 </h2>
 
 <p class="text-muted mb-4">
@@ -65,11 +66,11 @@ And Typesetting Industry.
 <p>Hard Copy Books <br>Delivered To You</p>
 </div>
 
-<div class="col-6 col-md-3 text-start">
+<!-- <div class="col-6 col-md-3 text-start">
 <div class="border border-danger rounded-3 mb-2"
      style="width:50px;height:50px;"></div>
 <p>24×7 Live Video <br>Doubt Solving</p>
-</div>
+</div> -->
 
 </div>
 </div>
@@ -181,7 +182,7 @@ Enroll Now
 <div class="container">
 
 <div class="text-center mb-4">
-<span class="badge border border-secondary bg-white text-dark px-4 py-2">
+<span class="badge border border-secondary bg-transparent text-dark px-4 py-2">
 Courses Description
 </span>
 </div>
@@ -191,7 +192,7 @@ Two-Year Integrated Classroom Programme
 </h2>
 
 <p class="text-muted">
-Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry...
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 </p>
 
 </div>
@@ -203,34 +204,38 @@ Lorem Ipsum Is Simply Dummy Text Of The Printing And Typesetting Industry...
 <section class="py-5" style="background:#FFF5F6;">
 <div class="container">
 
-<h4 class="text-center fw-semibold mb-5">
+<h5 class="text-center fw-semibold mb-5">
 Course Highlights
-</h4>
+</h5>
 
-<div class="row g-4">
+<div class="row g-5">
 
+@php
+$highlights = [
+"Complete Board + NEET Syllabus Coverage",
+"All India Common Analysis For Rank Boosting",
+"Doubt Clearing Sessions",
+"Regular Updates About Student’s Performance And Attendance",
+"Systematic And Regular Testing Systems",
+"Well-Defined And Planned Academic Year",
+"Up To 90% Scholarship Through NACST",
+"Feedback And Micro Level Analysis",
+"Review Classes For The Entire Syllabus",
+"All India Test Series + Grand Success Package"
+];
+@endphp
+
+@foreach($highlights as $highlight)
 <div class="col-md-6">
-<ul class="list-unstyled">
-<li class="mb-3">✓ Complete Board + NEET Syllabus Coverage</li>
-<li class="mb-3">✓ All India Rank Boosting Analysis</li>
-<li class="mb-3">✓ Doubt Clearing Sessions</li>
-<li class="mb-3">✓ Regular Performance Updates</li>
-<li class="mb-3">✓ All India Test Series</li>
-<li class="mb-3">✓ Systematic Testing</li>
-</ul>
+<div class="d-flex align-items-start gap-3">
+<span class="badge bg-success rounded-circle p-2">✓</span>
+<span>{{ $highlight }}</span>
 </div>
-
-<div class="col-md-6">
-<ul class="list-unstyled">
-<li class="mb-3">✓ Planned Academic Year</li>
-<li class="mb-3">✓ 90% Scholarship Through NACST</li>
-<li class="mb-3">✓ Micro Level Analysis</li>
-<li class="mb-3">✓ Review Classes</li>
-<li class="mb-3">✓ Grand Success Package</li>
-</ul>
 </div>
+@endforeach
 
 </div>
+
 </div>
 </section>
 
