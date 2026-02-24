@@ -46,20 +46,6 @@
   @yield('content')
 
   @include('partials.footer')
-<!-- Floating WhatsApp Button -->
-<!-- Floating WhatsApp Button -->
-<!-- <a href="https://wa.me/918669667300"
-   target="_blank"
-   class="position-fixed bottom-0 end-0 m-4 bg-success p-3 rounded-circle shadow whatsapp-btn">
-
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-       alt="WhatsApp" width="40" height="40">
-
-</a>
-<a href="tel:+918669667300"  target="_blank"
-   class="position-fixed bottom-0 end-0 m-4 bg-success p-3 rounded-circle shadow whatsapp-btn" style="right:80px;">
-
-    </a> -->
 
     <div class="floating-contact">
     

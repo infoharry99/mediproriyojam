@@ -48,12 +48,13 @@
       <!-- Service -->
       <div class="col-md-2">
 
-        <h5 class="fw-bold mb-3">Service</h5>
+        <h5 class="fw-bold mb-3">Courese</h5>
 
         <ul class="list-unstyled small">
 
-          <li class="mb-2">WordPress</li>
-          <li class="mb-2">UI/UX Design</li>
+          <li class="mb-2">Magic Bullet batch (11th + 12th + NEET)</li>
+          <li class="mb-2"> Platinum Batch (12th + NEET)</li>
+          <li class="mb-2"> Eklavya Batch (After 12th)</li>
 
         </ul>
 
