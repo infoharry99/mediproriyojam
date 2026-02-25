@@ -223,8 +223,8 @@
 
                     <!-- Message -->
                   <p class="small text-muted testimonial-message">
-    {{ $testimonial->message }}
-</p>
+                   {{ $testimonial->message }}
+                       </p>
 
                     <!-- Rating -->
                     <div class="mb-3 text-warning">

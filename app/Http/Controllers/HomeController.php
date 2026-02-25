@@ -19,7 +19,7 @@ class HomeController extends Controller
 
     $testimonials = Testimonial::where('status','active')
                         ->orderBy('display_order')
-                        ->paginate(3);   // 6 per page
+                        ->get();   // 6 per page
 
   
 

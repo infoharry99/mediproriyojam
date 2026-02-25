@@ -609,7 +609,6 @@
          <div class="container">
          <div class="testimonial-header position-relative text-center">
 
-    <!-- Top Circle Background -->
     <div class="top-circle"></div>
 
     <div class="container position-relative">
@@ -618,82 +617,110 @@
             Don’t take our word for it. Trust our students
         </p>
     </div>
-
 </div>
 
-         <div id="testimonialCarousel"
-     class="carousel slide"
-     data-bs-ride="carousel">
+        <div class="position-relative">
 
-    <div class="carousel-inner">
+            <!-- Slider -->
+            <div id="feedbackSlider"
+                 class="d-flex gap-4 overflow-auto pb-4"
+                 style="scroll-behavior:smooth;">
 
-        @foreach($testimonials->chunk(3) as $chunkIndex => $testimonialChunk)
-            <div class="carousel-item {{ $chunkIndex == 0 ? 'active' : '' }}">
+                @foreach($testimonials as $testimonial)
+                <div class="p-4 rounded-4 shadow position-relative testimonial-card"
+                     style="min-width:280px;
+                            background:linear-gradient(to bottom,#FFD7D7,#FFF5F6);">
 
-                <div class="row">
+                    <!-- Quote -->
+                    <!-- <div class="display-6 mb-2">“</div> -->
 
-                    @foreach($testimonialChunk as $testimonial)
-                        <div class="col-12 col-md-6 col-lg-4 mb-4">
-                            <div class="testimonial-card p-4 shadow-sm bg-white h-100">
+                    <!-- Message -->
+                  <p class="small text-muted testimonial-message">
+                   {{ $testimonial->message }}
+                       </p>
 
-                                <div class="d-flex justify-content-between mb-3">
+                    <!-- Rating -->
+                    <div class="mb-3 text-warning">
+                        @for($i=1;$i<=5;$i++)
+                            @if($i <= $testimonial->rating)
+                                <i class="bi bi-star-fill"></i>
+                            @else
+                                <i class="bi bi-star"></i>
+                            @endif
+                        @endfor
+                    </div>
 
-                                    <div class="text-start">
-                                        <img src="{{ asset($testimonial->image ?? 'assets/img/profile.png') }}"
-                                             width="60" height="60"
-                                             class="mb-2 rounded-circle object-fit-cover">
+                    <!-- Bottom Profile Section -->
+                    <div class="d-flex align-items-center gap-2 position-absolute"
+                         style="bottom:15px; left:15px; ">
 
-                                        <h6 class="fw-semibold mb-0">
-                                            {{ $testimonial->name }}
-                                        </h6>
+                        <img src="{{ asset($testimonial->image ?? 'assets/img/profile.png') }}"
+                             style="width:50px;height:50px;object-fit:cover;"
+                             class="rounded-circle border"
+                             alt="{{ $testimonial->name }}">
 
-                                        <small class="text-muted">
-                                            {{ $testimonial->designation }}
-                                        </small>
-                                    </div>
-
-                                    <div class="text-warning fs-5">
-                                        @for($i=1;$i<=5;$i++)
-                                            {!! $i <= $testimonial->rating ? '★' : '☆' !!}
-                                        @endfor
-                                    </div>
-
-                                </div>
-
-                                <p class="text-muted">
-                                    {{ $testimonial->message }}
-                                </p>
-
-                            </div>
+                        <div class="text-start">
+                            <h6 class="mb-0 small fw-semibold">
+                                {{ $testimonial->name }}
+                            </h6>
+                            <small class="text-muted">
+                                {{ $testimonial->designation }}
+                            </small>
                         </div>
-                    @endforeach
+
+                    </div>
 
                 </div>
+                @endforeach
 
             </div>
-        @endforeach
 
-    </div>
-</div>
-           <div class="d-flex justify-content-center gap-4 mt-4">
+            <!-- Buttons -->
+            <div class="mt-3 d-flex justify-content-center gap-4">
+                <button onclick="slideLeft()" class="btn btn-outline-secondary rounded-circle me-2">‹</button>
+                <button onclick="slideRight()" class="btn btn-outline-secondary rounded-circle">›</button>
+            </div>
 
-            <button class="carousel-control-prev position-static"
-                    type="button"
-                    data-bs-target="#testimonialCarousel"
-                    data-bs-slide="prev">
-              <span class="carousel-control-prev-icon custom-arrow"></span>
-            </button>
-
-            <button class="carousel-control-next position-static"
-                    type="button"
-                    data-bs-target="#testimonialCarousel"
-                    data-bs-slide="next">
-                <span class="carousel-control-next-icon custom-arrow"></span>
-            </button>
-
-         </div>
+        </div>
+         
          </div>
     </section>
+
+    <style>
+.testimonial-card {
+    min-width: 280px;
+    min-height: 250px;
+    background: linear-gradient(to bottom,#FFD7D7,#FFF5F6);
+    padding-bottom: 90px; /* space for bottom profile */
+}
+
+.testimonial-message {
+    margin-bottom: 20px;
+}
+</style>
+<script>
+const slider = document.getElementById("feedbackSlider");
+
+function slideLeft(){
+    slider.scrollBy({left:-280,behavior:'smooth'});
+}
+function slideRight(){
+    slider.scrollBy({left:280,behavior:'smooth'});
+}
+</script>
+
+<style>
+.object-fit-cover{
+    object-fit:cover;
+}
+#feedbackSlider::-webkit-scrollbar{
+    display:none;
+}
+#feedbackSlider{
+    -ms-overflow-style:none;
+    scrollbar-width:none;
+}
+</style>
 
 <style>
   .testimonial-card{
@@ -720,7 +747,7 @@
     transform:translateX(-50%);
     width:400px;
     height:400px;
-    background:#f36c6c;   /* Coral color */
+    background:#f36c6c;   
     border-radius:50%;
     z-index:0;
 }
@@ -737,18 +764,7 @@
     z-index:2;
 }
 
-/* Custom Center Arrows */
-/* .custom-arrow{
-    background:#ff4d6d;
-    color:#fff;
-    width:45px;
-    height:45px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    font-size:18px;
-} */
+
 .custom-arrow{
     background-color:#ff4d6d;
     width:45px;
@@ -760,6 +776,21 @@
 .carousel-control-prev,
 .carousel-control-next{
     width:auto;
+}
+@media (min-width: 992px) {
+
+    .carousel-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .carousel-item > .row {
+        width: 100%;
+    }
+
+    .carousel-item .col-lg-4 {
+        display: block;
+    }
 }
 </style>
 
