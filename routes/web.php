@@ -8,6 +8,7 @@ use App\Http\Controllers\AboutpageStatController;
 use App\Http\Controllers\AboutStatisticController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AchievementController;
+use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AdmissionEnquiryController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\AnnouncementPosterController;
@@ -77,6 +78,7 @@ Route::get('/gallery', function () {
 
 //About Us
 
+
 Route::get('/about-us', function () {
     $about_intro = AboutpageIntro::latest()->get();
     $about_founder = AboutpageFounder::latest()->get();
@@ -110,6 +112,9 @@ Route::post('/admin-login', [AuthController::class, 'login'])->name('admin.login
 Route::post('/admin-logout', [AuthController::class, 'logout'])->name('admin.logout');
 
 Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {
+
+    Route::get('/dashboard', [AdminDashboardController::class,'index'])
+        ->name('dashboard');
 
     Route::get('/banners', [BannerController::class, 'index'])
         ->name('banners.index');
