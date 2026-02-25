@@ -946,6 +946,36 @@
                 display: none;
             }
         }
+
+        .sidebar-logo{
+            width:100%;
+            height:40px;
+            object-fit:contain;
+            transition:0.3s;
+        }
+
+        /* hide when collapsed */
+        .sidebar.collapsed .sidebar-logo{
+            display:none;
+        }
+
+        .logout-btn{
+            display:flex;
+            align-items:center;
+            gap:8px;
+            width:100%;
+            justify-content:flex-start;
+        }
+
+        /* collapsed → hide text */
+        .sidebar.collapsed .logout-text{
+            display:none;
+        }
+
+        /* collapsed → center icon */
+        .sidebar.collapsed .logout-btn{
+            justify-content:center;
+        }
     </style>
 </head>
 <body class="mode-dark">
@@ -964,12 +994,13 @@
                 </svg>
             </div> --}}
             {{-- <span class="brand-name">Medical Prayojnam</span> --}}
-            <img src="{{asset('assets/img/education/footerlogo.png')}}" alt="" style="width:100%; height:40px;">
+            <img src="{{asset('assets/img/education/footerlogo.png')}}" class="sidebar-logo" alt="">
             <button class="collapse-btn" onclick="toggleSidebar()">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                 </svg>
             </button>
+            
         </div>
 
         <nav class="sidebar-nav">
@@ -1245,15 +1276,13 @@
 
         <div class="sidebar-footer">
             <div class="user-info">
-                <!-- Logout Form -->
-            <form method="POST" action="{{ route('admin.logout') }}" class="logout-form">
-                @csrf
-                <button type="submit" class=" btn btn-danger">
-                    <i class="fa fa-sign-out-alt"></i>
-                    <span>Logout</span>
-                </button>
-            </form>
-            
+                <form method="POST" action="{{ route('admin.logout') }}" class="logout-form">
+                    @csrf
+                    <button type="submit" class="btn btn-danger logout-btn">
+                        <i class="fa fa-sign-out-alt"></i>
+                        <span class="logout-text">Logout</span>
+                    </button>
+                </form>
             </div>
         </div>
     </aside>
