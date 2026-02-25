@@ -50,10 +50,10 @@ class AuthController extends Controller
             $request->session()->regenerate();
 
             if (Auth::user()->role === 'admin') {
-                return redirect()->route('admin.banners.index');
+                return redirect()->route('admin.dashboard');
             }
 
-            return redirect('/admin/banners');
+            return redirect('/admin/dashboard');
         }
 
         return back()->with('error', 'Invalid email or password');
