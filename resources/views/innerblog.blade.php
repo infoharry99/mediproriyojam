@@ -82,7 +82,7 @@
 
 
         <!-- Skeuomorphic -->
-        <div class="row align-items-center">
+        <!-- <div class="row align-items-center">
             <div class="col-lg-6 mb-4">
                 <h2 class="text-danger fw-semibold mb-3">
                     The Skeuomorphic Era
@@ -95,7 +95,7 @@
             <div class="col-lg-6">
                 <div class="bg-secondary rounded-4" style="height:220px;"></div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 </section>
@@ -126,10 +126,9 @@
 }
 </style>
 <!-- VENN DIAGRAM SECTION -->
-<section class="py-5" style="background:#FFF5F6;">
+<!-- <section class="py-5" style="background:#FFF5F6;">
     <div class="container text-center position-relative" style="height:420px; max-width:800px;">
 
-        <!-- Left Circle -->
         <div class="position-absolute top-50 start-50 translate-middle"
              style="transform:translate(-120%, -50%);
                     width:350px;height:350px;
@@ -143,7 +142,6 @@
             </ul>
         </div>
 
-        <!-- Right Circle -->
         <div class="position-absolute top-50 start-50 translate-middle"
              style="transform:translate(20%, -50%);
                     width:350px;height:350px;
@@ -158,7 +156,7 @@
         </div>
 
     </div>
-</section>
+</section> -->
 
 
 <!-- MATERIAL DESIGN -->

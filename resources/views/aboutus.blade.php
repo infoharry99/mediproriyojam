@@ -306,49 +306,103 @@
 </section>
 
 <style>
-    .stats-section {
-        padding: 60px 20px;
-        background: #f5f5f5;
-    }
+   .stats-section {
+    padding: 40px 15px;
+    background: #f5f5f5;
+}
+
+.stats-box {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 50px 40px;
+
+    /* Desktop outline */
+    background: url("assets/outline.png") no-repeat center;
+    background-size: 100% 100%;
+
+    border-radius: 20px;
+    gap: 20px;
+}
+
+/* Each stat */
+.stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-item h2 {
+    font-size: 42px;
+    font-weight: 600;
+    color: #333;
+}
+
+.stat-item p {
+    margin-top: 8px;
+    color: #777;
+    font-size: 16px;
+}
+
+/* Divider */
+.divider {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* ========================= */
+/* 📱 MOBILE RESPONSIVE */
+/* ========================= */
+@media (max-width: 768px) {
 
     .stats-box {
-        max-width: 1200px;
-        margin: auto;
+        flex-direction: column;   /* Row → Column */
+        background: none;         /* Remove outline */
+        padding: 25px 20px;
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        padding: 50px 40px;
-
-        /* 🔥 outline image */
-        background: url("assets/outline.png") no-repeat center;
-        background-size: 100% 100%;
+        border: 1px solid #ddd;
+        background: #fff;
     }
 
     .stat-item {
-        text-align: center;
-        flex: 1;
+        width: 100%;
+        padding: 15px 0;
     }
 
     .stat-item h2 {
-        font-size: 42px;
-        font-weight: 600;
-        color: #333;
+        font-size: 32px;
     }
 
     .stat-item p {
-        margin-top: 8px;
-        color: #777;
-        font-size: 16px;
+        font-size: 14px;
     }
 
-    /* vertical divider image */
+    /* Change vertical line to horizontal */
     .divider {
-        height: 80px;
-        width: auto;
-        object-fit: contain;
+        width: 60%;
+        height: 2px;
+        margin: 10px auto;
+        transform: rotate(0deg);
     }
+}
+
+/* ========================= */
+/* 📱 SMALL MOBILE */
+/* ========================= */
+@media (max-width: 480px) {
+
+    .stat-item h2 {
+        font-size: 26px;
+    }
+
+    .stats-box {
+        padding: 20px 15px;
+    }
+}
 </style>
 
 <section class="aboutus-classroom-section py-5">

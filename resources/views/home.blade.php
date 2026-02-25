@@ -483,48 +483,79 @@
 
 <!-- OUR TOP DOCTORS -->
 <section class="position-relative py-5 overflow-hidden"
-         style="background:#FFEFF0;">
+         style="background:#FFEFF0; padding-top:7rem; padding-bottom:7rem;">
 
   <!-- Pink Glow Circle -->
-  <div class="pink-glow"></div>
+  <div class="position-absolute start-50 translate-middle-x"
+       style="
+        bottom:-180px;
+        width:520px;
+        height:520px;
+        background:rgba(255,126,126,0.7);
+        filter:blur(120px);
+        border-radius:50%;
+       ">
+  </div>
+
 
   <div class="container position-relative text-center">
 
-    <div class="row justify-content-center g-4 g-lg-5">
+    <div class="row justify-content-center g-5 align-items-end">
 
-      <!-- CARD -->
-      <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+
+      <!-- CARD 1 -->
+      <div class="col-md-4 d-flex justify-content-center">
+
         <div class="doctor-card">
+
           <img src="/assets/img/education/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall 1.png"
                class="doctor-img"
                alt="">
+
           <div class="doctor-name">
             Rasika Ghorpade
           </div>
+
         </div>
+
       </div>
 
-      <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+
+      <!-- CARD 2 -->
+      <div class="col-md-4 d-flex justify-content-center">
+
         <div class="doctor-card">
+
           <img src="/assets/img/education/697078c6bd0682489206e2ce 1.png"
                class="doctor-img"
                alt="">
+
           <div class="doctor-name">
             Satyabrata Pal
           </div>
+
         </div>
+
       </div>
 
-      <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+
+      <!-- CARD 3 -->
+      <div class="col-md-4 d-flex justify-content-center">
+
         <div class="doctor-card">
+
           <img src="/assets/img/education/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall 1 (1).png"
                class="doctor-img"
                alt="">
+
           <div class="doctor-name">
             Kresha Kubhalwar
           </div>
+
         </div>
+
       </div>
+
 
     </div>
 
@@ -532,77 +563,45 @@
 
 </section>
 
-  <style>
-    /* Doctor Cards */
-    /* Pink Glow */
-    .pink-glow{
-        position:absolute;
-        left:50%;
-        transform:translateX(-50%);
-        bottom:-120px;
-        width:400px;
-        height:400px;
-        background:rgba(255,126,126,0.6);
-        filter:blur(120px);
-        border-radius:50%;
-        z-index:0;
-    }
+<style>
+  /* Doctor Cards */
 
-    /* Doctor Cards */
-    .doctor-card{
-        width:100%;
-        max-width:330px;
-        background:#fff;
-        border-radius:28px;
-        overflow:hidden;
-        box-shadow:0 15px 35px rgba(0,0,0,0.15);
-        transition:all .4s ease;
-    }
+  .doctor-card{
+      width:330px;
+      background:#fff;
+      border-radius:32px;
+      overflow:hidden;
+      box-shadow:0 15px 35px rgba(0,0,0,0.2);
+      transition:all .5s ease;
+      position:relative;
+      z-index:1;
+  }
 
-    .doctor-card:hover{
-        transform:translateY(-15px);
-        box-shadow:0 25px 50px rgba(0,0,0,0.25);
-    }
+  .doctor-card:hover{
+      transform:scale(1.1) translateY(-25px);
+      box-shadow:0 30px 60px rgba(0,0,0,0.35);
+      z-index:10;
+  }
 
-    .doctor-img{
-        width:100%;
-        height:380px;
-        object-fit:cover;
-        transition:transform .4s ease;
-    }
+  .doctor-img{
+      width:100%;
+      height:430px;
+      object-fit:cover;
+      transition:transform .5s ease;
+  }
 
-    .doctor-card:hover .doctor-img{
-        transform:scale(1.05);
-    }
+  .doctor-card:hover .doctor-img{
+      transform:scale(1.05);
+  }
 
-    .doctor-name{
-        padding:16px;
-        text-align:center;
-        border-top:1px solid #eee;
-        font-weight:600;
-        font-size:18px;
-    }
-
-    /* Tablet adjustments */
-    @media (max-width: 991px){
-        .doctor-img{
-            height:320px;
-        }
-    }
-
-    /* Mobile adjustments */
-    @media (max-width: 576px){
-        .doctor-img{
-            height:260px;
-        }
-
-        .pink-glow{
-            width:280px;
-            height:280px;
-            bottom:-80px;
-        }
-    }
-  </style>
+  .doctor-name{
+      padding:18px;
+      text-align:center;
+      border-top:1px solid #eee;
+      font-weight:600;
+      font-size:18px;
+  }
+</style>
     
     <section class="position-relative overflow-hidden"
          style="background:#FFF5F6; ">

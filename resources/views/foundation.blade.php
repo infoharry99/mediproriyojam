@@ -22,10 +22,10 @@
      style="height:400px;object-fit:cover;" alt="Video">
 
 <div class="position-absolute top-50 start-50 translate-middle">
-<div class="bg-white rounded-circle shadow d-flex align-items-center justify-content-center"
+<!-- <div class="bg-white rounded-circle shadow d-flex align-items-center justify-content-center"
      style="width:60px;height:60px;cursor:pointer;">
 
-</div>
+</div> -->
 </div>
 </div>
 
