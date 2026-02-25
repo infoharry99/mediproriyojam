@@ -328,15 +328,13 @@
         }
 
         /* Dropdown Menu */
-        .dropdown-menu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            margin-left: 0.5rem;
+        .sidebar-dropdown {
+            display: none;
+            padding-left: 10px;
         }
 
-        .nav-item.open .dropdown-menu {
-            max-height: 500px;
+        .nav-item.open .sidebar-dropdown {
+            display: block;
         }
 
         .sidebar.collapsed .dropdown-menu {
@@ -672,12 +670,20 @@
         }
 
         .stat-card {
-            background: var(--bg-card);
+            /* background: var(--bg-card); */
+            background:  #CF242A;
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 1.25rem;
             position: relative;
             overflow: hidden;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 8px 24px #CF242A;
+            cursor: pointer;
         }
 
         .stat-header {
@@ -755,11 +761,11 @@
             font-size: 1.75rem;
             font-weight: 700;
             margin-bottom: 0.25rem;
-            color: var(--text-light);
+            color: #ffffff;
         }
 
         .stat-label {
-            color: var(--text-muted);
+            color: #ffffff;
             font-size: 0.8125rem;
             font-weight: 500;
         }
@@ -940,6 +946,36 @@
                 display: none;
             }
         }
+
+        .sidebar-logo{
+            width:100%;
+            height:40px;
+            object-fit:contain;
+            transition:0.3s;
+        }
+
+        /* hide when collapsed */
+        .sidebar.collapsed .sidebar-logo{
+            display:none;
+        }
+
+        .logout-btn{
+            display:flex;
+            align-items:center;
+            gap:8px;
+            width:100%;
+            justify-content:flex-start;
+        }
+
+        /* collapsed → hide text */
+        .sidebar.collapsed .logout-text{
+            display:none;
+        }
+
+        /* collapsed → center icon */
+        .sidebar.collapsed .logout-btn{
+            justify-content:center;
+        }
     </style>
 </head>
 <body class="mode-dark">
@@ -958,16 +994,17 @@
                 </svg>
             </div> --}}
             {{-- <span class="brand-name">Medical Prayojnam</span> --}}
-            <img src="{{asset('assets/img/education/footerlogo.png')}}" alt="" style="width:100%; height:40px;">
+            <img src="{{asset('assets/img/education/footerlogo.png')}}" class="sidebar-logo" alt="">
             <button class="collapse-btn" onclick="toggleSidebar()">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                 </svg>
             </button>
+            
         </div>
 
         <nav class="sidebar-nav">
-            {{-- <div class="nav-item">
+            <div class="nav-item">
                 <a href="{{ route('admin.dashboard') }}" class="nav-link {{ Request::is('admin/dashboard*') ? 'active' : '' }}" >
                     <span class="nav-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -977,128 +1014,96 @@
                     </span>
                     <span class="nav-text">Dashboard</span>
                 </a>
-            </div> --}}
+            </div>
 
-            <div class="nav-item">
-                <a href="{{ route('admin.banners.index') }}" class="nav-link {{ Request::is('admin/banners*') ? 'active' : '' }}" >
+            @php
+            $homeActive =
+                Request::is('admin/banners*')||
+                Request::is('admin/about-us*') ||
+                Request::is('admin/about-statistics*') ||
+                Request::is('admin/courses*') ||
+                Request::is('admin/top-rankers*')||
+                Request::is('admin/testimonials*') ||
+                Request::is('admin/student-feedback-videos*');
+
+            @endphp
+
+            <div class="nav-item {{ $homeActive ? 'open' : '' }}">
+                <a href="javascript:void(0)"
+                class="nav-link {{ $homeActive ? 'active' : '' }}"
+                onclick="toggleDropdown(this)">
+
                     <span class="nav-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 5h18v14H3V5zm4 10l3-4 4 5 3-3 3 4"/>
+                                d="M3 9.75L12 4l9 5.75V19a2 2 0 01-2 2h-5a2 2 0 01-2-2v-4H10v4a2 2 0 01-2 2H3a2 2 0 01-2-2V9.75z"/>
                         </svg>
-
                     </span>
-                    <span class="nav-text">Banner</span>
-                </a>
-            </div>
 
-            {{-- <div class="nav-item">
-                <a href="{{ route('admin.portfolios.index') }}" class="nav-link {{ Request::is('admin/portfolios*') ? 'active' : '' }}" >
-                    <span class="nav-icon">
+                    <span class="nav-text">Home Page</span>
+
+                    <span class="dropdown-arrow {{ $homeActive ? 'rotate' : '' }}">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M9 6V4h6v2m4 4v8a2 2 0 01-2 2H7a2 2 0 01-2-2v-8m14 0H5"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
-
                     </span>
-                    <span class="nav-text">Portfolios</span>
                 </a>
-            </div> --}}
 
-            <div class="nav-item">
-                <a href="{{ route('admin.about.index') }}" class="nav-link {{ Request::is('admin/about-us*') ? 'active' : '' }}" >
-                    <span class="nav-icon">
-                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 12a4 4 0 100-8 4 4 0 000 8zm6 8H6a6 6 0 0112 0z"/>
-                        </svg>
+                <div class="sidebar-dropdown">
+                    <a href="{{ route('admin.banners.index') }}"
+                    class="dropdown-item {{ Request::is('admin/banners*') ? 'active' : '' }}">
+                    Banners
+                    </a>
 
-                    </span>
-                    <span class="nav-text">Abouts</span>
-                </a>
+                    <a href="{{ route('admin.about.index') }}"
+                    class="dropdown-item {{ Request::is('admin/about-us*') ? 'active' : '' }}">
+                    Aboutus
+                    </a>
+
+                    <a href="{{ route('admin.courses.index') }}"
+                    class="dropdown-item {{ Request::is('admin/courses*') ? 'active' : '' }}">
+                    Courses
+                    </a>
+
+                    <a href="{{ route('admin.top.rankers.index') }}"
+                    class="dropdown-item {{ Request::is('admin/top-rankers*') ? 'active' : '' }}">
+                    Top Rankers
+                    </a>
+
+                    <a href="{{ route('admin.testimonials.index') }}"
+                    class="dropdown-item {{ Request::is('admin/testimonials*') ? 'active' : '' }}">
+                    Testimonials
+                    </a>
+
+                    <a href="{{ route('admin.feedback.videos.index') }}"
+                    class="dropdown-item {{ Request::is('admin/student-feedback-videos*') ? 'active' : '' }}">
+                    Feedback Videos
+                    </a>
+                </div>
             </div>
-
-            <div class="nav-item">
-                <a href="{{ route('admin.about.statistics.index') }}" class="nav-link {{ Request::is('admin/about-statistics*') ? 'active' : '' }}" >
-                    <span class="nav-icon">
-                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 12a4 4 0 100-8 4 4 0 000 8zm6 8H6a6 6 0 0112 0z"/>
-                        </svg>
-
-                    </span>
-                    <span class="nav-text">About Statistics</span>
-                </a>
-            </div>
-
-            <div class="nav-item">
-                <a href="{{ route('admin.courses.index') }}" class="nav-link {{ Request::is('admin/courses*') ? 'active' : '' }}" >
-                    <span class="nav-icon">
-                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 12a4 4 0 100-8 4 4 0 000 8zm6 8H6a6 6 0 0112 0z"/>
-                        </svg>
-
-                    </span>
-                    <span class="nav-text">Courses</span>
-                </a>
-            </div>
-             <div class="nav-item">
-                <a href="{{ route('admin.top.rankers.index') }}" class="nav-link {{ Request::is('admin/top-rankers*') ? 'active' : '' }}" >
-                    <span class="nav-icon">
-                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 12a4 4 0 100-8 4 4 0 000 8zm6 8H6a6 6 0 0112 0z"/>
-                        </svg>
-
-                    </span>
-                    <span class="nav-text">Top Rankers</span>
-                </a>
-            </div>
-
-            <div class="nav-item">
-                <a href="{{ route('admin.testimonials.index') }}" class="nav-link {{ Request::is('admin/testimonials*') ? 'active' : '' }}" >
-                    <span class="nav-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                    </svg>
-
-                    </span>
-                    <span class="nav-text">Testimonial</span>
-                </a>
-            </div>
-
-            <div class="nav-item">
-                <a href="{{ route('admin.feedback.videos.index') }}" class="nav-link {{ Request::is('admin/student-feedback-videos*') ? 'active' : '' }}" >
-                    <span class="nav-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                    </svg>
-
-                    </span>
-                    <span class="nav-text">Feedback Videos</span>
-                </a>
-            </div> 
 
             <div class="nav-item">
                 <a href="{{ route('admin.blogs.index') }}" class="nav-link {{ Request::is('admin/blogs*') ? 'active' : '' }}" >
                     <span class="nav-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12h6m-6 4h6M7 4h7l5 5v11a2 2 0 01-2 2H7a2 2 0 01-2-2V6a2 2 0 012-2z"/>
                     </svg>
-
                     </span>
                     <span class="nav-text">Blogs</span>
                 </a>
             </div>
+
              <div class="nav-item">
                 <a href="{{ route('admin.admission.enquiries.index') }}" class="nav-link {{ Request::is('admin/admission-enquiries*') ? 'active' : '' }}" >
                     <span class="nav-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20 13V7a2 2 0 00-2-2H6a2 2 0 00-2 2v6m16 0l-8 5-8-5"/>
                     </svg>
-
                     </span>
+
+                    
                     <span class="nav-text">Admission Inquiries</span>
                 </a>
             </div>
@@ -1107,20 +1112,21 @@
                 <a href="{{ route('admin.app.download.index') }}" class="nav-link {{ Request::is('admin/app-download*') ? 'active' : '' }}" >
                     <span class="nav-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v12m0 0l4-4m-4 4l-4-4M4 21h16"/>
                     </svg>
-
                     </span>
                     <span class="nav-text">Applications Url</span>
                 </a>
             </div>
-             <div class="nav-item">
+
+            <div class="nav-item">
                 <a href="{{ route('admin.achievements.index') }}" class="nav-link {{ Request::is('admin/achievements*') ? 'active' : '' }}" >
                     <span class="nav-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 21h8M12 17v4M5 3h14v4a5 5 0 01-10 0V3z"/>
                     </svg>
-
                     </span>
                     <span class="nav-text">Achievements</span>
                 </a>
@@ -1130,154 +1136,153 @@
                 <a href="{{ route('admin.course.highlights.index') }}" class="nav-link {{ Request::is('admin/course-highlights*') ? 'active' : '' }}" >
                     <span class="nav-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11.049 2.927l2.902 5.88 6.49.944-4.696 4.58 1.11 6.47L12 18.897l-5.855 3.074 1.11-6.47L2.56 9.75l6.49-.944z"/>
                     </svg>
-
                     </span>
                     <span class="nav-text">Courses Highlights</span>
                 </a>
             </div>
+
             <div class="nav-item">
                 <a href="{{ route('admin.course.description.index') }}" class="nav-link {{ Request::is('admin/course-description*') ? 'active' : '' }}" >
                     <span class="nav-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12h6m-6 4h6M7 4h7l5 5v11a2 2 0 01-2 2H7a2 2 0 01-2-2V6a2 2 0 012-2z"/>
                     </svg>
-
                     </span>
                     <span class="nav-text">Courses Description</span>
                 </a>
             </div>
+
             <div class="nav-item">
                 <a href="{{ route('admin.test.types.index') }}" class="nav-link {{ Request::is('admin/test-types*') ? 'active' : '' }}" >
                     <span class="nav-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5h6M9 9h6M9 13h6M5 5h.01M5 9h.01M5 13h.01M5 17h.01"/>
                     </svg>
-
                     </span>
                     <span class="nav-text">Test Types</span>
                 </a>
             </div>
 
-             <div class="nav-item">
-                <a href="{{ route('admin.about.intro.index') }}" class="nav-link {{ Request::is('admin/about-intro*') ? 'active' : '' }}" >
+            @php
+            $aboutActive =
+                Request::is('admin/about-intro*') ||
+                Request::is('admin/about-founder*') ||
+                Request::is('admin/about-stats*') ||
+                Request::is('admin/about-gallery*') ||
+                Request::is('admin/about-features*');
+            @endphp
+
+            <div class="nav-item {{ $aboutActive ? 'open' : '' }}">
+                <a href="javascript:void(0)"
+                class="nav-link {{ $aboutActive ? 'active' : '' }}"
+                onclick="toggleDropdown(this)">
+
                     <span class="nav-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 16h-1v-4h-1m1-4h.01M12 21a9 9 0 100-18 9 9 0 000 18z"/>
                     </svg>
-
                     </span>
-                    <span class="nav-text">About Intro</span>
-                </a>
-            </div>
 
-             <div class="nav-item">
-                <a href="{{ route('admin.about.founder.index') }}" class="nav-link {{ Request::is('admin/about-founder*') ? 'active' : '' }}" >
-                    <span class="nav-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                    </svg>
-
-                    </span>
-                    <span class="nav-text">About Founder</span>
-                </a>
-            </div>
-            
-            <div class="nav-item">
-                <a href="{{ route('admin.about.stats.index') }}" class="nav-link {{ Request::is('admin/about-stats*') ? 'active' : '' }}" >
-                    <span class="nav-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                    </svg>
-
-                    </span>
-                    <span class="nav-text">About States</span>
-                </a>
-            </div>
-
-            <div class="nav-item">
-                <a href="{{ route('admin.about.gallery.index') }}" class="nav-link {{ Request::is('admin/about-gallery*') ? 'active' : '' }}" >
-                    <span class="nav-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                    </svg>
-
-                    </span>
-                    <span class="nav-text">About Gallary</span>
-                </a>
-            </div>
-
-            <div class="nav-item">
-                <a href="{{ route('admin.about.features.index') }}" class="nav-link {{ Request::is('admin/about-features*') ? 'active' : '' }}" >
-                    <span class="nav-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                    </svg>
-
-                    </span>
-                    <span class="nav-text">About Features</span>
-                </a>
-            </div>
-
-            <div class="nav-item">
-                <a href="{{ route('admin.announcements.index') }}" class="nav-link {{ Request::is('admin/announcements*') ? 'active' : '' }}" >
-                    <span class="nav-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                    </svg>
-
-                    </span>
-                    <span class="nav-text">Announcements</span>
-                </a>
-            </div>
-            <div class="nav-item">
-                <a href="{{ route('admin.announcement.poster.index') }}" class="nav-link {{ Request::is('admin/announcements-poster*') ? 'active' : '' }}" >
-                    <span class="nav-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                    </svg>
-
-                    </span>
-                    <span class="nav-text">Announcements Poster</span>
-                </a>
-            </div>
-
-            {{-- <div class="nav-item">
-                <a href="javascript:void(0)" class="nav-link" onclick="toggleDropdown(this)">
-                    <span class="nav-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
-                        </svg>
-                    </span>
                     <span class="nav-text">About Page</span>
-                    <span class="dropdown-arrow">
+
+                    <span class="dropdown-arrow {{ $aboutActive ? 'rotate' : '' }}">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                         </svg>
                     </span>
                 </a>
-                <div class="dropdown-menu">
-                    <a href="#new-plugin" class="dropdown-item {{ Request::is('about-intro*') ? 'active' : '' }}">About Intro</a>
-                    <a href="#all-plugins" class="dropdown-item" data-route="Admin\PluginController@index">All Plugins</a>
+
+                <div class="sidebar-dropdown">
+                    <a href="{{ route('admin.about.intro.index') }}"
+                    class="dropdown-item {{ Request::is('admin/about-intro*') ? 'active' : '' }}">
+                    About Intro
+                    </a>
+
+                    <a href="{{ route('admin.about.founder.index') }}"
+                    class="dropdown-item {{ Request::is('admin/about-founder*') ? 'active' : '' }}">
+                    About Founder
+                    </a>
+
+                    <a href="{{ route('admin.about.stats.index') }}"
+                    class="dropdown-item {{ Request::is('admin/about-stats*') ? 'active' : '' }}">
+                    About Stats
+                    </a>
+
+                    <a href="{{ route('admin.about.gallery.index') }}"
+                    class="dropdown-item {{ Request::is('admin/about-gallery*') ? 'active' : '' }}">
+                    About Gallery
+                    </a>
+
+                    <a href="{{ route('admin.about.features.index') }}"
+                    class="dropdown-item {{ Request::is('admin/about-features*') ? 'active' : '' }}">
+                    About Features
+                    </a>
                 </div>
-            </div> --}}
- 
+            </div>
+
+           
+
+            
+            @php
+            $announcementActive =
+                Request::is('admin/announcements*') ||
+                Request::is('admin/announcements-poster*');
+            @endphp
+
+            <div class="nav-item {{ $announcementActive ? 'open' : '' }}">
+                <a href="javascript:void(0)"
+                class="nav-link {{ $announcementActive ? 'active' : '' }}"
+                onclick="toggleDropdown(this)">
+
+                    <span class="nav-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 11l14-5v12L3 13v-2zM17 6l4-2v16l-4-2M6 13v4a2 2 0 002 2h1"/>
+                    </svg>
+                    </span>
+
+                    <span class="nav-text">Announcements</span>
+
+                    <span class="dropdown-arrow {{ $announcementActive ? 'rotate' : '' }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </span>
+                </a>
+
+                <div class="sidebar-dropdown">
+                    <a href="{{ route('admin.announcements.index') }}"
+                    class="dropdown-item {{ Request::is('admin/announcements*') ? 'active' : '' }}">
+                    Announcements
+                    </a>
+
+                    <a href="{{ route('admin.announcement.poster.index') }}"
+                    class="dropdown-item {{ Request::is('admin/announcements-poster*') ? 'active' : '' }}">
+                    Announcements Poster
+                    </a>
+
+                    
+                </div>
+            </div>
              
 
         </nav>
 
         <div class="sidebar-footer">
             <div class="user-info">
-                <!-- Logout Form -->
-            <form method="POST" action="{{ route('admin.logout') }}" class="logout-form">
-                @csrf
-                <button type="submit" class=" btn btn-danger">
-                    <i class="fa fa-sign-out-alt"></i>
-                    <span>Logout</span>
-                </button>
-            </form>
-            
+                <form method="POST" action="{{ route('admin.logout') }}" class="logout-form">
+                    @csrf
+                    <button type="submit" class="btn btn-danger logout-btn">
+                        <i class="fa fa-sign-out-alt"></i>
+                        <span class="logout-text">Logout</span>
+                    </button>
+                </form>
             </div>
         </div>
     </aside>
