@@ -10,7 +10,7 @@
 
 <!-- ================= HERO + FORM SECTION ================= -->
 <section class="py-5" style="background:#FFF5F6;">
-<div class="container mt-5 pt-5">
+<div class="container ">
 
 <div class="row g-5">
 

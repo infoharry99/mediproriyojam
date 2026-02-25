@@ -53,7 +53,7 @@
 
 <style>
   .herosection{
-    margin-top: 70px;
+    margin-top: 0px;
   }
 
   .hero-desktop-img {
@@ -606,6 +606,7 @@
     
     <section class="position-relative overflow-hidden"
          style="background:#FFF5F6; ">
+         <div class="container">
          <div class="testimonial-header position-relative text-center">
 
     <!-- Top Circle Background -->
@@ -620,74 +621,78 @@
 
 </div>
 
-          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+         <div id="testimonialCarousel"
+     class="carousel slide"
+     data-bs-ride="carousel">
 
-             <div class="carousel-inner">
+    <div class="carousel-inner">
 
-    @foreach($testimonials->chunk(3) as $chunkIndex => $testimonialChunk)
-        <div class="carousel-item {{ $chunkIndex == 0 ? 'active' : '' }}">
-            <div class="row justify-content-center">
+        @foreach($testimonials->chunk(3) as $chunkIndex => $testimonialChunk)
+            <div class="carousel-item {{ $chunkIndex == 0 ? 'active' : '' }}">
 
-                @foreach($testimonialChunk as $testimonial)
-                    <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-                        <div class="testimonial-card p-4 shadow-sm bg-white">
+                <div class="row">
 
-                            <div class="d-flex justify-content-between mb-3">
-                                <div class="text-start">
-                                    <img src="{{ asset($testimonial->image ?? 'assets/img/profile.png') }}"
-                                         width="60" height="60"
-                                         class="mb-2 rounded-circle object-fit-cover">
+                    @foreach($testimonialChunk as $testimonial)
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="testimonial-card p-4 shadow-sm bg-white h-100">
 
-                                    <h6 class="fw-semibold mb-0">
-                                        {{ $testimonial->name }}
-                                    </h6>
+                                <div class="d-flex justify-content-between mb-3">
 
-                                    <small class="text-muted">
-                                        {{ $testimonial->designation }}
-                                    </small>
+                                    <div class="text-start">
+                                        <img src="{{ asset($testimonial->image ?? 'assets/img/profile.png') }}"
+                                             width="60" height="60"
+                                             class="mb-2 rounded-circle object-fit-cover">
+
+                                        <h6 class="fw-semibold mb-0">
+                                            {{ $testimonial->name }}
+                                        </h6>
+
+                                        <small class="text-muted">
+                                            {{ $testimonial->designation }}
+                                        </small>
+                                    </div>
+
+                                    <div class="text-warning fs-5">
+                                        @for($i=1;$i<=5;$i++)
+                                            {!! $i <= $testimonial->rating ? '★' : '☆' !!}
+                                        @endfor
+                                    </div>
+
                                 </div>
 
-                                <div class="text-warning fs-5">
-                                    @for($i=1;$i<=5;$i++)
-                                        {!! $i <= $testimonial->rating ? '★' : '☆' !!}
-                                    @endfor
-                                </div>
+                                <p class="text-muted">
+                                    {{ $testimonial->message }}
+                                </p>
+
                             </div>
-
-                            <p class="text-muted">
-                                {{ $testimonial->message }}
-                            </p>
-
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+
+                </div>
 
             </div>
-        </div>
-    @endforeach
+        @endforeach
 
+    </div>
 </div>
-
-             
-
-          </div>
            <div class="d-flex justify-content-center gap-4 mt-4">
 
-    <button class="carousel-control-prev position-static"
-            type="button"
-            data-bs-target="#testimonialCarousel"
-            data-bs-slide="prev">
-       <span class="carousel-control-prev-icon custom-arrow"></span>
-    </button>
+            <button class="carousel-control-prev position-static"
+                    type="button"
+                    data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+              <span class="carousel-control-prev-icon custom-arrow"></span>
+            </button>
 
-    <button class="carousel-control-next position-static"
-            type="button"
-            data-bs-target="#testimonialCarousel"
-            data-bs-slide="next">
-         <span class="carousel-control-next-icon custom-arrow"></span>
-    </button>
+            <button class="carousel-control-next position-static"
+                    type="button"
+                    data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon custom-arrow"></span>
+            </button>
 
-</div>
+         </div>
+         </div>
     </section>
 
 <style>

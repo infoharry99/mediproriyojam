@@ -11,7 +11,7 @@
 <!-- ================= ENQUIRY FORM SECTION ================= -->
 <section class="py-5" style="background:#FFF5F6;">
 
-    <div class="text-center mb-5 mt-5 pt-5">
+    <div class="text-center mb-5">
         <h3 class="d-inline-block px-4 py-2 border border-dark rounded-pill fw-medium">
             Enquiry form with lead
         </h3>

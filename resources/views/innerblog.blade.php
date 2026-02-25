@@ -10,7 +10,7 @@
 
 <!-- HERO SECTION -->
 <section class="py-5" style="background:#FFF5F6;">
-    <div class="container mt-5 pt-5">
+    <div class="container">
 
         <div class="text-center mb-4">
             <h3 class="fw-medium" style="font-size:30px;">

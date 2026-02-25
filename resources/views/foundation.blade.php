@@ -9,7 +9,7 @@
 
 <!-- HERO SECTION -->
 <section class="py-5" style="background:#FFF5F6;">
-<div class="container" style="margin-top:120px;">
+<div class="container">
 <div class="row g-5 align-items-start">
 
 <!-- LEFT CONTENT -->

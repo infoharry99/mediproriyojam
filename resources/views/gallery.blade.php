@@ -8,7 +8,7 @@
 
 <section class="min-vh-100 py-5" style="background:#FFF5F6;">
 
-    <div class="container mt-5 pt-5">
+    <div class="container">
 
         <!-- Heading -->
         <div class="text-center mb-5">
