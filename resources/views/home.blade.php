@@ -617,8 +617,211 @@
         </p>
     </div>
 </div>
+<div class="schoolershipsection">
+  <div class="headingtext text-center">
+  <h1 class="font-bold">Einstein Scholarship Test 2026</h1>
+  <h6>For NEET & Science Aspirants</h6>
+  <div class="scholarship-wrapper mt-5 mb-5">
 
-        <div class="position-relative">
+    <div class="scholarship-banner">
+
+        <!-- Yellow Floating Badge -->
+        <div class="badge-float">
+            40 Marks | Physics • Chemistry • Maths • Biology
+        </div>
+
+        <div class="banner-inner">
+
+            <!-- Left Text -->
+            <div class="banner-left">
+
+                <p class="win-text">Win Up to</p>
+
+                <h2 class="price-text">₹2,00,000</h2>
+
+                <p class="sub-text">Scholarship</p>
+
+            </div>
+
+            <!-- Right Image -->
+            <div class="banner-right">
+                <img src="{{ asset('assets/boys.png') }}" alt="Students">
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="exam-section mt-5 mb-5">
+
+
+        <div class="row justify-content-center  mt-5">
+
+            <!-- Card 1 -->
+            <div class="col-md-4">
+
+                <div class="exam-card card-up">
+
+                    <div class="card-header-custom">
+                        <img src="/assets/exam.png" alt="Exam">
+                        <h5>Exam Pattern</h5>
+                    </div>
+
+                    <ul>
+                        <li><img src="/assets/star.png" alt="Exam"> 40 MCQs</li>
+                        <li><img src="/assets/star.png" alt="Exam"> 1 Mark Each</li>
+                        <li><img src="/assets/star.png" alt="Exam"> Total: 40 Marks</li>
+                        <li><img src="/assets/star.png" alt="Exam"> Total: 40 min</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+
+                <div class="exam-card card-down">
+
+                    <div class="card-header-custom">
+                        <img src="/assets/exam.png" alt="Exam">
+
+                        <h5>Subjects</h5>
+                    </div>
+
+                    <ul>
+                        <li><img src="/assets/star.png" alt="Exam"> Physics — 10</li>
+                        <li><img src="/assets/star.png" alt="Exam"> Chemistry — 10</li>
+                        <li><img src="/assets/star.png" alt="Exam"> Maths — 10</li>
+                        <li><img src="/assets/star.png" alt="Exam"> Biology — 10</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+</div>
+
+<div class="topper-section">
+
+
+    <div class="topper-bg">
+
+      <div class="row justify-content-center align-items-end">
+
+        <!-- Rank 2 -->
+        <div class="col-md-3 text-center topper-card down">
+
+          <div class="rank-badge silver">
+          <img src="/assets/2.png" >
+
+          </div>
+
+          <img src="/assets/img/education/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall 1.png"  class="topper-img">
+
+
+          <!-- <div class="name-ribbon">Rasika Ghorpade</div> -->
+          <img src="/assets/Off1.png" class="name-ribbon2">
+
+
+        </div>
+
+        <!-- Rank 1 -->
+        <div class="col-md-4 text-center topper-card up">
+
+          <div class="rank-badge gold">
+          <img src="/assets/1.png" >
+
+          </div>
+
+          <img src="/assets/img/education/697078c6bd0682489206e2ce 1.png" class="topper-img main">
+
+          <!-- <div class="name-ribbon">Satyabrata Pan</div> -->
+          <img src="/assets/Off.png" class="name-ribbon1">
+
+        </div>
+
+        <!-- Rank 3 -->
+        <div class="col-md-3 text-center topper-card down">
+
+          <div class="rank-badge bronze">
+          <img src="/assets/3.png" >
+
+          </div>
+
+          <img src="/assets/img/education/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall 1 (1).png"
+           class="topper-img">
+
+          <!-- <div class="name-ribbon">Kresha Kubhakar</div> -->
+          <img src="/assets/Off1.png" class="name-ribbon2">
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+</div>
+<div class="redline my-10"></div>
+
+<div class="contact-section">
+
+
+    <div class="contact-box mt-5 mb-5">
+
+        <div class="row g-0 align-items-stretch h-100">
+
+        <!-- LEFT IMAGE -->
+          <div class="col-md-6 contact-image h-100">
+          <img src="{{ asset('assets/Frame 12.png') }}" alt="Doctor">
+        </div>
+
+        <!-- RIGHT FORM -->
+<div class="col-md-6 contact-form h-100 d-flex flex-column justify-content-center">
+          <h2>Get in Touch</h2>
+
+          <form>
+
+            <input type="text" placeholder="Full Name">
+
+            <input type="text" placeholder="Mobile Number">
+
+            <div class="row g-3">
+              <div class="col-6">
+                <input type="text" placeholder="Class">
+              </div>
+              <div class="col-6">
+                <input type="text" placeholder="City">
+              </div>
+            </div>
+
+            <input type="email" placeholder="Email">
+
+            <input type="text" placeholder="Target Exam">
+
+            <button type="submit">Register for Free</button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+</div>
+  </div>
+</div>
+
+        <div class="position-relative mt-10">
 
             <!-- Slider -->
             <div id="feedbackSlider"
@@ -686,6 +889,409 @@
     </section>
 
     <style>
+
+
+
+/* Curved BG */
+.exam-section{
+  padding-top: 20px;
+
+}
+.scholarship-wrapper{
+  padding-top: 40px;
+
+}
+.topper-bg{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* Card */
+.topper-card {
+    position: relative;
+}
+
+/* Image */
+.topper-img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 15px;
+    padding: 5px;
+}
+/* Main Image */
+.topper-img.main {
+    max-width: 250px;
+}
+
+/* Rank Badge */
+.rank-badge {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+    font-weight: 700;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* Colors */
+.gold {
+   
+margin-left: 90px;
+
+
+  }
+.silver { 
+margin-left: 90px;
+}
+.bronze { 
+margin-left: 90px;
+
+
+}
+
+/* Name Ribbon */
+.name-ribbon1 {
+    /* background: #D62828; */
+    color: #fff;
+
+    /* padding: 6px 14px; */
+    /* border-radius: 0 0 10px 10px; */
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-top: -5px;
+    margin-left: -18px;
+}
+.name-ribbon2 {
+    /* background: #D62828; */
+    color: #fff;
+
+    /* padding: 6px 14px; */
+    /* border-radius: 0 0 10px 10px; */
+          <img src="/assets/Off1.png" class="name-ribbon">
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-top: -5px;
+    margin-left: -32px;
+}
+
+/* Position */
+.up {
+    transform: translateY(-30px);
+}
+
+.down {
+    transform: translateY(20px);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .up,
+    .down {
+        transform: none;
+        margin-bottom: 25px;
+    }
+
+    .topper-img {
+        max-width: 150px;
+    }
+
+    .topper-img.main {
+        max-width: 170px;
+    }
+}
+      /* Section Background */
+
+.redline{
+    width: 100%;
+    height: 2px;              /* Line thickness */
+    background-color: #D62828; /* Red color */
+}
+/* Main Box */
+.contact-box {
+    background: #fff;
+    /* border-radius: 20px; */
+    overflow: hidden;
+    max-width: 1400px;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Left Image */
+.contact-image {
+    background: #ccc;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right Form */
+.contact-form {
+    padding: 50px 45px;
+}
+
+.contact-form h2 {
+    color: #D62828;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* Inputs */
+.contact-form input {
+    width: 100%;
+    border: 1px solid #eee;
+    border-radius: 30px;
+    padding: 12px 20px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    outline: none;
+}
+
+.contact-form input:focus {
+    border-color: #D62828;
+}
+
+/* Button */
+.contact-form button {
+    background: #D62828;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 35px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #b71c22;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    .contact-section {
+        padding: 50px 10px;
+    }
+
+    .contact-form {
+        padding: 30px 25px;
+    }
+
+    .contact-form h2 {
+        text-align: center;
+    }
+
+    .contact-image {
+        height: 250px;
+    }
+}
+      /* Card Design */
+.exam-card {
+    background: #FFDCD3;
+    border-radius: 20px;
+    padding: 25px 30px;
+    min-height: 260px;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+}
+
+/* Header */
+.card-header-custom {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.card-header-custom i {
+    color: #D62828;
+    font-size: 22px;
+}
+
+.card-header-custom h5 {
+    margin: 0;
+    font-weight: 700;
+}
+
+/* List */
+.exam-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.exam-card ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.exam-card ul li i {
+    color: #F05454;
+    font-size: 14px;
+}
+
+/* Position Effect */
+.card-up {
+    transform: translateY(-25px);
+}
+
+.card-down {
+    transform: translateY(25px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    .card-up,
+    .card-down {
+        transform: none;
+        margin-bottom: 25px;
+    }
+
+    .exam-section {
+        padding: 50px 15px;
+    }
+}
+      /* Wrapper */
+.scholarship-wrapper {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Main Banner */
+.scholarship-banner {
+    background: #D62828;
+    border-radius: 18px;
+    position: relative;
+    overflow: visible;
+    padding: 35px 35px 0 35px;
+}
+
+/* Yellow Tag (Floating) */
+.badge-float {
+    position: absolute;
+    top: -37px;
+    left: 3px;
+
+    background: #FFD700;
+    color: #000;
+
+    padding: 10px 14px;
+    font-size: 12px;
+    font-weight: 600;
+
+    border-radius: 18px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+
+    z-index: 5;
+}
+
+/* Layout */
+.banner-inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+/* Left Text */
+.banner-left {
+    color: #fff;
+    padding-bottom: 22px;
+}
+
+.win-text {
+    margin: 0;
+    font-size: 15px;
+}
+
+.price-text {
+    margin: 4px 0;
+    font-size: 42px;
+    font-weight: 700;
+    color: #FFD700;
+}
+
+.sub-text {
+    margin: 0;
+    font-size: 15px;
+}
+
+/* Right Image */
+.banner-right {
+    position: relative;
+}
+
+.banner-right img {
+    max-height: 200px;
+    /* margin-bottom: 21px; */
+    margin-top: -80px;
+    display: block;
+}
+
+/* ============ MOBILE ============ */
+
+@media (max-width: 768px) {
+
+    .scholarship-banner {
+        padding: 25px 20px 0 20px;
+    }
+
+    .banner-inner {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .banner-left {
+        padding-bottom: 15px;
+    }
+
+    .price-text {
+        font-size: 32px;
+    }
+
+    .banner-right img {
+        max-height: 140px;
+        margin-top: -15px;
+    }
+
+    .badge-float {
+        font-size: 11px;
+        left: 12px;
+    }
+}
+      .headingtext h1{
+        color:#CF242A;
+        font-weight: 500;  
+        
+      }
 .testimonial-card {
     min-width: 280px;
     min-height: 250px;
@@ -901,7 +1507,7 @@ function slideRight(){
 
   <div class="container">
 
-    <div class="row g-5 align-items-center">
+    <div class="row g-5 align-items-stretch">
 
       <!-- LEFT: FORM -->
       <div class="col-md-6">
@@ -1002,11 +1608,11 @@ function slideRight(){
       <!-- RIGHT: IMAGE -->
       <div class="col-md-6">
 
-        <div class="rounded-4 overflow-hidden shadow">
-
-          <img src="/assets/img/education/formImage.png"
-               class="img-fluid w-100 object-fit-cover"
-               alt="Doctors">
+        <!-- <div class="rounded-4 overflow-hidden shadow"> -->
+<div class="rounded-4 overflow-hidden shadow h-100 d-flex">
+          
+               <img src="/assets/Frame 12.png"
+     class="img-fluid w-100 h-100 object-fit-cover">
 
         </div>
 
@@ -1109,11 +1715,11 @@ function slideRight(){
 
 
   <!-- Bottom Title -->
-  <div class="text-center mt-5">
+  <!-- <div class="text-center mt-5">
     <h4 class="d-inline-block px-4 py-2 border border-dark rounded-pill fw-medium">
       Award and achievement
     </h4>
-  </div>
+  </div> -->
 
 </section>
 
@@ -1136,100 +1742,174 @@ function slideRight(){
   }
 </style>
 
-<!-- BADGE / ACHIEVEMENT SECTION -->
-<!-- <section class="position-relative py-5 mb-5 overflow-hidden"
-         style="background:#FFF5F6;">
+<div class="winner-section">
+<div class="container">
 
-  <div class="position-absolute top-0 start-0 w-100 h-100">
-    <img src="/assets/img/bg/badgeBGimage.png"
-         class="w-100 h-100 object-fit-cover"
-         style="object-fit:cover;"
-         alt="">
-  </div>
 
-  <div class="container position-relative">
+    <div class="winner-card">
 
-    <div class="row text-center text-white g-4">
-      <div class="col-6 col-md-2">
+      <div class="row align-items-center g-4">
 
-        <div class="d-flex flex-column align-items-center">
+        <!-- LEFT IMAGE -->
+        <div class="col-md-4 text-center">
 
-          <img src="/assets/img/education/badgeGroup 1000006861.png"
-               class="img-fluid mb-4"
-               style="max-width:180px;"
-               alt="Badge">
+          
+<div class="winner-img-box">
 
-          <h2 class="display-4 fw-light">
-            2020
-          </h2>
+    <!-- Medal Icon -->
+    <img src="/assets/Empty.png" class="winner-medal-img">
 
-          <p class="small mt-2 px-2">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </p>
+    <!-- Main Image -->
+              <img src="/assets/img/education/697078c6bd0682489206e2ce 1.png" alt="Winner" class="winner-img">
+
+</div>
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="col-md-8">
+
+          <div class="winner-content">
+
+           
+
+            <p class="winner-text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+               when an unknown printer took a galley of type and scrambled it to make a type 
+               specimen book. It has survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged of Letraset sheets 
+                containing Lorem 
+            </p>
+
+            <h5 class="winner-name">Satyabrata Pan</h5>
+
+            <span class="winner-role">National Award Winner</span>
+
+          </div>
 
         </div>
 
       </div>
 
-
-      <div class="col-6 col-md-2">
-        <div class="d-flex flex-column align-items-center">
-          <img src="/assets/img/education/badgeGroup 1000006861.png"
-               class="img-fluid mb-4"
-               style="max-width:180px;">
-          <h2 class="display-4 fw-light">2020</h2>
-          <p class="small mt-2 px-2">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-2">
-        <div class="d-flex flex-column align-items-center">
-          <img src="/assets/img/education/badgeGroup 1000006861.png"
-               class="img-fluid mb-4"
-               style="max-width:180px;">
-          <h2 class="display-4 fw-light">2020</h2>
-          <p class="small mt-2 px-2">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-2">
-        <div class="d-flex flex-column align-items-center">
-          <img src="/assets/img/education/badgeGroup 1000006861.png"
-               class="img-fluid mb-4"
-               style="max-width:180px;">
-          <h2 class="display-4 fw-light">2020</h2>
-          <p class="small mt-2 px-2">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-2">
-        <div class="d-flex flex-column align-items-center">
-          <img src="/assets/img/education/badgeGroup 1000006861.png"
-               class="img-fluid mb-4"
-               style="max-width:180px;">
-          <h2 class="display-4 fw-light">2020</h2>
-          <p class="small mt-2 px-2">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          </p>
-        </div>
-      </div>
+      <!-- Corner Star -->
+      <div class="corner-star">⭐</div>
 
     </div>
 
   </div>
 
-</section> -->
+</div>
+<style>
+  /* Section */
+.winner-section {
+    padding: 10px 15px;
+    background: #FFF5F6;
+    padding-bottom: 30px;
+}
 
-<!-- BADGE / ACHIEVEMENT SECTION -->
-<section class="position-relative py-5 overflow-hidden" style="background:#FFF5F6;">
+/* Main Card */
+.winner-card {
+    background: #5D0000;
 
-  <!-- Background Image -->
+    border-radius: 15px;
+    padding: 20px 20px;
+    position: relative;
+    color: #fff;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Left Image Box */
+
+
+/* s */
+
+/* Image Container */
+.winner-img-box {
+    position: relative; /* Important */
+    display: inline-block;
+    border-radius: 12px;
+}
+ .winner-img{
+  width: 100%;
+    border-radius: 12px;
+
+
+            }
+/* Medal on Image */
+.winner-medal-img {
+    position: absolute;
+
+    top: -12px;
+    right: -42px;
+
+    width: 100px;
+    height: auto;
+
+    z-index: 5;
+}
+
+/* Content */
+.winner-content {
+    position: relative;
+    padding-left: 10px;
+}
+
+/* Medal */
+.winner-medal {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+/* Text */
+.winner-text {
+    font-size: 20px;
+    line-height: 2;
+    color: #ffecec;
+    margin-bottom: 15px;
+}
+
+/* Name */
+.winner-name {
+    color: #FFD700;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+/* Role */
+.winner-role {
+    font-size: 12px;
+    color: #ffcccc;
+}
+
+/* Corner Star */
+.corner-star {
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    font-size: 26px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .winner-card {
+        padding: 25px 20px;
+        text-align: center;
+    }
+
+    .winner-content {
+        padding-left: 0;
+    }
+
+    .winner-img-box img {
+        max-width: 150px;
+    }
+}
+</style>
+
+<!-- <section class="position-relative py-5 overflow-hidden" style="background:#FFF5F6;">
+
   <div class="position-absolute top-0 start-0 w-100 h-100">
     <img src="/assets/img/bg/badgeBGimage.png"
          class="w-100 h-100"
@@ -1240,7 +1920,6 @@ function slideRight(){
   <div class="container position-relative">
     <div class="row justify-content-center text-center text-white g-4">
 
-      <!-- ITEM -->
       <div class="col-6 col-md-4 col-lg">
         <div class="d-flex flex-column align-items-center">
           <img src="/assets/img/education/badgeGroup 1000006861.png"
@@ -1254,7 +1933,6 @@ function slideRight(){
         </div>
       </div>
 
-      <!-- Repeat Items -->
       <div class="col-6 col-md-4 col-lg">
         <div class="d-flex flex-column align-items-center">
           <img src="/assets/img/education/badgeGroup 1000006861.png"
@@ -1310,7 +1988,9 @@ function slideRight(){
     </div>
   </div>
 
-</section>
+</section> -->
+
+
   </main>
 
 @endsection
