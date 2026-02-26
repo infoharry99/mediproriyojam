@@ -1498,164 +1498,196 @@ function slideRight(){
 </style>
 
 <!-- ENQUIRY FORM -->
-<section class="py-5" style="background:#FFF5F6;">
+<section class="enquiry-section">
 
-  <div class="text-center mb-4">
-    <h3 class="d-inline-block px-4 py-2 border border-dark rounded-pill fs-5 fw-medium">
-      Enquiry form with lead
-    </h3>
-  </div>
+    <div class="text-center mb-4">
+        <h3 class="enquiry-title">
+            Enquiry form with lead
+        </h3>
+    </div>
 
+    <div class="container">
+        <div class="row g-4 align-items-stretch">
 
-  <div class="container">
+            <!-- LEFT FORM -->
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="enquiry-card">
 
-    <div class="row g-5 align-items-stretch enquiry-row">
+                    <h2 class="fw-bold text-danger mb-4">
+                        @if(session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+                        Admission Enquiry Form
+                    </h2>
 
-      <div class="col-md-6">
+                    <form action="{{ route('admission.enquiry.store') }}" method="POST">
+                        @csrf
 
-        <div class="bg-white rounded-4 shadow p-4 p-lg-5 h-100">
+                        <!-- Full Name -->
+                        <div class="mb-4">
+                            <label class="form-label small text-muted">Full Name</label>
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <input type="text" name="first_name" placeholder="First"
+                                        class="form-control">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" name="last_name" placeholder="Last"
+                                        class="form-control">
+                                </div>
+                            </div>
+                        </div>
 
-          <h2 class="fw-bold text-danger mb-4">
-            @if(session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-            @endif
-            Admission Enquiry Form
-          </h2>
-          <form action="{{ route('admission.enquiry.store') }}" method="POST">
-          @csrf
+                        <!-- Phone -->
+                        <div class="mb-4">
+                            <label class="form-label small text-muted">Phone number</label>
+                            <input type="text" name="phone_number" placeholder="Phone number"
+                                class="form-control">
+                        </div>
 
-            <div class="mb-4">
-
-              <label class="form-label text-muted small">
-                Full Name
-              </label>
-
-              <div class="row g-3">
-                <div class="col-6">
-                  <input type="text" name="first_name" placeholder="First" class="form-control">
-                </div>
-                <div class="col-6">
-                  <input type="text" name="last_name" placeholder="Last" class="form-control">
-                </div>
-              </div>
-
-            </div>
-
-
-            <div class="mb-4">
-                  <label class="form-label text-muted small">
-                      Phone number
-                  </label>
-                  <input type="text" name="phone_number" placeholder="Phone number" class="form-control">
-              </div>
-
-
-            <div class="mb-4">
-                            <label class="form-label text-muted small">
-                                School
-                            </label>
+                        <!-- Course -->
+                        <div class="mb-4">
+                            <label class="form-label small text-muted">School</label>
                             <select class="form-select" name="course">
-                                <option selected>Choose course</option>
+                                <option selected disabled>Choose course</option>
                                 <option>NEET</option>
                                 <option>Medical</option>
                             </select>
                         </div>
 
-
-            
+                        <!-- City -->
                         <div class="mb-4">
-                            <label class="form-label text-muted small">
-                                City
-                            </label>
-                            <input type="text" name="city" placeholder="City" class="form-control">
+                            <label class="form-label small text-muted">City</label>
+                            <input type="text" name="city" placeholder="City"
+                                class="form-control">
                         </div>
 
+                        <!-- Query -->
                         <div class="mb-4">
-                            <label class="form-label text-muted small">
-                                Current studying
-                            </label>
-                            <textarea rows="4" name="query" placeholder="Current studying" class="form-control"></textarea>
+                            <label class="form-label small text-muted">Current studying</label>
+                            <textarea rows="4" name="query"
+                                placeholder="Current studying"
+                                class="form-control"></textarea>
                         </div>
 
+                        <div>
+                            <button type="submit" class="btn btn-danger enquiry-btn">
+                                Submit →
+                            </button>
+                        </div>
 
-            <div class="pt-2">
+                    </form>
 
-              <button type="submit"
-                      class="btn btn-danger px-4 py-2 d-inline-flex align-items-center gap-2">
-
-                Submit
-                <span>→</span>
-
-              </button>
-
+                </div>
             </div>
 
-          </form>
+            <!-- RIGHT IMAGE -->
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="enquiry-image-wrapper">
+                    <img src="/assets/Frame 12.png" alt="Enquiry Image">
+                </div>
+            </div>
 
         </div>
-
-      </div>
-
-
-      <div class="col-md-6">
-
-           <div class="rounded-4 overflow-hidden shadow h-100 d-flex">
-          
-               <img src="/assets/Frame 12.png"
-             class="img-fluid w-100 enquiry-img">
-
-        </div>
-
-      </div>
-
     </div>
-
-  </div>
-
 </section>
 
-
 <style>
-.enquiry-row {
-    min-height: auto;   /* height ki jagah min-height use karo */
+  /* SECTION BACKGROUND */
+.enquiry-section {
+    background: #FFF5F6;
+    padding: 60px 0;
 }
-.enquiry-img {
+
+/* TITLE */
+.enquiry-title {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* CARD */
+.enquiry-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    height: 100%;
+}
+
+/* IMAGE WRAPPER */
+.enquiry-image-wrapper {
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.enquiry-image-wrapper img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-@media (max-width: 768px) {
-    .enquiry-img {
-        height: auto;
+/* BUTTON */
+.enquiry-btn {
+    padding: 10px 25px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.enquiry-btn:hover {
+    background: #bb2d3b;
+}
+
+/* FORM FOCUS */
+.form-control:focus,
+.form-select:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 .2rem rgba(220,53,69,.25);
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablet */
+@media (max-width: 991px) {
+    .enquiry-card {
+        padding: 30px;
     }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
-    .enquiry-row {
-        min-height: auto;
+
+    .enquiry-section {
+        padding: 40px 15px;
+    }
+
+    .enquiry-card {
+        padding: 25px;
+    }
+
+    .enquiry-image-wrapper {
         height: auto;
+        margin-top: 20px;
+    }
+
+    .enquiry-image-wrapper img {
+        height: auto;
+        object-fit: contain;
+    }
+
+    .enquiry-title {
+        font-size: 16px;
+        padding: 8px 18px;
     }
 }
-
-
-.enquiry-row img {
-    /* object-fit: cover; */
-}
-  .form-control:focus,
-  .form-select:focus{
-    border-color:#dc3545;
-    box-shadow:0 0 0 .2rem rgba(220,53,69,.25);
-  }
-
-  .btn-danger{
-    transition:.3s;
-  }
-
-  .btn-danger:hover{
-    background:#bb2d3b;
-  }
 </style>
 
 <!-- DOWNLOAD APP SECTION -->
