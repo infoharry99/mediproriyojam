@@ -195,7 +195,7 @@ Enroll Now
 <div class="container">
 
      <div class="text-center mb-4">
-          <span class=" fw-semibold badge border border-secondary bg-transparent text-dark px-4 py-2">
+          <span class=" fw-semibold badge border border-secondary bg-transparent text-dark px-4 py-2" style="font-size:18px;">
           Courses Description
           </span>
      </div>
