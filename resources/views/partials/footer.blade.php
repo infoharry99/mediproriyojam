@@ -2,7 +2,7 @@
 <footer class="text-white py-5" style="background:#D62828;">
   <div class="container">
     <div class="row gy-4">
-      <div class="col-md-4">
+      <div class="col-md-3">
 
         <img src="{{ asset('assets/img/education/footerlogo.png') }}"
              class="mb-3"
@@ -36,9 +36,11 @@
         <ul class="list-unstyled small">
 
           <li class="mb-2"><a href="#" class="footer-link">Home it work</a></li>
-          <li class="mb-2"><a href="#" class="footer-link">Pricing</a></li>
+          <li class="mb-2"><a href="#" class="footer-link">About</a></li>
+          <li class="mb-2"><a href="#" class="footer-link">Announcement</a></li>
+          <li class="mb-2"><a href="#" class="footer-link">Gallery</a></li>
           <li class="mb-2"><a href="#" class="footer-link">Blog</a></li>
-          <li class="mb-2"><a href="#" class="footer-link">Demo</a></li>
+          <li class="mb-2"><a href="#" class="footer-link">Contact</a></li>
 
         </ul>
 

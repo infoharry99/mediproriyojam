@@ -714,7 +714,6 @@
 
       <div class="row justify-content-center align-items-end">
 
-        <!-- Rank 2 -->
         <div class="col-md-3 text-center topper-card down">
 
           <div class="rank-badge silver">
@@ -725,13 +724,11 @@
           <img src="/assets/img/education/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall 1.png"  class="topper-img">
 
 
-          <!-- <div class="name-ribbon">Rasika Ghorpade</div> -->
-          <img src="/assets/Off1.png" class="name-ribbon2">
+          <img src="/assets/Off2.jpeg" class="name-ribbon2">
 
 
         </div>
 
-        <!-- Rank 1 -->
         <div class="col-md-4 text-center topper-card up">
 
           <div class="rank-badge gold">
@@ -741,12 +738,10 @@
 
           <img src="/assets/img/education/697078c6bd0682489206e2ce 1.png" class="topper-img main">
 
-          <!-- <div class="name-ribbon">Satyabrata Pan</div> -->
           <img src="/assets/Off.png" class="name-ribbon1">
 
         </div>
 
-        <!-- Rank 3 -->
         <div class="col-md-3 text-center topper-card down">
 
           <div class="rank-badge bronze">
@@ -757,7 +752,6 @@
           <img src="/assets/img/education/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall 1 (1).png"
            class="topper-img">
 
-          <!-- <div class="name-ribbon">Kresha Kubhakar</div> -->
           <img src="/assets/Off1.png" class="name-ribbon2">
 
 
@@ -778,46 +772,44 @@
 
         <div class="row g-0 align-items-stretch h-100">
 
-        <!-- LEFT IMAGE -->
-          <div class="col-md-6 contact-image h-100">
+          <div class="col-md-4 contact-image h-100">
           <img src="{{ asset('assets/Frame 12.png') }}" alt="Doctor">
         </div>
 
-        <!-- RIGHT FORM -->
-<div class="col-md-6 contact-form h-100 d-flex flex-column justify-content-center">
-          <h2>Get in Touch</h2>
+      <div class="col-md-8 contact-form h-100 d-flex flex-column justify-content-center">
+                <h2>Get in Touch</h2>
 
-          <form>
+                <form>
 
-            <input type="text" placeholder="Full Name">
+                  <input type="text" placeholder="Full Name">
 
-            <input type="text" placeholder="Mobile Number">
+                  <input type="text" placeholder="Mobile Number">
 
-            <div class="row g-3">
-              <div class="col-6">
-                <input type="text" placeholder="Class">
+                  <div class="row g-3">
+                    <div class="col-6">
+                      <input type="text" placeholder="Class">
+                    </div>
+                    <div class="col-6">
+                      <input type="text" placeholder="City">
+                    </div>
+                  </div>
+
+                  <input type="email" placeholder="Email">
+
+                  <input type="text" placeholder="Target Exam">
+
+                  <button type="submit">Register for Free</button>
+
+                </form>
+
               </div>
-              <div class="col-6">
-                <input type="text" placeholder="City">
-              </div>
+
             </div>
 
-            <input type="email" placeholder="Email">
+          </div>
 
-            <input type="text" placeholder="Target Exam">
-
-            <button type="submit">Register for Free</button>
-
-          </form>
-
-        </div>
 
       </div>
-
-    </div>
-
-
-</div>
   </div>
 </div>
 
@@ -1027,10 +1019,21 @@ margin-left: 90px;
     background: #fff;
     /* border-radius: 20px; */
     overflow: hidden;
+     height: 700px; 
     max-width: 1400px;
     margin: auto;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
+@media (max-width: 768px) {
+    .contact-box {
+        height: auto;
+    }
+    .contact-image,
+    .contact-form {
+        height: auto !important;
+    }
+}
+
 
 /* Left Image */
 .contact-image {
@@ -1497,7 +1500,6 @@ function slideRight(){
 <!-- ENQUIRY FORM -->
 <section class="py-5" style="background:#FFF5F6;">
 
-  <!-- Heading -->
   <div class="text-center mb-4">
     <h3 class="d-inline-block px-4 py-2 border border-dark rounded-pill fs-5 fw-medium">
       Enquiry form with lead
@@ -1507,9 +1509,8 @@ function slideRight(){
 
   <div class="container">
 
-    <div class="row g-5 align-items-stretch">
+    <div class="row g-5 align-items-stretch enquiry-row">
 
-      <!-- LEFT: FORM -->
       <div class="col-md-6">
 
         <div class="bg-white rounded-4 shadow p-4 p-lg-5 h-100">
@@ -1525,7 +1526,6 @@ function slideRight(){
           <form action="{{ route('admission.enquiry.store') }}" method="POST">
           @csrf
 
-            <!-- Full Name -->
             <div class="mb-4">
 
               <label class="form-label text-muted small">
@@ -1544,7 +1544,6 @@ function slideRight(){
             </div>
 
 
-            <!-- Phone -->
             <div class="mb-4">
                   <label class="form-label text-muted small">
                       Phone number
@@ -1553,7 +1552,6 @@ function slideRight(){
               </div>
 
 
-            <!-- Course -->
             <div class="mb-4">
                             <label class="form-label text-muted small">
                                 School
@@ -1566,9 +1564,7 @@ function slideRight(){
                         </div>
 
 
-            <!-- City -->
             
-                        <!-- City -->
                         <div class="mb-4">
                             <label class="form-label text-muted small">
                                 City
@@ -1576,7 +1572,6 @@ function slideRight(){
                             <input type="text" name="city" placeholder="City" class="form-control">
                         </div>
 
-                        <!-- Current studying -->
                         <div class="mb-4">
                             <label class="form-label text-muted small">
                                 Current studying
@@ -1585,7 +1580,6 @@ function slideRight(){
                         </div>
 
 
-            <!-- Submit -->
             <div class="pt-2">
 
               <button type="submit"
@@ -1605,14 +1599,12 @@ function slideRight(){
       </div>
 
 
-      <!-- RIGHT: IMAGE -->
       <div class="col-md-6">
 
-        <!-- <div class="rounded-4 overflow-hidden shadow"> -->
-<div class="rounded-4 overflow-hidden shadow h-100 d-flex">
+           <div class="rounded-4 overflow-hidden shadow h-100 d-flex">
           
                <img src="/assets/Frame 12.png"
-     class="img-fluid w-100 h-100 object-fit-cover">
+             class="img-fluid w-100 enquiry-img">
 
         </div>
 
@@ -1623,7 +1615,34 @@ function slideRight(){
   </div>
 
 </section>
+
+
 <style>
+.enquiry-row {
+    min-height: auto;   /* height ki jagah min-height use karo */
+}
+.enquiry-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .enquiry-img {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .enquiry-row {
+        min-height: auto;
+        height: auto;
+    }
+}
+
+
+.enquiry-row img {
+    /* object-fit: cover; */
+}
   .form-control:focus,
   .form-select:focus{
     border-color:#dc3545;
