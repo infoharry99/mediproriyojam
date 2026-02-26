@@ -724,7 +724,7 @@
           <img src="/assets/img/education/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall 1.png"  class="topper-img">
 
 
-          <img src="/assets/Off2.jpeg" class="name-ribbon2">
+          <img src="/assets/Off1.png" class="name-ribbon2">
 
 
         </div>
@@ -752,7 +752,7 @@
           <img src="/assets/img/education/front-view-male-student-wearing-black-backpack-holding-copybooks-files-blue-wall 1 (1).png"
            class="topper-img">
 
-          <img src="/assets/Off1.png" class="name-ribbon2">
+          <img src="/assets/Off2.jpeg" class="name-ribbon2">
 
 
         </div>
