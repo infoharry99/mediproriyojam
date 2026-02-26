@@ -217,12 +217,7 @@
   </div>
 
 
-  <!-- Bottom Title -->
-  <div class="text-center mt-5">
-    <h4 class="d-inline-block px-4 py-2 border border-dark rounded-pill fw-medium">
-      Award and achievement
-    </h4>
-  </div>
+ 
 
 </section>
 

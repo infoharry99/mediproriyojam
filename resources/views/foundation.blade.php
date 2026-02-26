@@ -194,11 +194,11 @@ Enroll Now
 <section class="py-5" style="background:#FFEAEA;">
 <div class="container">
 
-<div class="text-center mb-4">
-<span class="badge border border-secondary bg-transparent text-dark px-4 py-2">
-Courses Description
-</span>
-</div>
+     <div class="text-center mb-4">
+          <span class=" fw-semibold badge border border-secondary bg-transparent text-dark px-4 py-2">
+          Courses Description
+          </span>
+     </div>
 
 <h2 class="fw-semibold mb-4">
 Two-Year Integrated Classroom Programme
