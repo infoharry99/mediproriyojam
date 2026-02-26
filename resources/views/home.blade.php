@@ -254,19 +254,7 @@
             <h5 class="fw-semibold mb-3">
               Magic Bullet batch (11th + 12th + NEET)
             </h5>
-            <div class="d-flex justify-content-between text-muted small mt-3">
-
-              <div class="d-flex align-items-center gap-1">
-                <img src="/assets/img/education/c1.png" width="30">
-                <span>Mohit Rao</span>
-              </div>
-
-              <div class="d-flex align-items-center gap-1">
-                <!-- <img src="/assets/icons/Vector.png" width="16"> -->
-                <span>⭐(4.5 Reviews)</span>
-              </div>
-
-            </div>
+           
 
             <hr>
           <div class="d-flex gap-4 text-muted small mt-3">
@@ -305,19 +293,7 @@
                       <h5 class="fw-semibold mb-3">
                         Platinum Batch (12th + NEET)
                       </h5>
-                      <div class="d-flex justify-content-between text-muted small mt-3">
-
-                        <div class="d-flex align-items-center gap-1">
-                          <img src="/assets/img/education/c2.png" width="30">
-                          <span>Kriti Mishra</span>
-                        </div>
-
-                        <div class="d-flex align-items-center gap-1">
-                          <!-- <img src="/assets/icons/Vector.png" width="16"> -->
-                          <span>⭐(4.5 Reviews)</span>
-                        </div>
-
-                      </div>
+                     
                       <hr>
                       <div class="d-flex gap-4 text-muted small mt-3">
                         <div class="d-flex align-items-center gap-1">
@@ -350,15 +326,6 @@
                       </h5>
                       <div class="d-flex justify-content-between text-muted small mt-3">
 
-                        <div class="d-flex align-items-center gap-1">
-                          <img src="/assets/img/education/c3.png" width="30">
-                          <span>Rohit</span>
-                        </div>
-
-                        <div class="d-flex align-items-center gap-1">
-                          <!-- <img src="/assets/icons/Vector.png" width="16"> -->
-                          <span>⭐(4.8 Reviews)</span>
-                        </div>
 
                       </div>
                       <hr>
@@ -378,9 +345,9 @@
                 </div>
 
                 <div class="text-center my-4">
-              <a href="#" class="see-all-btn">
+              <!-- <a href="#" class="see-all-btn">
                   See All Courses <span>→</span>
-              </a>
+              </a> -->
           </div>
     </div>
 
@@ -606,17 +573,7 @@
     <section class="position-relative overflow-hidden"
          style="background:#FFF5F6; ">
          <div class="container">
-         <div class="testimonial-header position-relative text-center">
-
-    <div class="top-circle"></div>
-
-    <div class="container position-relative">
-        <h2 class="fw-semibold">Testimonial</h2>
-        <p class="text-muted mb-0">
-            Don’t take our word for it. Trust our students
-        </p>
-    </div>
-</div>
+        
 <div class="schoolershipsection">
   <div class="headingtext text-center">
   <h1 class="font-bold">Einstein Scholarship Test 2026</h1>
@@ -812,6 +769,15 @@
       </div>
   </div>
 </div>
+      <div class="testimonial-header position-relative text-center">
+            <div class="top-circle"></div>
+            <div class="container position-relative">
+              <h2 class="fw-semibold">Testimonial</h2>
+              <p class="text-muted mb-0">
+                  Don’t take our word for it. Trust our students
+              </p>
+          </div>
+      </div>
 
         <div class="position-relative mt-10">
 
@@ -822,7 +788,7 @@
 
                 @foreach($testimonials as $testimonial)
                 <div class="p-4 rounded-4 shadow position-relative testimonial-card"
-                     style="min-width:280px;
+                     style="min-width:350px;
                             background:linear-gradient(to bottom,#FFD7D7,#FFF5F6);">
 
                     <!-- Quote -->
