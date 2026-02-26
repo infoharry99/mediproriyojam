@@ -25,10 +25,10 @@
             </div>
         @endif
 
-        <div class="row align-items-center g-5">
+        <div class="row align-items-stretch g-5 ">
 
             <!-- LEFT FORM CARD -->
-            <div class="col-md-6">
+            <div class="col-md-6 ">
 
                 <div class="bg-white rounded-4 shadow p-4 p-lg-5 h-100">
 
@@ -107,9 +107,9 @@
 
             <!-- RIGHT IMAGE -->
             <div class="col-md-6">
-                <div class="rounded-4 overflow-hidden shadow">
-                    <img src="/assets/img/education/formImage.png"
-                         class="img-fluid w-100"
+                <div class="rounded-4 overflow-hidden shadow h-100">
+                    <img src="/assets/Frame 12.png"
+                         class="img-fluid w-100 h-100"
                          alt="Doctors">
                 </div>
             </div>
