@@ -42,36 +42,48 @@ And Typesetting Industry.
 </p>
 
 <!-- Features -->
-<div class="row text-start g-4">
+ <div class="row text-start g-4">
 
-<div class="col-6 col-md-3">
-<div class="border border-danger rounded-3 d-flex align-items-center justify-content-center mb-2"
-     style="width:50px;height:50px;">
-<img src="/assets/icons/Live Video On.png" width="24">
-</div>
-<p class="mb-0">LIVE <br>Interactive Class</p>
-</div>
+     <div class="col-6 col-md-3">
+          <div class="border border-danger bg-white rounded-3 d-flex align-items-center justify-content-center mb-2"
+               style="width:50px;height:50px;">
+          <img src="/assets/dp.png" width="30">
+          </div>
+          <p class="mb-0">Classroom  <br>Teaching</p>
+     </div>
 
-<div class="col-6 col-md-3">
-<div class="border border-danger rounded-3 mb-2"
-     style="width:50px;height:50px;"></div>
-<p class="mb-0">Offline <br>Like Discipline</p>
-</div>
+     <div class="col-6 col-md-3">
+          <div class="border border-danger bg-white rounded-3 d-flex align-items-center justify-content-center mb-2"
 
-<div class="col-6 col-md-3">
-<div class="border border-danger rounded-3 mb-2"
-     style="width:50px;height:50px;"></div>
-<p class="mb-0">Hard Copy Books <br>delivered to you</p>
-</div>
+               style="width:50px;height:50px;">
+               <img src="/assets/dp1.png" width="30">
+          </div>
 
-<!-- <div class="col-6 col-md-3">
-<div class="border border-danger rounded-3 mb-2"
-     style="width:50px;height:50px;"></div>
-<p class="mb-0">24*7 Live Video <br>Call Doubt Solving</p>
-</div> -->
+          <p class="mb-0">Doubt Clearing  <br>in Class</p>
+     </div>
 
-</div>
-</div>
+     <div class="col-6 col-md-3">
+          <div class="border border-danger  bg-white rounded-3 d-flex align-items-center justify-content-center mb-2"
+
+               style="width:50px;height:50px;">
+               <img src="/assets/dp2.png" width="30">
+          </div>
+
+          <p class="mb-0">Small Batch Size</p>
+     </div>
+
+     <div class="col-6 col-md-3">
+          <div class="border border-danger bg-white rounded-3 d-flex align-items-center justify-content-center mb-2"
+
+               style="width:50px;height:50px;">
+               <img src="/assets/dp3.png" width="30">
+          </div>
+
+          <p class="mb-0">Regular Test Series</p>
+     </div>
+
+  </div>
+ </div>
 </div>
 
 <!-- RIGHT FORM -->

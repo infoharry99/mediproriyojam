@@ -834,7 +834,7 @@
                        </p>
 
                     <!-- Rating -->
-                    <div class="mb-3 text-warning">
+                    <div class="mb-5 text-warning">
                         @for($i=1;$i<=5;$i++)
                             @if($i <= $testimonial->rating)
                                 <i class="bi bi-star-fill"></i>

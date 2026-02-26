@@ -1,5 +1,6 @@
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <style>
 .navbar .nav-link {
     transition: 0.3s ease;
@@ -69,6 +70,24 @@
 .dropdown-menu {
     z-index: 2000;
 }
+@media (max-width: 991px) {
+
+    .navbar-collapse {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+}
 </style>
 
 <header class="fixed-top bg-white shadow-sm">
@@ -83,19 +102,18 @@
             </a>
 
             <!-- Mobile Toggle -->
-           <button class="navbar-toggler border-0 collapsed"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNavbar"
-        id="mainNavbar"
-        aria-controls="mainNavbar"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
+           <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <!-- Menu -->
-            <div class="collapse navbar-collapse" id="mainNavbar">
+                 <div class="collapse navbar-collapse" id="mainNavbar">
 
                 <!-- Links -->
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-medium">
@@ -194,15 +212,17 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    const navbar = document.getElementById("mainNavbar");
-    const navLinks = document.querySelectorAll("#mainNavbar .nav-link:not(.dropdown-toggle)");
+    const navbarCollapse = document.getElementById("mainNavbar");
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link:not(.dropdown-toggle)");
 
     navLinks.forEach(function (link) {
         link.addEventListener("click", function () {
 
             if (window.innerWidth < 992) {
-                const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbar);
-                bsCollapse.hide();
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                if (bsCollapse) {
+                    bsCollapse.hide();
+                }
             }
 
         });

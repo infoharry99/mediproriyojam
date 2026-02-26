@@ -49,25 +49,44 @@
 <!-- Features -->
 <div class="row g-4 text-start">
 
-@php
-$features = [
-    "LIVE Interactive Class",
-    '"Offline" Like Discipline',
-    "Hard Copy Books delivered to you",
-    "24*7 Live Video Call Doubt Solving"
-];
-@endphp
 
-@foreach($features as $feature)
-<div class="col-6 col-md-3">
-    <div class="d-flex flex-column gap-2">
-        <div class="border border-danger rounded d-flex align-items-center justify-content-center"
-             style="width:50px;height:50px;">
-        </div>
-        <p class="mb-0">{{ $feature }}</p>
-    </div>
-</div>
-@endforeach
+     <div class="col-6 col-md-3">
+          <div class="border border-danger bg-white rounded-3 d-flex align-items-center justify-content-center mb-2"
+               style="width:50px;height:50px;">
+          <img src="/assets/dp.png" width="30">
+          </div>
+          <p class="mb-0">Classroom  <br>Teaching</p>
+     </div>
+
+     <div class="col-6 col-md-3">
+          <div class="border border-danger bg-white rounded-3 d-flex align-items-center justify-content-center mb-2"
+
+               style="width:50px;height:50px;">
+               <img src="/assets/dp1.png" width="30">
+          </div>
+
+          <p class="mb-0">Doubt Clearing  <br>in Class</p>
+     </div>
+
+     <div class="col-6 col-md-3">
+          <div class="border border-danger  bg-white rounded-3 d-flex align-items-center justify-content-center mb-2"
+
+               style="width:50px;height:50px;">
+               <img src="/assets/dp2.png" width="30">
+          </div>
+
+          <p class="mb-0">Small Batch Size</p>
+     </div>
+
+     <div class="col-6 col-md-3">
+          <div class="border border-danger bg-white rounded-3 d-flex align-items-center justify-content-center mb-2"
+
+               style="width:50px;height:50px;">
+               <img src="/assets/dp3.png" width="30">
+          </div>
+
+          <p class="mb-0">Regular Test Series</p>
+     </div>
 
 </div>
 
