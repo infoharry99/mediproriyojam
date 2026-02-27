@@ -1391,7 +1391,7 @@ function slideRight(){
 
           <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
             <iframe 
-              src="https://www.youtube.com/embed/ERhyLbUaCzs"
+              src="https://www.youtube.com/embed/sq-I-JVmyWc"
               title="Student Feedback 1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
@@ -1406,8 +1406,9 @@ function slideRight(){
         <div class="video-card shadow">
 
           <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
+
               <iframe 
-              src="https://www.youtube.com/embed/OWUfUo8aEfU"
+              src="https://www.youtube.com/embed/jc4LiVYJM4Y"
               title="Student Feedback 1"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
@@ -1425,7 +1426,7 @@ function slideRight(){
 
           <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
             <iframe 
-              src="https://www.youtube.com/embed/3ZQaGUrAZtQ"
+              src="https://www.youtube.com/embed/w7BnvUlf7nI"
               title="Student Feedback 3"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen>
