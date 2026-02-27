@@ -457,7 +457,7 @@
 
     .aboutus-classroom-img{
     width:100%;
-    height:520px;
+    height:720px;
     object-fit:cover;
     display:block;
     }
