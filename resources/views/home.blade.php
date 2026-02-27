@@ -736,7 +736,7 @@
       <div class="col-md-8 contact-form h-100 d-flex flex-column justify-content-center">
                 <h2>Get in Touch</h2>
 
-                <form>
+                <!-- <form>
 
                   <input type="text" placeholder="Full Name">
 
@@ -757,8 +757,58 @@
 
                   <button type="submit">Register for Free</button>
 
-                </form>
+                </form> -->
+<form method="POST" action="{{ route('admission.enquiry.store') }}">
+    @csrf
 
+    <input type="text" name="first_name" placeholder="Full Name" required>
+
+    <input type="text" name="phone_number" placeholder="Mobile Number" required>
+
+    <div class="row g-3">
+        <div class="col-6">
+            <input type="text" name="course" placeholder="Class">
+        </div>
+        <div class="col-6">
+            <input type="text" name="city" placeholder="City">
+        </div>
+    </div>
+
+    <input type="email" name="email" placeholder="Email">
+
+    <input type="text" name="query" placeholder="Target Exam">
+
+    <button type="submit">Register for Free</button>
+</form>
+
+
+
+@if(session('success'))
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        Swal.fire({
+            title: 'Success!',
+            text: '{{ session('success') }}',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
+    });
+</script>
+@endif
+
+<div class="modal fade" id="successModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title">Success</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        {{ session('success') }}
+      </div>
+    </div>
+  </div>
+</div> 
               </div>
 
             </div>
@@ -2010,5 +2060,5 @@ function slideRight(){
 
 
   </main>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @endsection

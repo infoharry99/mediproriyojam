@@ -25,34 +25,37 @@
             </div>
         </div>
 
-        <!-- Gallery Grid -->
-        <div class="row g-4">
+       <div class="row g-4">
 
-            @for($i = 1; $i <= 16; $i++)
+    @forelse($galleries as $gallery)
 
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
 
-                <div class="gallery-card position-relative overflow-hidden rounded-4 shadow bg-white">
+        <div class="gallery-card position-relative overflow-hidden rounded-4 shadow bg-white">
 
-                    <img src="{{ asset('assets/gallery/gallery'.$i.'.png') }}"
-                         alt="Gallery Image {{ $i }}"
-                         class="img-fluid w-100 gallery-img">
+            <img src="{{ asset($gallery->image) }}"
+                 alt="{{ $gallery->title ?? 'Gallery Image' }}"
+                 class="img-fluid w-100 gallery-img">
 
-                    <!-- Overlay -->
-                    <div class="gallery-overlay d-flex align-items-center justify-content-center">
-                        <!-- Optional text -->
-                        <!-- <span class="text-white fw-semibold small">
-                            View Image
-                        </span> -->
-                    </div>
-
-                </div>
-
+            <div class="gallery-overlay d-flex align-items-center justify-content-center">
+                @if($gallery->title)
+                    <h6 class="text-white">{{ $gallery->title }}</h6>
+                @endif
             </div>
 
-            @endfor
-
         </div>
+
+    </div>
+
+    @empty
+
+    <div class="col-12 text-center">
+        <p>No gallery images found.</p>
+    </div>
+
+    @endforelse
+
+</div>
 
     </div>
 

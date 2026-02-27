@@ -24,6 +24,7 @@ use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\TestTypeController;
 use App\Http\Controllers\TopRankerController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ScholarshipController;
 use App\Models\AboutpageFeature;
 use App\Models\AboutpageFounder;
 use App\Models\AboutpageGallery;
@@ -47,7 +48,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
 
+Route::post('/scholarship-submit', [ScholarshipController::class, 'store'])->name('scholarship.store');
 
+Route::get('/scholarship-list', [ScholarshipController::class, 'index'])->name('scholarship.list');
 
 Route::get('/course', function () {
     return view('course');
@@ -72,11 +75,15 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
+// Route::get('/gallery', function () {
+//     return view('gallery');
+// });
 Route::get('/gallery', function () {
-    return view('gallery');
-});
+    $galleries = AboutpageGallery::orderBy('sort_order')->get();
+    return view('gallery', compact('galleries'));
+})->name('gallery.page');
 
-//About Us
+//About Uss
 
 
 Route::get('/about-us', function () {
@@ -97,6 +104,8 @@ Route::get('/announcements', function () {
 
 Route::post('/admission-enquiry', [AdmissionEnquiryController::class, 'store'])
     ->name('admission.enquiry.store');
+    // Route::post('/admission-enquiry', [AdmissionEnquiryController::class, 'store'])
+    // ->name('admission.enquiry.store');
 
 // Blog Listing
 Route::get('/blog', [BlogPostController::class, 'publicIndex'])->name('blog.index');

@@ -14,6 +14,7 @@
             <tr>
                 <th>#</th>
                 <th>Name</th>
+                <th>Email</th>
                 <th>Phone</th>
                 <th>Course</th>
                 <th>City</th>
@@ -28,6 +29,7 @@
                 <td>{{ $loop->iteration }}</td>
 
                 <td>{{ $enquiry->full_name }}</td>
+                <td>{{ $enquiry->email }}</td>
 
                 <td>{{ $enquiry->phone_number }}</td>
 

@@ -1167,13 +1167,23 @@
                     <span class="nav-text">Test Types</span>
                 </a>
             </div>
+             <div class="nav-item">
+                <a href="{{ route('admin.about.gallery.index') }}" class="nav-link {{ Request::is('admin/about-gallery*') ? 'active' : '' }}" >
+                    <span class="nav-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5h6M9 9h6M9 13h6M5 5h.01M5 9h.01M5 13h.01M5 17h.01"/>
+                    </svg>
+                    </span>
+                    <span class="nav-text">Gallery</span>
+                </a>
+            </div>
 
             @php
             $aboutActive =
                 Request::is('admin/about-intro*') ||
                 Request::is('admin/about-founder*') ||
                 Request::is('admin/about-stats*') ||
-                Request::is('admin/about-gallery*') ||
                 Request::is('admin/about-features*');
             @endphp
 
@@ -1214,10 +1224,10 @@
                     About Stats
                     </a>
 
-                    <a href="{{ route('admin.about.gallery.index') }}"
+                    <!-- <a href="{{ route('admin.about.gallery.index') }}"
                     class="dropdown-item {{ Request::is('admin/about-gallery*') ? 'active' : '' }}">
-                    About Gallery
-                    </a>
+                     Gallery
+                    </a> -->
 
                     <a href="{{ route('admin.about.features.index') }}"
                     class="dropdown-item {{ Request::is('admin/about-features*') ? 'active' : '' }}">

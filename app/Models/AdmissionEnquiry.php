@@ -13,6 +13,7 @@ class AdmissionEnquiry extends Model
         'last_name',
         'phone_number',
         'course',
+        'email',
         'city',
         'query',
         'status',

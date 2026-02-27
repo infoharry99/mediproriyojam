@@ -20,6 +20,7 @@ class AdmissionEnquiryController extends Controller
         'last_name'    => 'nullable|string|max:100',
         'phone_number' => 'required|string|max:20',
         'course'       => 'nullable',
+        'email'       => 'nullable',
         'city'         => 'nullable|string|max:150',
         'query'        => 'nullable',
     ]);
