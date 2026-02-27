@@ -240,7 +240,7 @@
         <div class="card course-card  border-0 shadow-sm">
 
           <div class="overflow-hidden rounded-top p-4">
-            <img src="/assets/img/education/course_thumb01.jpg.png"
+            <img src="/assets/img/education/magic.jpg"
                  class="card-img-top course-img"
                  alt="">
           </div>
@@ -283,7 +283,7 @@
                    <a href="/foundation" class="text-decoration-none text-dark">
                   <div class="card course-card1 h-100 border-0 ">
                     <div class="overflow-hidden rounded-top p-4">
-                      <img src="/assets/img/education/course_thumb02.jpg.png"
+                      <img src="/assets/img/education/platinum.jpg"
                           class="card-img-top course-img ">
                     </div>
                     <div class="card-body p-4">
@@ -314,7 +314,7 @@
                    <a href="/target" class="text-decoration-none text-dark">
                   <div class="card course-card h-100 border-0 shadow-sm">
                     <div class="overflow-hidden rounded-top p-4">
-                      <img src="/assets/img/education/course_thumb03.jpg.png"
+                      <img src="/assets/img/education/eklavya.jpg"
                           class="card-img-top course-img">
                     </div>
                     <div class="card-body p-4">
